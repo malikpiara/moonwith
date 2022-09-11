@@ -24,7 +24,7 @@ export default function Home({ allPostsData }) {
         <p>I'm a product manager from Lisbon with a knack for software development and design. You can find me at <a href="https://moonwith.com/">Moonwith</a>. </p>
         <p>
           This is my first{' '}
-          <a href="https://nextjs.org/learn">Next.js</a> project. A blog on programming, design, product development and my tech projects.
+          <a href="https://nextjs.org/learn">Next.js</a> project. A blog on programming, design and product development.
         </p>
       </section>
 
