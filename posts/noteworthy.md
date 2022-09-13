@@ -1,6 +1,7 @@
 ---
 title: "Becoming noteworthy"
 date: "2020-04-07"
+tags: [work]
 ---
 
 Even though we are all different on paper, in reality, most of us act in conformity. — We wear the same shoes, build websites that look the same and have opinions that are not worth to bat an eyelash for.
