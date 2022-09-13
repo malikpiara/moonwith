@@ -1,6 +1,7 @@
 ---
 title: Chapters
 date: "2022-03-29"
+tags: []
 ---
 
 There will be times when you feel like a path forward is nowhere to be found. But sometimes, a path is not there because you are not supposed to be on that road yet.

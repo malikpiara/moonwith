@@ -21,7 +21,12 @@ export async function getStaticPaths() {
   };
 }
 
+
+
 export default function Post({ postData }) {
+
+  let tags = postData.tags;
+
     return (
       <Layout>
         <Head>
@@ -32,7 +37,16 @@ export default function Post({ postData }) {
           <div className={utilStyles.lightText}>
             <Date dateString={postData.date} />
           </div>
+
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+
+          <section>
+            <h3 className={utilStyles.headingMd}>Tags</h3>
+        
+          {tags.map(tag => (
+            <span className='tag'>{tag}</span>
+          ))}
+          </section>
         </article>
       </Layout>
     );

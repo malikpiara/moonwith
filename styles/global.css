@@ -28,3 +28,10 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.tag {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 8px 14px;
+  margin-right: 10px;
+}
