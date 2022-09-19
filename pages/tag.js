@@ -14,7 +14,11 @@ export async function getStaticProps() {
   };
 }
 
+// I'm adding a filter to check if "principles" is one of the tags.
+// Now I need to understand how to do this dynamically with parameters.
+
 export default function Home({ allPostsData }) {
+    const tag = "principles"
   return (
     <Layout home>
       <Head>
@@ -28,14 +32,17 @@ export default function Home({ allPostsData }) {
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>Tagged: {tag}</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title, tags }) => (
+          {allPostsData.filter(a=> a.tags.includes(tag)).map(({ id, date, title, tags }) => (
             <li className={utilStyles.listItem} key={id}>
             <Link href={`/posts/${id}`}>
               <a>{title}</a>
             </Link>
-            
+            <br />
+            <small>{tags.map(tag => (
+            <span>{tag}, </span>
+          ))}</small>
             <br />
             <small className={utilStyles.lightText}>
               <Date dateString={date} />

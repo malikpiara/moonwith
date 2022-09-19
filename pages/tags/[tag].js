@@ -5,7 +5,7 @@ import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
+  const postData = await getPostData(params.tag);
   return {
     props: {
       postData,
@@ -21,11 +21,7 @@ export async function getStaticPaths() {
   };
 }
 
-
-
 export default function Post({ postData }) {
-
-  const tags = postData.tags;
 
     return (
       <Layout>
@@ -37,16 +33,6 @@ export default function Post({ postData }) {
           <div className={utilStyles.lightText}>
             <Date dateString={postData.date} />
           </div>
-
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-
-          <section>
-            <h3 className={utilStyles.headingMd}>Tags</h3>
-        
-          {tags.map(tag => (
-            <span className='tag'>{tag}</span>
-          ))}
-          </section>
         </article>
       </Layout>
     );
