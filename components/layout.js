@@ -52,11 +52,18 @@ export default function Layout({ children, home }) {
                   />
                 </a>
               </Link>
-              <h2 className={utilStyles.headingLg}>
+              
+              {/* <h2 className={utilStyles.headingLg}>
                 <Link href="/">
                   <a className={utilStyles.colorInherit}>{name}</a>
                 </Link>
-              </h2>
+              </h2> */}
+              <ul className={utilStyles.list}>
+                <Link href="/"><li className={styles.navigationItem}>Essays</li></Link>
+                <Link href="#"><li className={styles.navigationItem}>About</li></Link>
+                <Link href="#"><li className={styles.navigationItem}>Projects</li></Link>
+                <Link href="/contact"><li className={styles.navigationItem}>Get in touch</li></Link>
+              </ul>
             </>
           )}
         </header>

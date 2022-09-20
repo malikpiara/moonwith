@@ -21,8 +21,6 @@ export async function getStaticPaths() {
   };
 }
 
-
-
 export default function Post({ postData }) {
 
   const tags = postData.tags;

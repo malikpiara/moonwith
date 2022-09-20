@@ -14,6 +14,10 @@ body {
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: rgb(102 90 187 / 40%);
+}
+
 a {
   /* color: #329f24; */
   color: #715abb;

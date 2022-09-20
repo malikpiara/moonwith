@@ -14,7 +14,7 @@ export async function getStaticProps() {
 
 export default function Contact() {
   return (
-    <Layout home>
+    <Layout children>
       <Head>
         <title>{siteTitle}</title>
       </Head>
