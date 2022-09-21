@@ -26,13 +26,13 @@ export default function Contact() {
             <p>I share content related with emotional intelligence, product development and my personal projects.</p>
             <ul>
                 <li>
-                    <a class="link" href="https://twitter.com/malikpiara" target="_blank">Twitter.</a>
+                    <a className="link" href="https://twitter.com/malikpiara" target="_blank">Twitter.</a>
                 </li>
                 <li>
-                    <a class="link" href="https://linkedin.com/in/malikpiara/" target="_blank">Linkedin.</a>
+                    <a className="link" href="https://linkedin.com/in/malikpiara/" target="_blank">Linkedin.</a>
                 </li>
                 <li>
-                    <a class="link" href="https://instagram.com/malikpiara/" target="_blank">Instagram.</a>
+                    <a className="link" href="https://instagram.com/malikpiara/" target="_blank">Instagram.</a>
                 </li>
             </ul>
         </section>
@@ -40,8 +40,8 @@ export default function Contact() {
         <section className={utilStyles.headingMd}>
             <h2 className={utilStyles.headingLg}>Reach me directly</h2>
             <ul>
-                <li><a class="link" href="mailto:malik@hey.com" target="_blank">malik@hey.com.</a> I take one week on average to reply.</li>
-                <li><a class="link" href="https://t.me/malikpiara" target="_blank">@malikpiara on Telegram.</a></li>
+                <li><a className="link" href="mailto:malik@hey.com" target="_blank">malik@hey.com.</a> I take one week on average to reply.</li>
+                <li><a className="link" href="https://t.me/malikpiara" target="_blank">@malikpiara on Telegram.</a></li>
             </ul>
         </section>
     </Layout>

@@ -60,7 +60,7 @@ export default function Layout({ children, home }) {
               </h2> */}
               <ul className={utilStyles.list}>
                 <Link href="/"><li className={styles.navigationItem}>Essays</li></Link>
-                <Link href="#"><li className={styles.navigationItem}>About</li></Link>
+                <Link href="/about"><li className={styles.navigationItem}>About</li></Link>
                 <Link href="#"><li className={styles.navigationItem}>Projects</li></Link>
                 <Link href="/contact"><li className={styles.navigationItem}>Get in touch</li></Link>
               </ul>
