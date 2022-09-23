@@ -75,6 +75,10 @@ export default function Layout({ children, home }) {
             </Link>
           </div>
         )}
+        <br/>
+        <footer>
+          <span>Only you know who you can be</span>
+        </footer>
       </div>
     );
   }

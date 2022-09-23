@@ -39,3 +39,16 @@ img {
   padding: 8px 14px;
   margin-right: 10px;
 }
+
+footer {
+  background-color: #715abb;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 500;
+}
