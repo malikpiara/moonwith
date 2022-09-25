@@ -41,15 +41,25 @@ img {
   cursor: pointer;
 }
 
+.siteTitle {
+  font-family: "Source Serif Pro", Georgia, Montserrat, sans-serif;
+  letter-spacing: 0.8px;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 900;
+}
+
 footer {
   background-color: #715abb;
   color: #ffffff;
   text-align: center;
   margin: 0;
   padding: 10px;
-  width: 100%;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 12px;
   font-weight: 500;
+  bottom: 0;
+  position: sticky;
+  border-radius: 25px 25px 0 0;
 }
