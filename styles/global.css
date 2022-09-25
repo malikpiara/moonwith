@@ -38,6 +38,7 @@ img {
   border-radius: 20px;
   padding: 8px 14px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 footer {
