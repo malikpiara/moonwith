@@ -32,7 +32,7 @@ export default function Post({ allPostsData, params }) {
         <h1>Essays on {params.id}</h1>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li className={utilStyles.recommendedEntry} key={id}>
             <Link href={`/posts/${id}`}>
               <a>{title}</a>
             </Link>

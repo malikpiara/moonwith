@@ -1,16 +1,18 @@
 import Head from 'next/head';
 import Layout from '../../components/layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import { getAllPostIds, getPostData, getSortedPostsData } from '../../lib/posts';
 import Date from '../../components/date';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
+  const allPostsData = getSortedPostsData("principles").slice(0, 3);
 
   return {
     props: {
       postData,
+      allPostsData
     },
   };
 }
@@ -24,7 +26,7 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postData }) {
+export default function Post({ postData, allPostsData }) {
 
   const tags = postData.tags;
 
@@ -34,7 +36,7 @@ export default function Post({ postData }) {
           <title>{postData.title}</title>
         </Head>
         <article>
-          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+          <h1 className={utilStyles.heading2Xl}>{postData.title}</h1>
           <div className={utilStyles.lightText}>
             <Date dateString={postData.date} />
           </div>
@@ -50,6 +52,26 @@ export default function Post({ postData }) {
             </Link>
           ))}
           </section>
+
+          <section>
+            <br/>
+            <h3 className={utilStyles.headingMd}>Other essays you may like</h3>
+            <div>
+            {allPostsData.map(({ id, date, title }) => (
+              <Link href={`/posts/${id}`}>
+              <div className={utilStyles.recommendedEntry} key={id}>
+                
+                  <div className={utilStyles.headingSmall}><a>{title}</a></div>
+               
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date} />
+                </small>
+              </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+          
         </article>
       </Layout>
     );

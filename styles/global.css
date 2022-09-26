@@ -2,12 +2,15 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
+  font-family: system-ui, -apple-system, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
   color: #152644;
   background-color: #e9e4f2;
+  letter-spacing: 0.1px;
+  line-height: 1.6;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  font-size: 1.15rem;
 }
 
 * {
@@ -38,6 +41,7 @@ img {
   border-radius: 20px;
   padding: 8px 14px;
   margin-right: 10px;
+  font-size: 18px;
   cursor: pointer;
 }
 
@@ -50,8 +54,8 @@ img {
 }
 
 footer {
-  background-color: #715abb;
-  color: #ffffff;
+  background-color: #e9e48c;
+  color: #010101;
   text-align: center;
   margin: 0;
   padding: 10px;
