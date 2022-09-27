@@ -69,3 +69,43 @@
     background-color: #80808014;
     color: #715abb;
   }
+
+  .fullWidthGrid {
+    background-color: beige;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    column-gap: 2em;
+  }
+
+  .fullWidthGrid:nth-child(1) {
+    padding-top: 0;
+  }
+
+  .fullWidthGrid:nth-child(2) {
+    background-color:ivory;
+  }
+
+  .shiftedImage {
+    position: relative;
+    right: -43px;
+  }
+
+  .fullWidthGrid h1 {
+    font-weight: 900;
+    flex: 100%;
+    margin: 20px auto;
+    font-family: "Source Serif Pro", Georgia, Montserrat, sans-serif;
+    font-size: 52px;
+    line-height: 1.1;
+    color: #152644;
+  }
+
+  .fullWidthGrid > div {
+    flex: 1 1 400px;
+  }
+
+  .fullWidthGrid a {
+    text-transform: uppercase;
+    font-size: 15px;
+  }

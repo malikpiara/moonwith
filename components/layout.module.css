@@ -6,8 +6,7 @@
 
   .containerWide {
     width: 100%;
-    padding: 0 1rem;
-    margin: 1rem auto 0;
+    margin: 0;
   }
   
   .header {
@@ -20,6 +19,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1em 1.8em;
+  }
+
+  .headerBeige {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1.8em;
+    background-color: beige;
   }
 
   .navigationItem {

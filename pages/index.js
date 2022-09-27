@@ -20,15 +20,8 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>I'm a product manager from Lisbon with a knack for software development and design.</p>
-        <p>
-        Moonwith is my digital home. Here, I share thoughts on personal growth, emotional intelligence, design and product development.
-        </p>
-      </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title, tags }) => (
             <li className={utilStyles.recommendedEntry} key={id}>

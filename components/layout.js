@@ -7,7 +7,7 @@ import Link from 'next/link';
 const name = 'Malik Piara';
 export const siteTitle = 'Moonwith'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, wide }) {
     return (
       <div className={styles.containerWide}>
         <Head>
@@ -25,9 +25,10 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-          
-        <header className={styles.headerMw}>
-          
+
+       
+            
+        <header className={wide? styles.headerBeige: styles.headerMw }>
             <>
             <Link href={'/'}>
             <h1 className={"siteTitle"}>{siteTitle}</h1>
@@ -54,9 +55,10 @@ export default function Layout({ children, home }) {
                 </a>
               </Link>
             </>
-
         </header>
-        <div className={styles.container}>
+
+        {!wide && (
+          <div className={styles.container}>
           <main>{children}</main>
           {!home && (
             <div className={styles.backToHome}>
@@ -67,6 +69,14 @@ export default function Layout({ children, home }) {
           )}
           <br/>
         </div>
+         )}
+
+         {wide && (
+             <div className={styles.containerWide}>
+              <main>{children}</main>
+            </div>
+         )}
+
         <footer>
           <span>Only you know who you can be</span>
         </footer>
