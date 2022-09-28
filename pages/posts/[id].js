@@ -7,7 +7,12 @@ import utilStyles from '../../styles/utils.module.css';
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
-  const allPostsData = getSortedPostsData("principles").slice(0, 3);
+
+  // I'm giving recommendations based on the first tag we find.
+  // This is not great but gets the jobs done for now.
+  // The filter is removing the post with the same id from the recommendations.
+  const firstTag = postData.tags[0];
+  const allPostsData = getSortedPostsData(firstTag).filter(post => post.id !== postData.id).slice(0, 3);
 
   return {
     props: {
@@ -48,7 +53,7 @@ export default function Post({ postData, allPostsData }) {
         
           {tags.map(tag => (
             <Link href={`/tags/${tag}`}>
-              <span className='tag'>{tag}</span>
+              <span className='tag'>{tag.slice(0,1).toUpperCase() + tag.slice(1)}</span>
             </Link>
           ))}
           </section>
@@ -57,7 +62,7 @@ export default function Post({ postData, allPostsData }) {
             <br/>
             <h3 className={utilStyles.headingMd}>Other essays you may like</h3>
             <div>
-            {allPostsData.map(({ id, date, title }) => (
+            {allPostsData.map(({ id, date, title, contentPreview }) => (
               <Link href={`/posts/${id}`}>
               <div className={utilStyles.recommendedEntry} key={id}>
                 
@@ -66,6 +71,8 @@ export default function Post({ postData, allPostsData }) {
                 <small className={utilStyles.lightText}>
                   <Date dateString={date} />
                 </small>
+
+                <div dangerouslySetInnerHTML={{ __html: contentPreview.slice(0, 120) + "…"}} />
               </div>
               </Link>
             ))}

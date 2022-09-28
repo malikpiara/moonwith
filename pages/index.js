@@ -3,13 +3,12 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-import Date from '../components/date';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData,
+      allPostsData
     },
   };
 }
@@ -23,16 +22,14 @@ export default function Home({ allPostsData }) {
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title, tags }) => (
+          {allPostsData.map(({ id, title, contentPreview }) => (
             <li className={utilStyles.recommendedEntry} key={id}>
             <Link href={`/posts/${id}`}>
-              <a>{title}</a>
+              <h2 className={utilStyles.headingXl}>{title}</h2>
             </Link>
             
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
+            <div dangerouslySetInnerHTML={{ __html: contentPreview.slice(0, 250) + "…"}} />
+
           </li>
           ))}
         </ul>
