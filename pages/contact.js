@@ -19,7 +19,7 @@ export default function Contact() {
         <title>{siteTitle}</title>
       </Head>
 
-      <h1 className={utilStyles.headingXl}>Get in touch with me</h1>
+      <h1 className={utilStyles.heading2Xl}>Get in touch with me</h1>
       
       <section className={utilStyles.headingMd}>
             <h2 className={utilStyles.headingLg}>Around the web</h2>

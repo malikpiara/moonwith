@@ -3,14 +3,17 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const name = 'Malik Piara';
 export const siteTitle = 'Moonwith'
 
 export default function Layout({ children, home, wide }) {
+  const router = useRouter()
     return (
       <div className={styles.containerWide}>
         <Head>
+        
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
@@ -25,21 +28,20 @@ export default function Layout({ children, home, wide }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-
-       
             
         <header className={wide? styles.headerBeige: styles.headerMw }>
             <>
+
             <Link href={'/'}>
             <h1 className={"siteTitle"}>{siteTitle}</h1>
-            </Link>
-            
+            </Link> 
+
 
             <ul className={utilStyles.list}>
-                <Link href="/"><li className={`${styles.navigationItem} ${styles.navigationItemActive}`}>Essays</li></Link>
-                <Link href="/about"><li className={styles.navigationItem}>About</li></Link>
-                <Link href="#"><li className={styles.navigationItem}>Projects</li></Link>
-                <Link href="/contact"><li className={styles.navigationItem}>Get in touch</li></Link>
+                <Link href="/"><li className={`${styles.navigationItem} ${router.pathname == "/" ? styles.navigationItemActive : ""}`}>Essays</li></Link>
+                <Link href="/about"><li className={`${styles.navigationItem} ${router.pathname == "/about" ? styles.navigationItemActive : ""}`}>About</li></Link>
+                <Link href="/projects"><li className={`${styles.navigationItem} ${router.pathname == "/projects" ? styles.navigationItemActive : ""}`}>Projects</li></Link>
+                <Link href="/contact"><li className={`${styles.navigationItem} ${router.pathname == "/contact" ? styles.navigationItemActive : ""}`}>Get in touch</li></Link>
               </ul>
 
               <Link href="/">
