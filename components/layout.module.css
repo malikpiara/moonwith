@@ -36,6 +36,7 @@
     }
     .container, .containerWide {
       font-size: 0.95em;
+      padding: 0 0.25em;
     }
   }
 
