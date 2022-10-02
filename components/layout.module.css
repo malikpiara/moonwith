@@ -30,6 +30,15 @@
     background-color: beige;
   }
 
+  @media(max-width: 600px) {
+    .headerBeige, .headerMw {
+      display: none;
+    }
+    .container, .containerWide {
+      font-size: 0.9em;
+    }
+  }
+
   .navigationItem {
     display: inline-block;
     gap: 10px;

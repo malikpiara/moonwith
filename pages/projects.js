@@ -36,7 +36,7 @@ export default function Projects() {
             <p>My pride and joy. Upframe was my first attempt at building a scalable organisation and business model. Boostrapped from highschool.</p>
             
             <p>Our aim was to help first-time founders get unstuck and to move faster with a sense of accountability. And to give them get a sense of community. The ways in which we did so changed over time, as we learned about the needs and constraints of the market.</p>
-            <p><a class="link" href="https://www.linkedin.com/company/upframe/" target="_blank">The last iteration</a> was a platform that enabled first-time founders to find mentors and book video calls with them right away. Akin to Calendly with a powerful people search.</p>
+            <p><a className="link" href="https://www.linkedin.com/company/upframe/" target="_blank">The last iteration</a> was a platform that enabled first-time founders to find mentors and book video calls with them right away. Akin to Calendly with a powerful people search.</p>
 
             <p>We had recurring revenue, a poweful vision, a solid business model and the track record of enabling 1000+ conversations and video calls between mentors and mentees worldwide. From Portugal, to Nigeria to Pakistan. — Unfortunately, I made a lot of mistakes that led us to be in a difficult position and ultimately killed the company.</p>
             
@@ -55,16 +55,16 @@ export default function Projects() {
                   />
 
             
-            <h2 class="title">351, the Portuguese Startup Community</h2>
+            <h2 className="title">351, the Portuguese Startup Community</h2>
             <p>When I organised my first conference and startup events or created my first company, I was a teenager. I didn't have the experience or network so I had to spend a lot of time and energy to make it happen.</p>
             <p>After moving to Berlin and seeing how the rest of Europe operated, I created 351 with the goal of building a local startup scene that was more connected, inclusive and wise. Today, newcomers with energy and the right mindset can have access to key people and create the kind of impact that took me years to achieve.</p>
 
             <p>Today, <b>351 is the largest and most active startup community in Portugal</b>. I'm not able to claim responsability for that achievement as I'm no longer a part of it. But I'm happy something I started is still growing and producing the kind of impact than I wouldn't be able to sustain with the reliable leadership of <a href="https://www.linkedin.com/in/fernando-jardim/" target="_blank">Fernando Jardim</a> and other volunteers. </p>
             
-            <p>If you want to get to know or keep up to date with the ever growing startup scene or get settled in Portugal, 351 might be a good first door for you. <a class="link" href="http://351.community/" target="_blank">Join the Slack Community</a>.</p>
+            <p>If you want to get to know or keep up to date with the ever growing startup scene or get settled in Portugal, 351 might be a good first door for you. <a className="link" href="http://351.community/" target="_blank">Join the Slack Community</a>.</p>
             
-            <h2 class="title">Fuzzboard.com (2020 - 2022)</h2>
-            <p>This lay-off crisis brought up by Covid-19 inspired me to build <a class="link" href="https://www.linkedin.com/company/fuzzboard/" target="_blank">a central place for startup jobs in Portugal</a>. Until then you’d have to go through multiple sources to hear about interesting roles at Portuguese startups. They also didn't have many resources to spread the word effectively. </p>
+            <h2 className="title">Fuzzboard.com (2020 - 2022)</h2>
+            <p>This lay-off crisis brought up by Covid-19 inspired me to build <a className="link" href="https://www.linkedin.com/company/fuzzboard/" target="_blank">a central place for startup jobs in Portugal</a>. Until then you’d have to go through multiple sources to hear about interesting roles at Portuguese startups. They also didn't have many resources to spread the word effectively. </p>
 
             <p>The project taught me distribution is often more important than the product itself. Although any developer can buld a job board, there are few that would be able to do so in strong collaboration with the government agency for entrepreneurship and startups, key accelerators and the largest startup community in the country.</p>
 
@@ -72,16 +72,16 @@ export default function Projects() {
             
             <p>Built an API, multiple Telegram and Twitter bots, and a Slack integration. Helped 400+ people looking for a job after escaping the war. Wouldn't be able to do so without the incredible support of <a href="https://www.mongodb.com/" target="_blank">MongoDB</a> and generous donations from people I don't know. </p>
 
-            <p>I burned out because I didn't put myself first and that was a lesson too: In order to take care of others, we need to take care of ourselves first. Fuzzboard was eventually absorbed by <a class="link" href="http://employukraine.org/" target="_blank">employukraine.org</a> because that was the most impactful way of helping people in the long-run. </p>
+            <p>I burned out because I didn't put myself first and that was a lesson too: In order to take care of others, we need to take care of ourselves first. Fuzzboard was eventually absorbed by <a className="link" href="http://employukraine.org/" target="_blank">employukraine.org</a> because that was the most impactful way of helping people in the long-run. </p>
             
-            <h2 class="title">Slack alternative for teams that hate distractions</h2>
+            <h2 className="title">Slack alternative for teams that hate distractions</h2>
             <p>I used to operate teams thinking only about what was best for me. One thing that took a painful amount of time to realise was that <b>great</b> designers and engineers need time and space to do their best work.</p>
             <p>On <a href="#upframe">Upframe's</a> last year, we decided to kill most meetings and work asynchronously, communicating daily with long-form writting. It was unconventional and I don't think that approach will work for everyone because different teams have different needs.</p>
             <p>I believe the tools we use end up shaping the way we work (think about cutlery vs chopsticks and how their adoption affects the way people cook) so I'm building an alternative to Slack or Discord that is calm by default based on what I learned working that way. This time, my only goal is to keep learning as much as I can about software engineering and product development while I finish my studies.</p>
             
             <p>The app is online and can already replace daily standups. But it's not ready for public adoption. To get updates:</p>
-            <p>1) <a class="link" target="_blank" href="https://github.com/malikpiara/fuzzboard">Check the Github repository</a>.</p>
-            <p>2) <a class="link" target="_blank" href="https://twitter.com/malikpiara/status/1395749135836499968">Follow this Twitter thread</a>.</p>
+            <p>1) <a className="link" target="_blank" href="https://github.com/malikpiara/fuzzboard">Check the Github repository</a>.</p>
+            <p>2) <a className="link" target="_blank" href="https://twitter.com/malikpiara/status/1395749135836499968">Follow this Twitter thread</a>.</p>
         </section>
     </Layout>
   );
