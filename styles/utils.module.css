@@ -90,6 +90,15 @@
     right: -43px;
   }
 
+  @media(max-width: 600px) {
+    .fullWidthGrid {
+      overflow: hidden;
+    }
+    .shiftedImage {
+      right: 0px;
+    }
+  }
+
   .fullWidthGrid h1 {
     font-weight: 900;
     flex: 100%;
