@@ -93,9 +93,14 @@
   @media(max-width: 600px) {
     .fullWidthGrid {
       overflow: hidden;
+      padding: 1em;
     }
     .shiftedImage {
       right: 0px;
+    }
+    .recommendedEntry {
+      padding: 0em;
+      font-size: 0.9em;
     }
   }
 
