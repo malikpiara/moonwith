@@ -31,14 +31,43 @@ export default function Layout({ children, home, wide }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
+
+        <header id={utilStyles.navbarMobile}>
+              <div style={{display: "flex", gap: "20px", alignItems: "center"}}>
+                <Link href="/">
+                        <a>
+                          <Image
+                            priority
+                            src="/images/profile.jpg"
+                            className={utilStyles.borderCircle}
+                            height={55}
+                            width={55}
+                            alt={name}
+                          />
+                        </a>
+                </Link>
+
+                <h1 className={"siteTitle"}>
+                  <a href="/" title="Malik's Blog">{siteTitle}</a>
+                </h1>
+                </div>
+
+              
+                <ul style={{display: "flex", flexWrap: "nowrap", margin: "0px", padding: "0px", justifyContent:"space-between"}}>
+                  <Link href="/"><li className={`${styles.navigationItem} ${router.pathname == "/" ? styles.navigationItemActive : ""}`}>Essays</li></Link>
+                  <Link href="/about"><li className={`${styles.navigationItem} ${router.pathname == "/about" ? styles.navigationItemActive : ""}`}>About</li></Link>
+                  <Link href="/projects"><li className={`${styles.navigationItem} ${router.pathname == "/projects" ? styles.navigationItemActive : ""}`}>Projects</li></Link>
+                  <Link href="/contact"><li className={`${styles.navigationItem} ${router.pathname == "/contact" ? styles.navigationItemActive : ""}`}>Get in touch</li></Link>
+                </ul>
+              
+        </header>
             
         <header className={wide? styles.headerBeige: styles.headerMw }>
             <>
 
             <Link href={'/'}>
             <h1 className={"siteTitle"}>{siteTitle}</h1>
-            </Link> 
-
+            </Link>
 
             <ul className={utilStyles.list}>
                 <Link href="/"><li className={`${styles.navigationItem} ${router.pathname == "/" ? styles.navigationItemActive : ""}`}>Essays</li></Link>

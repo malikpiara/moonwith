@@ -39,6 +39,7 @@
     }
     .container, .containerWide {
       font-size: 0.95em;
+      margin-top: 130px;
     }
   }
 
