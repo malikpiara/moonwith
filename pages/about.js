@@ -18,7 +18,7 @@ export default function About() {
       <section className={utilStyles.fullWidthGrid}>
 
             <div>
-            <h1>Talent is distributed globally but opportunities aren't. — I want to help change that.</h1>
+            <h1 className={utilStyles.headingSpecial}>Talent is distributed globally but opportunities aren't. — I want to help change that.</h1>
             <p>
               My name is Malik and I work on initiatives that promote more access to opportunities for people who don't have them. My mission is to help build a world where more people can have the freedom to decide who they want to be.
             </p>
@@ -43,7 +43,7 @@ export default function About() {
         </section>
 
       <section className={utilStyles.fullWidthGrid}>
-        <h1>Here's what some people say about me</h1>
+        <h1 className={utilStyles.headingSpecial}>Here's what some people say about me</h1>
         <div>
           <div>
           <p>"I can't think of another word to describe Malik better than 'leader'. He knows how to manage, motivate and encourage a team to an extreme extent. he really cares for what he does which is to change the world for the better. I know you'll achieve great things. Keep pushing forward!"</p>

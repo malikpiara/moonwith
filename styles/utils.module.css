@@ -8,7 +8,7 @@
   
   .headingXl {
     font-size: 2rem;
-    line-height: 1.3;
+    line-height: 1;
     font-weight: 800;
     letter-spacing: -0.05rem;
     margin: 1rem 0;
@@ -16,7 +16,8 @@
   
   .headingLg {
     font-size: 1.5rem;
-    line-height: 1.4;
+    font-weight: 800;
+    line-height: 1;
     margin: 1rem 0;
   }
   
@@ -104,11 +105,36 @@
     background-color: var(--body-bg);
   }
 
-  .beige {
-    background-color: beige !important;
+  .headingSpecial  {
+    font-weight: 900;
+    flex: 100%;
+    margin: 20px auto;
+    font-family: "Source Serif Pro", Georgia, Montserrat, sans-serif;
+    font-size: 52px;
+    line-height: 1.1;
+    color: #152644;
+  }
+
+  .fullWidthGrid > div {
+    flex: 1 1 400px;
+  }
+
+  .fullWidthGrid a {
+    text-transform: uppercase;
+    font-size: 15px;
   }
 
   @media(max-width: 600px) {
+    .heading2Xl {
+      font-size: 2.2rem;
+    }
+    .headingXl {
+      font-size: 1.8rem;
+      line-height: 0.7;
+    }
+    .headingSpecial {
+      font-size: 2rem;
+    }
     .fullWidthGrid {
       overflow: hidden;
       padding: 1em;
@@ -128,23 +154,4 @@
       color: inherit;
       text-decoration: none;
     }
-  }
-
-  .fullWidthGrid h1 {
-    font-weight: 900;
-    flex: 100%;
-    margin: 20px auto;
-    font-family: "Source Serif Pro", Georgia, Montserrat, sans-serif;
-    font-size: 52px;
-    line-height: 1.1;
-    color: #152644;
-  }
-
-  .fullWidthGrid > div {
-    flex: 1 1 400px;
-  }
-
-  .fullWidthGrid a {
-    text-transform: uppercase;
-    font-size: 15px;
   }
