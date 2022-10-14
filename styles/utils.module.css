@@ -93,7 +93,6 @@
   #navbarMobile {
     display: none;
     overflow: hidden;
-    background-color: #e9e4f2;
     position: fixed;
     top: 0;
     width: 100%;
@@ -102,6 +101,11 @@
     transition: 0.5s ease-in-out;
     font-weight: 600;
     font-family: Montserrat;
+    background-color: var(--body-bg);
+  }
+
+  .beige {
+    background-color: beige !important;
   }
 
   @media(max-width: 600px) {

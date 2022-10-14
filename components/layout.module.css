@@ -27,7 +27,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 1em 1.8em;
-    background-color: beige;
   }
 
   @media(max-width: 600px) {
@@ -39,7 +38,7 @@
     }
     .container, .containerWide {
       font-size: 0.95em;
-      margin-top: 130px;
+      margin-top: 180px;
     }
   }
 

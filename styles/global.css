@@ -1,10 +1,18 @@
+.purple {
+  --body-bg: #e9e4f2;
+}
+
+.green {
+  --body-bg: #f5f5dc;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: system-ui, -apple-system, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
   color: #152644;
-  background-color: #e9e4f2;
+  background-color: var(--body-bg);
   box-sizing: border-box;
   letter-spacing: 0.1px;
   line-height: 1.6;

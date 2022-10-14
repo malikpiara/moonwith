@@ -3,6 +3,10 @@ import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 
+export async function getStaticProps() {
+  return { props: {isGreen: true} };
+}
+
 
 export default function About() {
   return (

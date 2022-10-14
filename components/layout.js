@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 const name = 'Malik Piara';
 export const siteTitle = 'Moonwith'
 
-export default function Layout({ children, home, wide }) {
+export default function Layout({ children, home, wide, green }) {
   const router = useRouter()
     return (
       <div className={styles.containerWide}>
@@ -32,7 +32,9 @@ export default function Layout({ children, home, wide }) {
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
 
-        <header id={utilStyles.navbarMobile}>
+        
+
+        <header id={utilStyles.navbarMobile }>
               <div style={{display: "flex", gap: "10px", alignItems: "center"}}>
                 <Link href="/">
                         <a>
@@ -114,6 +116,9 @@ export default function Layout({ children, home, wide }) {
         <footer>
           <span>Only you know who you can be</span>
         </footer>
+       
       </div>
+      
     );
+    
   }
