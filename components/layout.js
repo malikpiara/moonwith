@@ -33,15 +33,15 @@ export default function Layout({ children, home, wide }) {
         </Head>
 
         <header id={utilStyles.navbarMobile}>
-              <div style={{display: "flex", gap: "20px", alignItems: "center"}}>
+              <div style={{display: "flex", gap: "10px", alignItems: "center"}}>
                 <Link href="/">
                         <a>
                           <Image
                             priority
                             src="/images/profile.jpg"
                             className={utilStyles.borderCircle}
-                            height={55}
-                            width={55}
+                            height={50}
+                            width={50}
                             alt={name}
                           />
                         </a>
