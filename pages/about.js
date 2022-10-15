@@ -16,7 +16,9 @@ export default function About() {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={`${utilStyles.fullWidthGrid} ${animate.animate__animated} ${animate.animate__fadeIn}`}>
+      <section className={`${utilStyles.flex} ${utilStyles.columnReverse} ${utilStyles.fullWidthGrid} ${animate.animate__animated} ${animate.animate__fadeIn}`}>
+
+        <section className={`${utilStyles.flex} ${utilStyles.columnReverse}`}>
 
             <div>
             <h1 className={utilStyles.headingSpecial}>Talent is distributed globally but opportunities aren't. — I want to help change that.</h1>
@@ -41,6 +43,8 @@ export default function About() {
                     alt="Portrait of myself"
                   />
             </div>
+        </section>
+
         </section>
 
       <section className={utilStyles.fullWidthGrid}>
