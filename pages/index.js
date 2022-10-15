@@ -22,10 +22,6 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
 
-      <div className={`${animate.animate__animated} ${animate.animate__fadeIn}`}>
-        Banana
-      </div>
-
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${animate.animate__animated} ${animate.animate__fadeIn}`}>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, title, contentPreview }) => (
