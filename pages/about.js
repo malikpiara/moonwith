@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
+import animate from '../styles/animate.module.css';
 import utilStyles from '../styles/utils.module.css';
 
 export async function getStaticProps() {
@@ -15,7 +16,7 @@ export default function About() {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={utilStyles.fullWidthGrid}>
+      <section className={`${utilStyles.fullWidthGrid} ${animate.animate__animated} ${animate.animate__fadeIn}`}>
 
             <div>
             <h1 className={utilStyles.headingSpecial}>Talent is distributed globally but opportunities aren't. — I want to help change that.</h1>

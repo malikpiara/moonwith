@@ -18,6 +18,7 @@ export default function Layout({ children, home, wide, green }) {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Serif+Pro:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
           <meta
             name="description"
             content="Malik's blog on programming, design and product development."
@@ -34,7 +35,7 @@ export default function Layout({ children, home, wide, green }) {
 
         
 
-        <header id={utilStyles.navbarMobile }>
+        <header id={utilStyles.navbarMobile}>
               <div style={{display: "flex", gap: "10px", alignItems: "center"}}>
                 <Link href="/">
                         <a>

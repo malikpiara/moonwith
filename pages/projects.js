@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
+import animate from '../styles/animate.module.css';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 
@@ -19,6 +20,8 @@ export default function Projects() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+
+      <section className={`${animate.animate__animated} ${animate.animate__fadeIn}`}>
 
       <h1 className={utilStyles.heading2Xl}>Projects</h1>
 
@@ -82,6 +85,7 @@ export default function Projects() {
             <p>The app is online and can already replace daily standups. But it's not ready for public adoption. To get updates:</p>
             <p>1) <a className="link" target="_blank" href="https://github.com/malikpiara/fuzzboard">Check the Github repository</a>.</p>
             <p>2) <a className="link" target="_blank" href="https://twitter.com/malikpiara/status/1395749135836499968">Follow this Twitter thread</a>.</p>
+        </section>
         </section>
     </Layout>
   );
