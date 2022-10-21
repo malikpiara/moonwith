@@ -10,7 +10,7 @@ export async function getStaticProps() {
   return {
     props: {
       allPostsData,
-      isGreen: false
+      isGreen: false,
     },
   };
 }
@@ -23,6 +23,7 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${animate.animate__animated} ${animate.animate__fadeIn}`}>
+
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, title, contentPreview }) => (
             <li className={utilStyles.recommendedEntry} key={id}>

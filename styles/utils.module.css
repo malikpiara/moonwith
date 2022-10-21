@@ -131,6 +131,28 @@
     font-size: 15px;
   }
 
+  .table2Colors {
+    overflow-x: hidden;
+  }
+
+  .table2Colors div {
+    border-radius: 5px;
+    padding: 5px 0px;
+  }
+
+  .table2Colors div div {
+    width: 200px;
+    padding-left: 20px;
+  }
+
+  /* .table2Colors div div:first-child {
+    width: auto;
+  } */
+
+  .table2Colors > div:nth-child(odd) {
+    background-color: #dcd1ef;
+  }
+
   @media(max-width: 700px) {
     .heading2Xl {
       font-size: 2.2rem;
