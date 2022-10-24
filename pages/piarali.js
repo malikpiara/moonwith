@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
 import animate from '../styles/animate.module.css';
 import utilStyles from '../styles/utils.module.css';
