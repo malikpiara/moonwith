@@ -12,7 +12,7 @@ Are we accepting what someone else teaches us because they hold some authority o
 
 People who care about progress, care enough to take a step back and reassess the current state of affairs. — The mindset is not the one of a contrarian. Or of someone who thinks they're wiser than everyone else who came before them. It's about courage, kindness and integrity with ourselves, our peers and the world at large.
 
-**Do we ask ourselves enough time:**
+**Do we ask ourselves enough times:**
 - Does this make sense?
 - What are we actually trying to achieve with this method or tool? Are we using it blindly or in an intentional way?
 - Could there be a better way?
