@@ -17,3 +17,5 @@ People who care about progress, care enough to take a step back and reassess the
 - What are we actually trying to achieve with this method or tool? Are we using it blindly or in an intentional way?
 - Could there be a better way?
 - What would we improve or do differently?
+
+Thank you David Heinemeier Hansson and Jason Fried for shaping the way I see the world through your actions. You inspire me every day.
