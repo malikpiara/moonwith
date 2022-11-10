@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 const name = 'Malik Piara';
 export const siteTitle = 'Moonwith'
 
-export default function Layout({ children, home, wide, green }) {
+export default function Layout({ children, home, wide }) {
   const router = useRouter()
     return (
       <div className={styles.containerWide}>
@@ -73,10 +73,18 @@ export default function Layout({ children, home, wide, green }) {
             </Link>
 
             <ul className={utilStyles.list}>
-                <Link href="/"><li className={`${styles.navigationItem} ${router.pathname == "/" ? styles.navigationItemActive : ""}`}>Essays</li></Link>
-                <Link href="/about"><li className={`${styles.navigationItem} ${router.pathname == "/about" ? styles.navigationItemActive : ""}`}>About</li></Link>
-                <Link href="/projects"><li className={`${styles.navigationItem} ${router.pathname == "/projects" ? styles.navigationItemActive : ""}`}>Projects</li></Link>
-                <Link href="/contact"><li className={`${styles.navigationItem} ${router.pathname == "/contact" ? styles.navigationItemActive : ""}`}>Get in touch</li></Link>
+                <Link href="/">
+                  <a className={`${styles.navigationItem} ${router.pathname == "/" ? styles.navigationItemActive : ""}`}>Essays</a>
+                </Link>
+                <Link href="/about">
+                  <a className={`${styles.navigationItem} ${router.pathname == "/about" ? styles.navigationItemActive : ""}`}>About</a>
+                </Link>
+                <Link href="/projects">
+                  <a className={`${styles.navigationItem} ${router.pathname == "/projects" ? styles.navigationItemActive : ""}`}>Projects</a>
+                </Link>
+                <Link href="/contact">
+                  <a className={`${styles.navigationItem} ${router.pathname == "/contact" ? styles.navigationItemActive : ""}`}>Get in touch</a>
+                </Link>
               </ul>
 
               <Link href="/">

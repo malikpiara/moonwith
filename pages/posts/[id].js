@@ -2,10 +2,19 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData, getSortedPostsData } from '../../lib/posts';
 import Date from '../../components/date';
+import Comment from '../../components/comment';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 
+export async function loadComments() {
+  // Call piara.li endpoint to get comments dummy.
+  const res = await fetch('https://piara.li/comments')
+  const data = await res.json()
+  return data
+}
+
 export async function getStaticProps({ params }) {
+  const comments = await loadComments();
   const postData = await getPostData(params.id);
 
   // I'm giving recommendations based on the first tag we find.
@@ -17,7 +26,8 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       postData,
-      allPostsData
+      allPostsData,
+      comments
     },
   };
 }
@@ -31,7 +41,7 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postData, allPostsData }) {
+export default function Post({ postData, allPostsData, comments }) {
 
   const tags = postData.tags;
 
@@ -52,15 +62,35 @@ export default function Post({ postData, allPostsData }) {
           <section>
             <h3 className={utilStyles.headingMd}>Tags</h3>
         
-          {tags.map(tag => (
-            <Link href={`/tags/${tag}`}>
-              <span className='tag'>{tag.slice(0,1).toUpperCase() + tag.slice(1)}</span>
-            </Link>
-          ))}
+          {
+            tags.map(tag => (
+              <Link href={`/tags/${tag}`}>
+                <span className='tag'>{tag.slice(0,1).toUpperCase() + tag.slice(1)}</span>
+              </Link>
+            ))
+          }
           </section>
 
+          <br/>
           <section>
-            <br/>
+            <h3 className={utilStyles.headingMd}>Comments</h3>
+
+            {
+              // Only displaying comments that have the same post id
+              // for any give post. TODO: Change the Backend to only entries with the
+              // post_id parameter by design.
+              comments
+              .filter(comment => comment.post_id == postData.id)
+              .map((comment) => {
+                return (
+                      <Comment comment={comment} key={comment.id} />
+                )
+              })
+            }
+          </section>
+
+          <br/>
+          <section>
             <h3 className={utilStyles.headingMd}>Other essays you may like</h3>
             <div>
             {allPostsData.map(({ id, date, title, contentPreview }) => (
