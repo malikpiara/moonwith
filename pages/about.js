@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
-import animate from '../styles/animate.module.css';
 import utilStyles from '../styles/utils.module.css';
 
 export async function getStaticProps() {
@@ -16,7 +15,7 @@ export default function About() {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={`${utilStyles.flex} ${utilStyles.columnReverse} ${utilStyles.fullWidthGrid} ${animate.animate__animated} ${animate.animate__fadeIn}`}>
+      <section className={`${utilStyles.flex} ${utilStyles.columnReverse} ${utilStyles.fullWidthGrid}`}>
 
         <section className={`${utilStyles.flex} ${utilStyles.columnReverse}`}>
 

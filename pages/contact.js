@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import animate from '../styles/animate.module.css';
 import { getSortedPostsData } from '../lib/posts';
 
 export async function getStaticProps() {
@@ -20,7 +19,7 @@ export default function Contact() {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={`${animate.animate__animated} ${animate.animate__fadeIn}`}>
+      <section>
 
       <h1 className={utilStyles.heading2Xl}>Get in touch with me</h1>
       

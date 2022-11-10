@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Cal from "@calcom/embed-react";
 import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
 
 export default function Book() {
     return (

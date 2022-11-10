@@ -4,7 +4,6 @@ import { getAllPostIds, getPostData, getSortedPostsData } from '../../lib/posts'
 import Date from '../../components/date';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
-import animate from '../../styles/animate.module.css';
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -41,7 +40,7 @@ export default function Post({ postData, allPostsData }) {
         <Head>
           <title>{postData.title}</title>
         </Head>
-        <section className={`${animate.animate__animated} ${animate.animate__fadeIn}`}>
+        <section>
         <article>
           <h1 className={utilStyles.heading2Xl}>{postData.title}</h1>
           <div className={utilStyles.lightText}>

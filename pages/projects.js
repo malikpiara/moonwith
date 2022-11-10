@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
-import animate from '../styles/animate.module.css';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 
@@ -21,7 +20,7 @@ export default function Projects() {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={`${animate.animate__animated} ${animate.animate__fadeIn}`}>
+      <section>
 
       <h1 className={utilStyles.heading2Xl}>Projects</h1>
 
