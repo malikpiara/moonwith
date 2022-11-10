@@ -74,6 +74,10 @@
     display: flex;
   }
 
+  .gap20 {
+    gap: 20px;
+  }
+
   .fullWidthGrid {
     background-color: beige;
     display: flex;

@@ -1,8 +1,22 @@
+
 .commentHead {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
+    margin-bottom: -10px;
 }
 
 .commentBody {
     font-size: 20px;
+}
+
+.avatar {
+    flex: 0 0 5em;
+    background-color: #d0c4f4;
+    text-align: center;
+    line-height: 45px;
+    color: #715abb;
+    border-radius: 50px;
+    font-weight: 500;
+    max-height: 45px;
+    max-width: 45px;
 }
