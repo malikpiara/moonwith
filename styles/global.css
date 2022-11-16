@@ -22,6 +22,10 @@ body {
   font-size: 1.15rem;
 }
 
+textarea {
+  font-family: system-ui, -apple-system, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
+}
+
 * {
   box-sizing: border-box;
 }

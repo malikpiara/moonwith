@@ -1,3 +1,8 @@
+.primary {
+  background-color: #715abb;
+  color: #ffffff;
+}
+
 .container {
     max-width: 39rem;
     padding: 0 1rem;
@@ -69,3 +74,81 @@
   .backToHome {
     margin: 3rem 0 0;
   }
+
+  .loadMore {
+    background-color: #774c2814;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+    transition: 2s;
+  }
+
+  .loadMore:hover {
+    background-color: #d0c4f4;
+  }
+
+  .commentInput {
+    display: flex;
+    gap: 4px;
+  }
+
+  .commentInput textarea,
+  .commentInput input[type="email"] {
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: transparent;
+    outline: 1px solid #b9b9b9;
+    font-size: 15px;
+    box-sizing: border-box;
+    resize: none;
+  }
+
+  .commentInput input[type="email"] {
+    height: 45px;
+  }
+
+  .commentInput textarea {
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    height: 105px;
+    max-height: 400px;
+    background-color: transparent;
+    outline: 1px solid #b9b9b9;
+    font-size: 15px;
+    box-sizing: border-box;
+    resize: none;
+  }
+
+  .commentInput textarea:focus,
+  .commentInput input[type="email"]:focus {
+    outline: 2px solid #715abb;
+  }
+
+  .button {
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 0;
+    text-align: center;
+    padding: 10px 20px;
+    opacity: 1;
+    outline: 0;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: system-ui, -apple-system, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .commentButtonContainer {
+    align-self: flex-end;
+  }
+
+.commentContainer {
+  flex-direction: column;
+  gap: 8px;
+}

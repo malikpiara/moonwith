@@ -74,6 +74,10 @@
     display: flex;
   }
 
+  .column {
+    flex-direction: column;
+  }
+
   .gap20 {
     gap: 20px;
   }

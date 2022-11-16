@@ -3,6 +3,8 @@ import Layout from '../../components/layout';
 import { getAllPostIds, getPostData, getSortedPostsData } from '../../lib/posts';
 import Date from '../../components/date';
 import Comment from '../../components/comment';
+import LoadMore from '../../components/load-more';
+import CommentInput from '../../components/comment-input';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 
@@ -73,7 +75,10 @@ export default function Post({ postData, allPostsData, comments }) {
 
           <br/>
           <section>
+            <LoadMore label={"Load Comments"}></LoadMore>
+            
             <h3 className={utilStyles.headingMd}>Comments</h3>
+            <CommentInput></CommentInput>
 
             {
               // Only displaying comments that have the same post id
