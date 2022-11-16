@@ -7,6 +7,7 @@ import LoadMore from '../../components/load-more';
 import CommentInput from '../../components/comment-input';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
+import commentStyles from '../../components/comment.module.css';
 import { useState } from 'react';
 
 export async function loadComments() {
@@ -46,6 +47,8 @@ export async function getStaticPaths() {
 
 export default function Post({ postData, allPostsData, comments }) {
 
+  let nextId = 0;
+
   const [showMore, setShowMore] = useState(false);
 
     function handleClick() {
@@ -56,6 +59,8 @@ export default function Post({ postData, allPostsData, comments }) {
 
   const [emailAddress, setEmailAddress] = useState('');
   const [commentContent, setCommentContent] = useState('');
+
+  const [listOfComments, SetListOfComments] = useState([]);
 
   function handleEmailChange(e) {
     setEmailAddress(e.target.value);
@@ -109,10 +114,23 @@ export default function Post({ postData, allPostsData, comments }) {
                 commentContent={commentContent}
                 emailOnChange={handleEmailChange}
                 CommentOnChange={handleCommentChange}
+                OnSubmit={e => {
+                  e.preventDefault();
+                  SetListOfComments([
+                    { id: nextId++, email: emailAddress, content: commentContent },
+                    ...listOfComments, // Keeps old items at the end.
+                  ]);
+              }}
               />
 
-              <p>{emailAddress}</p>
-              <p>{commentContent}</p>
+              <div>
+                {listOfComments.map(comment => (
+                  <div key={comment.id}>
+                    <div className={commentStyles.commentHead}>{comment.email}</div>
+                    <div className={commentStyles.commentBody}>{comment.content}</div>
+                    </div>
+                ))}
+              </div>
 
               {
               // Only displaying comments that have the same post id
