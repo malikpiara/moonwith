@@ -54,6 +54,17 @@ export default function Post({ postData, allPostsData, comments }) {
 
   const tags = postData.tags;
 
+  const [emailAddress, setEmailAddress] = useState('');
+  const [commentContent, setCommentContent] = useState('');
+
+  function handleEmailChange(e) {
+    setEmailAddress(e.target.value);
+  }
+
+  function handleCommentChange(e) {
+    setCommentContent(e.target.value);
+  }
+
     return (
       <Layout>
         <Head>
@@ -86,13 +97,22 @@ export default function Post({ postData, allPostsData, comments }) {
             {!showMore ?
             (
               <>
-              <LoadMore label={"Load Comments"}></LoadMore>
+              <LoadMore label={"Load Comments"}/>
               </>
             ) :
             (
               <>
               <h3 className={utilStyles.headingMd}>Comments</h3>
-              <CommentInput></CommentInput>
+              
+              <CommentInput
+                emailAddress={emailAddress}
+                commentContent={commentContent}
+                emailOnChange={handleEmailChange}
+                CommentOnChange={handleCommentChange}
+              />
+
+              <p>{emailAddress}</p>
+              <p>{commentContent}</p>
 
               {
               // Only displaying comments that have the same post id

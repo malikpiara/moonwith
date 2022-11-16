@@ -45,7 +45,7 @@ export default function Home({ allPostsData }) {
 
         <br/>
         { showMore <= allPostsData.length && (
-          <LoadMore label={"Load More Posts"}></LoadMore>
+          <LoadMore label={"Load More Posts"}/>
         )}
         
 
