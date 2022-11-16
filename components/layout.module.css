@@ -76,6 +76,7 @@
   }
 
   .loadMore {
+    font-weight: 500;
     background-color: #774c2814;
     border-radius: 8px;
     text-align: center;
