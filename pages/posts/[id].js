@@ -7,6 +7,7 @@ import LoadMore from '../../components/load-more';
 import CommentInput from '../../components/comment-input';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
+import { useState } from 'react';
 
 export async function loadComments() {
   // Call piara.li endpoint to get comments dummy.
@@ -45,6 +46,12 @@ export async function getStaticPaths() {
 
 export default function Post({ postData, allPostsData, comments }) {
 
+  const [showMore, setShowMore] = useState(false);
+
+    function handleClick() {
+        setShowMore(true);
+      }
+
   const tags = postData.tags;
 
     return (
@@ -74,16 +81,23 @@ export default function Post({ postData, allPostsData, comments }) {
           </section>
 
           <br/>
-          <section>
-            <LoadMore label={"Load Comments"}></LoadMore>
-            
-            <h3 className={utilStyles.headingMd}>Comments</h3>
-            <CommentInput></CommentInput>
+          {/* FIX: I shouldn't be targetting the whole section but the LoadMore element.  */}
+          <section  onClick={handleClick}>
+            {!showMore ?
+            (
+              <>
+              <LoadMore label={"Load Comments"}></LoadMore>
+              </>
+            ) :
+            (
+              <>
+              <h3 className={utilStyles.headingMd}>Comments</h3>
+              <CommentInput></CommentInput>
 
-            {
+              {
               // Only displaying comments that have the same post id
-              // for any give post. TODO: Change the Backend to only entries with the
-              // post_id parameter by design.
+              // for any give post. TODO: Change the Backend to only fetch entries with the
+              // post_id parameter without filter.
               comments
               .filter(comment => comment.post_id == postData.id)
               .map((comment) => {
@@ -92,6 +106,10 @@ export default function Post({ postData, allPostsData, comments }) {
                 )
               })
             }
+              </>
+            )
+            }
+            
           </section>
 
           <br/>
