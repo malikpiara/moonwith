@@ -121,8 +121,7 @@ export default function Post({ postData, allPostsData, comments }) {
                   ]);
                   setEmailAddress('');
                   setCommentContent('');
-
-              }}
+                }}
               />
 
               <div>
