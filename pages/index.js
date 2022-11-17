@@ -3,7 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-import LoadMore from '../components/load-more';
+import LoadMore from '../components/LoadMore';
 import { useState } from 'react';
 
 export async function getStaticProps() {

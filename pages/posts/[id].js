@@ -1,13 +1,12 @@
 import Head from 'next/head';
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 import { getAllPostIds, getPostData, getSortedPostsData } from '../../lib/posts';
-import Date from '../../components/date';
-import Comment from '../../components/comment';
-import LoadMore from '../../components/load-more';
-import CommentInput from '../../components/comment-input';
+import Date from '../../components/Date';
+import Comment from '../../components/Comment';
+import LoadMore from '../../components/LoadMore';
+import CommentInput from '../../components/CommentInput';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
-import commentStyles from '../../components/comment.module.css';
 import { useState } from 'react';
 
 export async function loadComments() {
@@ -60,7 +59,7 @@ export default function Post({ postData, allPostsData, comments }) {
   const [emailAddress, setEmailAddress] = useState('');
   const [commentContent, setCommentContent] = useState('');
 
-  const [listOfComments, SetListOfComments] = useState([]);
+  const [listOfComments, setListOfComments] = useState([]);
 
   function handleEmailChange(e) {
     setEmailAddress(e.target.value);
@@ -116,10 +115,13 @@ export default function Post({ postData, allPostsData, comments }) {
                 CommentOnChange={handleCommentChange}
                 OnSubmit={e => {
                   e.preventDefault();
-                  SetListOfComments([
+                  setListOfComments([
                     { id: nextId++, email: emailAddress, content: commentContent },
                     ...listOfComments, // Keeps old items at the end.
                   ]);
+                  setEmailAddress('');
+                  setCommentContent('');
+
               }}
               />
 
