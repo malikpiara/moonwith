@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Layout from '../../components/Layout';
+import Layout from '../../components/layout';
 import { getAllPostIds, getPostData, getSortedPostsData } from '../../lib/posts';
-import Date from '../../components/Date';
-import Comment from '../../components/Comment';
-import LoadMore from '../../components/LoadMore';
-import CommentInput from '../../components/CommentInput';
+import Date from '../../components/date';
+import Comment from '../../components/comment';
+import LoadMore from '../../components/load-more';
+import CommentInput from '../../components/comment-input';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 import { useState } from 'react';
