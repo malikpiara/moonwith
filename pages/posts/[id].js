@@ -125,10 +125,7 @@ export default function Post({ postData, allPostsData, comments }) {
 
               <div>
                 {listOfComments.map(comment => (
-                  <div key={comment.id}>
-                    <div className={commentStyles.commentHead}>{comment.email}</div>
-                    <div className={commentStyles.commentBody}>{comment.content}</div>
-                    </div>
+                    <Comment author={comment.email} content={comment.content} key={comment.id} />
                 ))}
               </div>
 
@@ -140,7 +137,7 @@ export default function Post({ postData, allPostsData, comments }) {
               .filter(comment => comment.post_id == postData.id)
               .map((comment) => {
                 return (
-                      <Comment comment={comment} key={comment.id} />
+                      <Comment author={comment.author} content={comment.content} key={comment.id} />
                 )
               })
             }
