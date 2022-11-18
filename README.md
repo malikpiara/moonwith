@@ -2,6 +2,8 @@
 
 🌙 Frontend for my personal platform. A blog with posts written in markdown + a couple of static pages and little experiments enabled by my API, [piara.li](https://github.com/malikpiara/piara.li). Every page in the app is pre-rendered statically. Built with Next.js.
 
+The comment section is enabled by my API. The content is read and sent from there.
+
 ## Get Started
 
 1. Clone the repository into your own computer. Make sure you have a recent version of Node.js (version 10.13 or later) installed.
@@ -15,8 +17,22 @@ When deploying to Vercel, the platform automatically detects Next.js, runs `next
 
 ## Current Status. Next Steps
 
-Started building a comment system in November for my module assessment at CODE University. Right now, we're retrieving comments from a dummy data structure in the [piara.li](https://github.com/malikpiara/piara.li) API. New comments only show up after the app is redeployed and they don't persist since there's no database yet.
+Started building a comment system in November for my frontend module assessment at CODE University. Right now, comments are retrieved from a data structure in the [piara.li](https://github.com/malikpiara/piara.li) API. New comments only show up after the app is redeployed and they don't persist since there's no database yet. You can read the comments in real time at [piara.li/comments](https://piara.li/comments).
 
-The next step is sending data from the comment forms to the API. Already built an endpoint but having trouble figuring out how to issue the POST request from the frontend.
+The next step is to make the comment section of every post dynamic, to connect the API to a database and to start using CSS variables. That will conclude version 1 of the comment system.
 
-After the first version of the comment system is fully implemented, I'll work on a way of managing them and build a page protected with authentication.
+Afterwards, I'll start working on a way of managing comments and build a page protected with authentication.
+
+## Project History
+
+This is the fifth time I build Moonwith from scratch. I learned a great deal in the process about different technologies and approaches. Here's an overview:
+
+1. Built everything statically with HTML and CSS.
+2. Created a Flask application (combining both frontend and backend, deployed to Heroku).
+3. Created a Django application (combining both frontend and backend, deployed to Heroku).
+4. Created a [static site generator with Flask + HTMX](https://github.com/malikpiara/moon) to access important capabilities like AJAX and CSS transitions without adding complexity to the frontend.
+5. Next.js frontend supported by the piara.li API in Express.
+
+## Thank You
+
+Thank you Ben Bachem, Jonathan Freiberger, Hanno Grimm, Moritz Eich, Dennis Willmann, Johann Hemmann, Lukas Müller, Henrique Dias and Berk Özzambak for supporting me so promptly. Without you, I wouldn't have been able to learn so much in so little time.
