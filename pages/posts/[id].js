@@ -119,6 +119,12 @@ export default function Post({ postData, allPostsData, comments }) {
                     { id: nextId++, email: emailAddress, content: commentContent },
                     ...listOfComments, // Keeps old items at the end.
                   ]);
+                  // Using next.js Rewrites to replace /api/:path* with my API.
+                  // Check next.config.js for more details.
+                  fetch(`/api/post/${postData.id}/${emailAddress}/${commentContent}`, {
+                    method: 'post',
+                    headers: {'Content-Type':'application/json'}
+                   }).then(response => console.log(response.json()));
                   setEmailAddress('');
                   setCommentContent('');
                 }}
