@@ -15,4 +15,8 @@ When deploying to Vercel, the platform automatically detects Next.js, runs `next
 
 ## Current Status. Next Steps
 
-Started building a comment system in November for my module assessment at CODE University. Right now, we're retrieving comments from a dummy data structure in the [piara.li](https://github.com/malikpiara/piara.li) API. New comments only show up after the app is redeployed and they don't persist since there's no database yet. The next step is sending data from the comment forms to the API. Already built an endpoint but having trouble figuring out how to issue the POST request from the frontend.
+Started building a comment system in November for my module assessment at CODE University. Right now, we're retrieving comments from a dummy data structure in the [piara.li](https://github.com/malikpiara/piara.li) API. New comments only show up after the app is redeployed and they don't persist since there's no database yet.
+
+The next step is sending data from the comment forms to the API. Already built an endpoint but having trouble figuring out how to issue the POST request from the frontend.
+
+After the first version of the comment system is fully implemented, I'll work on a way of managing them and build a page protected with authentication.
