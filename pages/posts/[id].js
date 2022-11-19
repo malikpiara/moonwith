@@ -9,6 +9,7 @@ import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 import { useState } from 'react';
 
+
 export async function loadComments() {
   // Call piara.li endpoint to get comments dummy.
   const res = await fetch('https://piara.li/comments')
@@ -32,6 +33,7 @@ export async function getStaticProps({ params }) {
       allPostsData,
       comments
     },
+    revalidate: 10, // Regenerating the page.
   };
 }
 
