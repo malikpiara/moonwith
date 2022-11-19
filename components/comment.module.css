@@ -14,7 +14,7 @@
     background-color: #d0c4f4;
     text-align: center;
     line-height: 45px;
-    color: #715abb;
+    color: var(--primary-color);
     border-radius: 50px;
     font-weight: 500;
     max-height: 45px;

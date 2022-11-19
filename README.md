@@ -19,7 +19,7 @@ When deploying to Vercel, the platform automatically detects Next.js, runs `next
 
 Started building a comment system in November for my frontend module assessment at CODE University. Right now, comments are retrieved from a data structure in the [piara.li](https://github.com/malikpiara/piara.li) API. New comments only show up after the app is redeployed and they don't persist since there's no database yet. You can read the comments in real time at [piara.li/comments](https://piara.li/comments).
 
-The next step is to make the comment section of every post dynamic, to connect the API to a database and to start using CSS variables. That will conclude version 1 of the comment system.
+The next step is to make the comment section of every post dynamic, to connect the API to a database and to start using CSS variables more broadly. That will conclude version 1 of the comment system.
 
 Afterwards, I'll start working on a way of managing comments and build a page protected with authentication.
 

@@ -55,7 +55,7 @@
   }
   
   .lightText {
-    color: #666;
+    color: #666666;
   }
 
   .recommendedEntry {
@@ -67,7 +67,7 @@
   }
 
   .recommendedEntry:hover {
-    background-color: #80808014;
+    background-color: var(--bg-contrast-1);
   }
 
   .flex {
@@ -116,7 +116,7 @@
     z-index: 1;
     transition: 0.5s ease-in-out;
     font-weight: 600;
-    font-family: Montserrat;
+    font-family: var(--font-family-nav);
     background-color: var(--body-bg);
   }
 
@@ -124,10 +124,10 @@
     font-weight: 900;
     flex: 100%;
     margin: 20px auto;
-    font-family: "Source Serif Pro", Georgia, Montserrat, sans-serif;
+    font-family: var(--font-family-heading);
     font-size: 52px;
     line-height: 1.1;
-    color: #152644;
+    color: var(--body-color);
   }
 
   .fullWidthGrid > div {

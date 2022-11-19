@@ -1,5 +1,5 @@
 .primary {
-  background-color: #715abb;
+  background-color: var(--primary-color);
   color: #ffffff;
 }
 
@@ -54,20 +54,20 @@
     padding: 10px;
     border-radius: 10px;
     color: hsl(60, 9.146341463414625%, 18.372549019607842%);
-    font-family: Montserrat;
+    font-family: var(--font-family-nav);
     text-decoration: none;
     font-size: 16px;
     transition: 0.5s ease-in-out;
   }
 
 .navigationItemActive {
-    background-color: #80808014;
-    color: #715abb;
+    background-color: var(--bg-contrast-1);
+    color: var(--primary-color);
 }
 
   .navigationItem:hover {
-    background-color: #80808014;
-    color: #715abb;
+    background-color: var(--bg-contrast-1);
+    color: var(--primary-color);
     cursor: pointer;
   }
   
@@ -139,7 +139,7 @@
     outline: 0;
     text-decoration: none;
     white-space: nowrap;
-    font-family: system-ui, -apple-system, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
+    font-family: var(--font-family-body);
     font-weight: 600;
     border-radius: 4px;
     font-size: 14px;

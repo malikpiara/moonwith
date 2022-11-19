@@ -1,3 +1,13 @@
+:root {
+  --primary-color: #715abb;
+  --body-color: #152644;
+  --bg-contrast-1: #80808014;
+  --tag-bg-color: #ffffff;
+  --font-family-body: system-ui, -apple-system, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
+  --font-family-heading: "Source Serif Pro", Georgia, Montserrat, sans-serif;
+  --font-family-nav: Montserrat;
+}
+
 .purple {
   --body-bg: #e9e4f2;
 }
@@ -6,28 +16,27 @@
   --body-bg: #f5f5dc;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: system-ui, -apple-system, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
-  color: #152644;
+  font-family: var(--font-family-body);
+  color: var(--body-color);
   background-color: var(--body-bg);
-  box-sizing: border-box;
   letter-spacing: 0.1px;
   line-height: 1.6;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   font-size: 1.15rem;
 }
 
 textarea {
-  font-family: system-ui, -apple-system, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
-}
-
-* {
-  box-sizing: border-box;
+  font-family: var(--font-family-body);
 }
 
 ::selection {
@@ -36,7 +45,7 @@ textarea {
 
 a {
   /* color: #329f24; */
-  color: #715abb;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -50,7 +59,7 @@ img {
 }
 
 .tag {
-  background-color: #ffffff;
+  background-color: var(--tag-bg-color);
   border-radius: 20px;
   padding: 8px 14px;
   margin-right: 10px;
@@ -59,7 +68,7 @@ img {
 }
 
 .siteTitle {
-  font-family: "Source Serif Pro", Georgia, Montserrat, sans-serif;
+  font-family: var(--font-family-heading);
   letter-spacing: 0.8px;
   font-size: 1.6rem;
   line-height: 1.4;
@@ -71,7 +80,7 @@ img {
 }
 
 .siteTitle:hover {
-  background-color: #80808014;
+  background-color: var(--bg-contrast-1);
 }
 
 footer {
