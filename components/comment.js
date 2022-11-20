@@ -12,6 +12,9 @@ export default function Comment({author, content}) {
     setLoading(true)
     fetch('/api/comments')
       .then((res) => res.json())
+      .then(() => {
+        setLoading(false)
+      })
   }, [])
 
   if (isLoading) return <p>Loading...</p>
