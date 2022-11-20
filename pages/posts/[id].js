@@ -7,7 +7,7 @@ import LoadMore from '../../components/load-more';
 import CommentInput from '../../components/comment-input';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 export async function loadComments() {
@@ -33,8 +33,6 @@ export async function getStaticProps({ params }) {
       allPostsData,
       comments
     },
-    // Triggering a regeneration of the page when a request comes in.
-    revalidate: 10, //At most every 10 seconds.
   };
 }
 
