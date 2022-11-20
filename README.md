@@ -1,6 +1,6 @@
 # Moonwith
 
-🌙 Frontend for my personal platform. A blog with posts written in markdown + a couple of static pages and little experiments enabled by my API, [piara.li](https://github.com/malikpiara/piara.li). Every page in the app is pre-rendered statically. Built with Next.js.
+🌙 Frontend for my personal platform. A blog with posts written in markdown + a couple of pages about my projects and little experiments enabled by my API, [piara.li](https://github.com/malikpiara/piara.li). Every page in the app is pre-rendered statically. Built with Next.js.
 
 The comment section is enabled by my API. The content is read and sent from there.
 
@@ -17,11 +17,13 @@ When deploying to Vercel, the platform automatically detects Next.js, runs `next
 
 ## Current Status. Next Steps
 
-Started building a comment system in November for my frontend module assessment at CODE University. Right now, comments are retrieved from a data structure in the [piara.li](https://github.com/malikpiara/piara.li) API. New comments only show up after the app is redeployed and they don't persist since there's no database yet. You can read the comments in real time at [piara.li/comments](https://piara.li/comments).
+Started building a comment system in November for my web frontend module assessment at CODE University. Right now, comments are retrieved from a data structure in the [piara.li](https://github.com/malikpiara/piara.li) API. I'm using Incremental Static Regeneration (ISR) to re-generate the blog post pages every time there is a new request. Doing so, I manage to make new comments show up without having to rebuild the entire website.
 
-The next step is to make the comment section of every post dynamic, to connect the API to a database and to start using CSS variables more broadly. That will conclude version 1 of the comment system.
+Comments don't persist since the API is not connected to a database. You can check what's under the hood at [piara.li/comments](https://piara.li/comments).
 
-Afterwards, I'll start working on a way of managing comments and build a page protected with authentication.
+The next step is to introduce On-Demand Revalidation so that the blog post pages are only re-generated when a comment is submitted. And to start using CSS variables more broadly. That will conclude version 1 of the comment system.
+
+Afterwards, I'll start working on a way of managing comments and build an admin page protected with authentication.
 
 ## Project History
 

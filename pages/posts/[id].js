@@ -33,7 +33,8 @@ export async function getStaticProps({ params }) {
       allPostsData,
       comments
     },
-    revalidate: 10, // Regenerating the page.
+    // Triggering a regeneration of the page when a request comes in.
+    revalidate: 10, //At most every 10 seconds.
   };
 }
 
