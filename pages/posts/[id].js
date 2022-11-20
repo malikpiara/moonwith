@@ -9,16 +9,7 @@ import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 import { useState, useEffect } from 'react';
 
-
-export async function loadComments() {
-  // Call piara.li endpoint to get comments dummy.
-  const res = await fetch('https://piara.li/comments')
-  const data = await res.json()
-  return data
-}
-
 export async function getStaticProps({ params }) {
-  const comments = await loadComments();
   const postData = await getPostData(params.id);
 
   // I'm giving recommendations based on the first tag we find.
@@ -30,8 +21,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       postData,
-      allPostsData,
-      comments
+      allPostsData
     },
   };
 }
@@ -45,7 +35,7 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postData, allPostsData, comments }) {
+export default function Post({ postData, allPostsData }) {
 
   let nextId = 0;
 
@@ -61,6 +51,18 @@ export default function Post({ postData, allPostsData, comments }) {
   const [commentContent, setCommentContent] = useState('');
 
   const [listOfComments, setListOfComments] = useState([]);
+  const [listOfSubmittedComments, setSubmittedComment] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true)
+    fetch('/api/comments')
+      .then((res) => res.json())
+      .then((listOfComments) => {
+        setListOfComments(listOfComments)
+        setLoading(false)
+      })
+  }, [])
 
   function handleEmailChange(e) {
     setEmailAddress(e.target.value);
@@ -116,9 +118,9 @@ export default function Post({ postData, allPostsData, comments }) {
                 CommentOnChange={handleCommentChange}
                 OnSubmit={e => {
                   e.preventDefault();
-                  setListOfComments([
+                  setSubmittedComment([
                     { id: nextId++, email: emailAddress, content: commentContent },
-                    ...listOfComments, // Keeps old items at the end.
+                    ...listOfSubmittedComments, // Keeps old items at the end.
                   ]);
                   // Using next.js Rewrites to replace /api/:path* with my API.
                   // Check next.config.js for more details.
@@ -132,8 +134,8 @@ export default function Post({ postData, allPostsData, comments }) {
               />
 
               <div>
-                {listOfComments.map(comment => (
-                    <Comment author={comment.email} content={comment.content} key={comment.id} />
+                {listOfSubmittedComments.map(comment => (
+                    <Comment author={comment.email} content={comment.content} key={comment.id}/>
                 ))}
               </div>
 
@@ -141,11 +143,11 @@ export default function Post({ postData, allPostsData, comments }) {
               // Only displaying comments that have the same post id
               // for any give post. TODO: Change the Backend to only fetch entries with the
               // post_id parameter without filter.
-              comments
+              listOfComments
               .filter(comment => comment.post_id == postData.id)
               .map((comment) => {
                 return (
-                      <Comment author={comment.author} content={comment.content} key={comment.id} />
+                      <Comment author={comment.author} content={comment.content} key={comment.id} isLoading={isLoading} />
                 )
               })
             }
