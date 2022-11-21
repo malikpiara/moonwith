@@ -3,7 +3,7 @@ module.exports = {
       return [
         {
           source: '/api/:path*',
-          destination: 'https://piara.li/:path*',
+          destination: 'https://cobra-api-mw.herokuapp.com/:path*',
         },
       ]
     },
