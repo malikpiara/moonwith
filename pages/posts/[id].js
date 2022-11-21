@@ -7,7 +7,8 @@ import LoadMore from '../../components/load-more';
 import CommentInput from '../../components/comment-input';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import ListOfComments from '../../components/list-of-comments';
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -50,19 +51,7 @@ export default function Post({ postData, allPostsData }) {
   const [emailAddress, setEmailAddress] = useState('');
   const [commentContent, setCommentContent] = useState('');
 
-  const [listOfComments, setListOfComments] = useState([]);
   const [listOfSubmittedComments, setSubmittedComment] = useState([]);
-  const [isLoading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true)
-    fetch('/api/comments')
-      .then((res) => res.json())
-      .then((listOfComments) => {
-        setListOfComments(listOfComments)
-        setLoading(false)
-      })
-  }, [])
 
   function handleEmailChange(e) {
     setEmailAddress(e.target.value);
@@ -140,16 +129,8 @@ export default function Post({ postData, allPostsData }) {
               </div>
 
               {
-              // Only displaying comments that have the same post id
-              // for any give post. TODO: Change the Backend to only fetch entries with the
-              // post_id parameter without filter.
-              listOfComments
-              .filter(comment => comment.post_id == postData.id)
-              .map((comment) => {
-                return (
-                      <Comment author={comment.author} content={comment.content} key={comment.id} isLoading={isLoading} />
-                )
-              })
+                      <ListOfComments post_id={postData.id} />
+                
             }
               </>
             )
