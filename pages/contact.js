@@ -24,8 +24,9 @@ export default function Contact() {
       <h1 className={utilStyles.heading2Xl}>Get in touch with me</h1>
       
       <section>
-            <h2 className={utilStyles.headingMd}>Around the web</h2>
-            <p>I share content related with emotional intelligence, product development and my personal projects.</p>
+        <p>When I was a teenager, I started reaching out to people I looked up to. Wouldn't be here without them. I'll  never say no to coffee or to sharing the few things I know with you. Don't be shy :)</p>
+        <h2 className={utilStyles.headingMd}>Around the web</h2>
+        <p>I share content related with emotional intelligence, product development and my personal projects.</p>
             <ul>
                 <li>
                     <a className="link" href="https://twitter.com/malikpiara" target="_blank">Twitter.</a>
@@ -42,7 +43,7 @@ export default function Contact() {
         <section>
             <h2 className={utilStyles.headingMd}>Reach me directly</h2>
             <ul>
-                <li><a className="link" href="mailto:malik@hey.com" target="_blank">malik@hey.com.</a> I take one week on average to reply.</li>
+                <li><a className="link" href="mailto:malik@hey.com" target="_blank">malik@hey.com.</a> I take time to reply because my priorities are often elsewhere. Please don't take it personally.</li>
                 <li><a className="link" href="https://t.me/malikpiara" target="_blank">@malikpiara on Telegram.</a></li>
             </ul>
         </section>

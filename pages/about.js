@@ -28,7 +28,10 @@ export default function About() {
               Moonwith is my digital home. The place where I share my thoughts on personal growth, emotional intelligence and product development.
             </p>
             <p>
-              At the moment, I'm studying and working as teaching assistant for product management at CODE University. And going through a 16-week design thinking program at D-School in Hasso Plattner Institute (Potsdam).
+              At the moment, I'm studying and working as teaching assistant for product management at CODE University in Berlin. Going through a 16-week design thinking program at D-School in Hasso Plattner Institute to gain more tools to tackle complex problems.
+            </p>
+            <p>
+              In the first half of 2023, I'll start looking for a place where I can create impact as a Product Manager or start a new company.
             </p>
             </div>
 
