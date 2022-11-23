@@ -13,13 +13,19 @@ Frontend for my personal platform built with Next.js. A blog with posts written 
 Vercel is the fastest way to deploy your Next.js application with zero configuration.
 When deploying to Vercel, the platform automatically detects Next.js, runs `next build`, and optimizes the build output for you.
 
-## Current Status. Next Steps
+## Current Status
 
-Started building a comment system in November for my web frontend module assessment at university. Right now, comments are retrieved from a data structure in the [piara.li](https://github.com/malikpiara/piara.li) API. I'm using ~~Incremental Static Regeneration (ISR) to re-generate the blog post pages every time there is a new request. Doing so, I manage to make new comments show up without having to rebuild the entire website.~~ Client-side data fetching with useEffect to load comments and reduce the number of requests to the server.
+Started building a comment system in November for my frontend module assessment at university. Right now, comments are retrieved from a data structure in the [cobra](https://github.com/malikpiara/cobra) API. I'm using client-side data fetching with `useEffect` to load comments without rebuilding my static pages. Doing so, we reduce the number of requests to the server.
 
-Comments don't persist for a long time since the API is not connected to a database (yet). You can check what's under the hood at [piara.li/comments](https://piara.li/comments).
+You can see all of the comments in real time at [cobra.moonwith.com/comments](https://cobra.moonwith.com/comments).
 
-The next step is ~~to introduce On-Demand Revalidation so that the blog post pages are only re-generated when a comment is submitted.~~ to start using CSS variables more broadly. That will conclude version 1 of the comment system. Afterwards, I'll start working on a way of managing comments and build an admin page protected with authentication.
+At [moonwith.com/piarali](https://moonwith.com/piarali) you can access my URL shortner. Using Incremental Static Regeneration (ISR) to re-generate this page every time there is a new request.
+
+## Next Steps
+
+- Start using CSS variables more broadly.
+- Start working on a way of managing comments and piara.li from an admin page within Moonwith.
+- Potentially introduce On-Demand Revalidation on the URL shortner page.
 
 ## Project History
 
