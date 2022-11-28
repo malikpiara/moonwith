@@ -9,6 +9,8 @@ import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 import { useState } from 'react';
 import ListOfComments from '../../components/list-of-comments';
+import { useUser } from '@auth0/nextjs-auth0';
+
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -37,6 +39,11 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData, allPostsData }) {
+
+  const { user, error, isLoading } = useUser();
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
 
   let nextId = 0;
 
@@ -100,7 +107,8 @@ export default function Post({ postData, allPostsData }) {
               <>
               <h3 className={utilStyles.headingMd}>Comments</h3>
               
-              <CommentInput
+              {user ? (
+                <CommentInput
                 emailAddress={emailAddress}
                 commentContent={commentContent}
                 emailOnChange={handleEmailChange}
@@ -121,6 +129,9 @@ export default function Post({ postData, allPostsData }) {
                   setCommentContent('');
                 }}
               />
+              ) : (
+                <div className={utilStyles.commentsSignup}>🌙 Be part of my exclusive community. <Link href="/api/auth/login">Sign up</Link> in order to leave a comment and see the hidden side of the Moon.</div>
+              )}
 
               <div>
                 {listOfSubmittedComments.map(comment => (
