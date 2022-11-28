@@ -4,8 +4,8 @@
   --bg-contrast-1: #80808014;
   --tag-bg-color: #ffffff;
   --font-family-body: system-ui, -apple-system, segoe ui, Roboto, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji;
-  --font-family-heading: "Source Serif Pro", Georgia, Montserrat, sans-serif;
-  --font-family-nav: Montserrat;
+/*   --font-family-heading: 'var(--sourceSerif4)', Georgia, var(--montserrat), sans-serif;
+  --font-family-nav: 'var(--montserrat)'; */
 }
 
 .purple {
@@ -68,7 +68,7 @@ img {
 }
 
 .siteTitle {
-  font-family: var(--font-family-heading);
+  font-family: var(--sourceSerif4);
   letter-spacing: 0.8px;
   font-size: 1.6rem;
   line-height: 1.4;

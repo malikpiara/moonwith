@@ -13,12 +13,7 @@ export default function Layout({ children, home, wide }) {
     return (
       <div className={styles.containerWide}>
         <Head>
-        
-          <link rel="icon" href="/favicon.ico" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com"/>
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Serif+Pro:wght@400;600;700;900&display=swap" rel="stylesheet"/>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
           <meta
             name="description"
             content="Malik's blog on programming, design and product development."
@@ -38,7 +33,6 @@ export default function Layout({ children, home, wide }) {
         <header id={utilStyles.navbarMobile}>
               <div style={{display: "flex", gap: "10px", alignItems: "center"}}>
                 <Link href="/">
-                        <a>
                           <Image
                             priority
                             src="/images/profile.jpg"
@@ -46,8 +40,7 @@ export default function Layout({ children, home, wide }) {
                             height={50}
                             width={50}
                             alt={name}
-                          />
-                        </a>
+                          />     
                 </Link>
 
                 <h1 className={"siteTitle"}>
@@ -73,22 +66,13 @@ export default function Layout({ children, home, wide }) {
             </Link>
 
             <ul className={utilStyles.list}>
-                <Link href="/">
-                  <a className={`${styles.navigationItem} ${router.pathname == "/" ? styles.navigationItemActive : ""}`}>Essays</a>
-                </Link>
-                <Link href="/about">
-                  <a className={`${styles.navigationItem} ${router.pathname == "/about" ? styles.navigationItemActive : ""}`}>About</a>
-                </Link>
-                <Link href="/projects">
-                  <a className={`${styles.navigationItem} ${router.pathname == "/projects" ? styles.navigationItemActive : ""}`}>Projects</a>
-                </Link>
-                <Link href="/contact">
-                  <a className={`${styles.navigationItem} ${router.pathname == "/contact" ? styles.navigationItemActive : ""}`}>Get in touch</a>
-                </Link>
+                <Link className={`${styles.navigationItem} ${router.pathname == "/" ? styles.navigationItemActive : ""}`} href="/">Essays</Link>
+                <Link className={`${styles.navigationItem} ${router.pathname == "/about" ? styles.navigationItemActive : ""}`} href="/about">About</Link>
+                <Link className={`${styles.navigationItem} ${router.pathname == "/projects" ? styles.navigationItemActive : ""}`} href="/projects">Projects</Link>
+                <Link className={`${styles.navigationItem} ${router.pathname == "/contact" ? styles.navigationItemActive : ""}`} href="/contact">Get in touch</Link>
               </ul>
 
               <Link href="/">
-                <a>
                   <Image
                     priority
                     src="/images/profile.jpg"
@@ -97,7 +81,6 @@ export default function Layout({ children, home, wide }) {
                     width={65}
                     alt={name}
                   />
-                </a>
               </Link>
             </>
         </header>
@@ -107,9 +90,7 @@ export default function Layout({ children, home, wide }) {
           <main>{children}</main>
           {!home && (
             <div className={styles.backToHome}>
-              <Link href="/">
-                <a>← Back to home</a>
-              </Link>
+              <Link href="/">← Back to home</Link>
             </div>
           )}
           <br/>

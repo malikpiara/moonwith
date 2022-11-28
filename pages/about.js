@@ -7,7 +7,6 @@ export async function getStaticProps() {
   return { props: {isGreen: true} };
 }
 
-
 export default function About() {
   return (
     <Layout wide>
@@ -39,9 +38,9 @@ export default function About() {
             <Image
                     priority
                     src="/images/malik.webp"
-                    width={3234}
-                    height={2260}
                     srcSet="2x"
+                    width={600}
+                    height={420}
                     alt="Portrait of myself"
                   />
             </div>
@@ -71,29 +70,25 @@ export default function About() {
         <div>
               <p>"I was impressed by the focus and dedication that he had for all things related to what he was doing. He would read all the books, talk to the best professionals and surround himself with knowledge that allowed him to grow and learn. I am not exaggerating, he will improve exponentially using all the information he can find."</p>
               <a href="https://www.linkedin.com/in/ulisses-miguel-ferreira/">— ULISSES (SOFTWARE ENGINEER, CONSENSYS)</a>
-            
         </div>
-        </div>
+      </div>
+
         <div>
-          <p>
-            "Malik is reliable, dedicated and always upbeat. His ability to attack complex problem spaces and to dive deep without losing sight of goal makes him a great contributor in product discovery phases. Based on his strong inner drive, Malik is able to handle a high-volume workload. He consistently met or surpassed all weekly milestones while working on his Summer School project.
-          <p/>
+          <div>
+          <p>"Malik is reliable, dedicated and always upbeat. His ability to attack complex problem spaces and to dive deep without losing sight of goal makes him a great contributor in product discovery phases. Based on his strong inner drive, Malik is able to handle a high-volume workload. He consistently met or surpassed all weekly milestones while working on his Summer School project.</p>
 
-          <p>
-            A key factor of Malik’s success is his ability to connect to co-workers and stakeholders easily. He quickly builds up reliable relationships and is able to use these to drive his topics forward.
-          </p>
+          <p>A key factor of Malik’s success is his ability to connect to co-workers and stakeholders easily. He quickly builds up reliable relationships and is able to use these to drive his topics forward.</p>
 
-          <p>
-            Curious and open-minded, Malik quickly learns to navigate in complex environments and challenging topics which allows him to provide valuable contributions for the company early on. He is always eager to learn, embraces change and is able to grow fast."
-          </p>
+          <p>Curious and open-minded, Malik quickly learns to navigate in complex environments and challenging topics which allows him to provide valuable contributions for the company early on. He is always eager to learn, embraces change and is able to grow fast."</p>
 
-          </p>
           <a href="https://www.linkedin.com/in/freudenreich/">— TOBIAS FREUDENREICH (DIRECTOR OF PRODUCT MANAGEMENT, XING)</a>
+          </div>
 
           <div>
               <p>"There is not a day I'm not impressed by how far Malik has come and everything he has accomplished in his yet short life. His drive and passion are not something you see everyday. He takes every advice in consideration, thinks about it, works on it, does his research, and comes back with his own approach on the subject. If you ask me, that's the best kind of learning. It's truly an honour to be a part of his journey, and I can't wait to see where it leads him. Somewhere amazing, I'm sure."</p>
+
               <a href="https://www.linkedin.com/in/joanavieirajoana/">— JO VIEIRA (CO-FOUNDER, LINEHEALTH)</a>
-            </div>
+          </div>
         </div>
       </section>
     </Layout>

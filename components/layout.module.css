@@ -54,7 +54,7 @@
     padding: 10px;
     border-radius: 10px;
     color: hsl(60, 9.146341463414625%, 18.372549019607842%);
-    font-family: var(--font-family-nav);
+    font-family: var(--montserrat);
     text-decoration: none;
     font-size: 16px;
     transition: 0.5s ease-in-out;

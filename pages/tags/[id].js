@@ -35,7 +35,7 @@ export default function Post({ allPostsData, params }) {
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.recommendedEntry} key={id}>
             <Link href={`/posts/${id}`}>
-              <a>{title}</a>
+              {title}
             </Link>
             
             <br />
