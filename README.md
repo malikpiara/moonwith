@@ -1,6 +1,6 @@
 # 🌙 Moonwith
 
-Frontend for my personal platform built with Next.js. A blog with posts written in markdown + a couple of pages about my projects and a URL shortener enabled by my API, [piara.li](https://github.com/malikpiara/piara.li). Every page in the app is pre-rendered statically. Using client-side data fetching at the component level to retrieve comments.
+My personal platform. A blog with posts written in markdown + a comment system enabled by Cobra, my API. Authentication is powered by Auth0 and Next.js API routes. Most pages are pre-rendered statically. I'm using client-side data fetching at the component level to retrieve comments.
 
 ## Get Started
 
@@ -13,9 +13,13 @@ Frontend for my personal platform built with Next.js. A blog with posts written 
 Vercel is the fastest way to deploy your Next.js application with zero configuration.
 When deploying to Vercel, the platform automatically detects Next.js, runs `next build`, and optimizes the build output for you.
 
+At `.env.example` you can find the environmental variables that make authentication with [Auth0](https://auth0.com/docs/quickstart/webapp/nextjs/interactive) possible.
+
+`AUTH0_SECRET`: A long secret value used to encrypt the session cookie. You can generate a suitable string using openssl rand -hex 32 on the command line.
+
 ## Current Status
 
-Started building a comment system in November for my frontend module assessment at university. Right now, comments are retrieved from a data structure in the [cobra](https://github.com/malikpiara/cobra) API. I'm using client-side data fetching with `useEffect` to load comments without rebuilding my static pages. Doing so, we reduce the number of requests to the server.
+Started building a comment system in November for my frontend module assessment at university. Right now, comments are retrieved from the [cobra](https://github.com/malikpiara/cobra) API. I'm using client-side data fetching with `useEffect` to load comments without rebuilding my static pages. Doing so, we reduce the number of requests to the server.
 
 You can see all of the comments in real time at [cobra.moonwith.com/comments](https://cobra.moonwith.com/comments).
 
