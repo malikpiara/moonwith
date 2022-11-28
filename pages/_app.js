@@ -1,5 +1,6 @@
 import '../styles/global.css';
 import React, { useEffect } from 'react';
+import { UserProvider } from '@auth0/nextjs-auth0';
 import { Montserrat, Source_Serif_4 } from '@next/font/google'
 
 const montserrat = Montserrat({ 
@@ -18,8 +19,10 @@ export default function App({ Component, pageProps }) {
         document.body.className = pageProps.isGreen ? 'green' : 'purple';
       });
     return (
-      <main className={`${montserrat.variable} ${sourceSerif4.variable}`}>
-        <Component {...pageProps} />
+      <UserProvider>
+        <main className={`${montserrat.variable} ${sourceSerif4.variable}`}>
+          <Component {...pageProps} />
         </main>
+      </UserProvider>
     );
 }

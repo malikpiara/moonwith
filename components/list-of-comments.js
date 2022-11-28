@@ -7,7 +7,7 @@ export default function ListOfComments({post_id}) {
 
   useEffect(() => {
     setLoading(true)
-    fetch(`/api/comments/${post_id}`)
+    fetch(`/cobra/comments/${post_id}`)
       .then((res) => res.json())
       .then((listOfComments) => {
         setListOfComments(listOfComments)

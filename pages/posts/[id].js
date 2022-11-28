@@ -111,9 +111,9 @@ export default function Post({ postData, allPostsData }) {
                     { id: nextId++, email: emailAddress, content: commentContent },
                     ...listOfSubmittedComments, // Keeps old items at the end.
                   ]);
-                  // Using next.js Rewrites to replace /api/:path* with my API.
+                  // Using next.js Rewrites to replace /cobra/:path* with my API.
                   // Check next.config.js for more details.
-                  fetch(`/api/comments/${postData.id}/${emailAddress}/${commentContent}`, {
+                  fetch(`/cobra/comments/${postData.id}/${emailAddress}/${commentContent}`, {
                     method: 'put',
                     headers: {'Content-Type':'application/json'}
                    }).then(response => console.log(response.json()));
