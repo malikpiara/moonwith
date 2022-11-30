@@ -55,7 +55,7 @@ export default function Post({ postData, allPostsData }) {
 
   const tags = postData.tags;
 
-  const [emailAddress, setEmailAddress] = useState('');
+  //const [emailAddress, setEmailAddress] = useState('');
   const [commentContent, setCommentContent] = useState('');
 
   const [listOfSubmittedComments, setSubmittedComment] = useState([]);
@@ -109,23 +109,20 @@ export default function Post({ postData, allPostsData }) {
               
               {user ? (
                 <CommentInput
-                emailAddress={emailAddress}
                 commentContent={commentContent}
-                emailOnChange={handleEmailChange}
                 CommentOnChange={handleCommentChange}
                 OnSubmit={e => {
                   e.preventDefault();
                   setSubmittedComment([
-                    { id: nextId++, email: emailAddress, content: commentContent },
+                    { id: nextId++, email: user.email, content: commentContent },
                     ...listOfSubmittedComments, // Keeps old items at the end.
                   ]);
                   // Using next.js Rewrites to replace /cobra/:path* with my API.
                   // Check next.config.js for more details.
-                  fetch(`/cobra/comments/${postData.id}/${emailAddress}/${commentContent}`, {
+                  fetch(`/cobra/comments/${postData.id}/${user.email}/${commentContent}`, {
                     method: 'put',
                     headers: {'Content-Type':'application/json'}
                    }).then(response => console.log(response.json()));
-                  setEmailAddress('');
                   setCommentContent('');
                 }}
               />

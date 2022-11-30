@@ -5,6 +5,26 @@
     margin-bottom: -10px;
 }
 
+.comment_input_wrap form {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.comment_input_head {
+    flex: 0 0 32px;
+}
+
+.comment_input_right {
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
 .commentBody {
     font-size: 18px;
 }

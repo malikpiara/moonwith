@@ -92,7 +92,8 @@
 
   .commentInput {
     display: flex;
-    gap: 4px;
+    gap: 8px;
+    flex: 1 0;
   }
 
   .commentInput textarea,
@@ -157,4 +158,5 @@
 .commentContainer {
   flex-direction: column;
   gap: 8px;
+  flex: auto;
 }

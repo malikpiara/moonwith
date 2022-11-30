@@ -21,7 +21,7 @@ export default function ListOfComments({post_id}) {
     <>
       {listOfComments
       .map(comment => (
-        <Comment author={comment.author} content={comment.content}/>
+        <Comment author={comment.author.substring(0, comment.author.indexOf("@"))} content={comment.content}/>
       ))}
       </>
   );
