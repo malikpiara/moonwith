@@ -90,12 +90,6 @@
     background-color: #d0c4f4;
   }
 
-  .commentInput {
-    display: flex;
-    gap: 8px;
-    flex: 1 0;
-  }
-
   .commentInput textarea,
   .commentInput input[type="email"] {
     border: 0;
