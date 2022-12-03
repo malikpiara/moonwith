@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import LoadMore from '../components/load-more';
+import PostPreview from '../components/post_preview';
 import { useState } from 'react';
 
 export async function getStaticProps() {
@@ -17,7 +18,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-
   const [showMore, setShowMore] = useState(8);
 
   function handleClick() {
@@ -32,23 +32,16 @@ export default function Home({ allPostsData }) {
 
       <section onClick={handleClick} className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
 
-        <ul className={utilStyles.list}>
+        <div>
           {allPostsData.map(({ id, title, contentPreview }) => (
-            <li className={utilStyles.recommendedEntry} key={id}>
-              <Link href={`/posts/${id}`}>
-                <h2 className={utilStyles.headingXl}>{title}</h2>
-              </Link>
-              <div dangerouslySetInnerHTML={{ __html: contentPreview.slice(0, 250) + "…"}} />
-            </li>
+             <PostPreview id={id} title={title} contentPreview={contentPreview}></PostPreview>
           )).slice(0, showMore)}
-        </ul>
+        </div>
 
         <br/>
         { showMore <= allPostsData.length && (
           <LoadMore label={"Load More Posts"}/>
         )}
-        
-
       </section>
     </Layout>
   );

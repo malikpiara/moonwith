@@ -64,6 +64,12 @@
     cursor: pointer;
     transition: 0.5s ease-in-out;
     margin: 0 0 0.2rem;
+    text-decoration: none;
+  }
+
+  .recommendedEntry a,
+  .recommendedEntry a:hover {
+    text-decoration: none;
   }
 
   .recommendedEntry:hover {
@@ -168,6 +174,15 @@
   background-color: #d0c4f4;
   border: 2px solid var(--primary-color);
   border-radius: 8px;
+}
+
+.postPreview a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.postPreview h2 {
+  color: var(--primary-color);
 }
 
   @media(max-width: 700px) {
