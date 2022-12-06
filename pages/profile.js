@@ -10,12 +10,21 @@ export default function Profile() {
   if (error) return <div>{error.message}</div>;
 
   const [public_endpoint, setPublic] = useState([]);
+  const [private_endpoint, setPrivate] = useState([]);
 
   useEffect(() => {
     fetch(`/cobra/api/public`)
       .then((res) => res.json())
       .then((public_endpoint) => {
         setPublic(public_endpoint)
+      })
+  }, [])
+
+  useEffect(() => {
+    fetch(`/cobra/api/private`)
+      .then((res) => res.json())
+      .then((private_endpoint) => {
+        setPrivate(private_endpoint)
       })
   }, [])
 
@@ -30,5 +39,8 @@ export default function Profile() {
             
             <h2>Public Endpoint</h2>
             <p>{public_endpoint.message}</p>
+
+            <h2>Private Endpoint</h2>
+            <p>{private_endpoint.message}</p>
           </div>
       ))}
