@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
-import Link from 'next/link';
 import LoadMore from '../components/load-more';
 import PostPreview from '../components/post_preview';
 import { useState } from 'react';
