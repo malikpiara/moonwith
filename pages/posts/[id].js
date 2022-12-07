@@ -3,6 +3,7 @@ import Layout from '../../components/layout';
 import { getAllPostIds, getPostData, getSortedPostsData } from '../../lib/posts';
 import Date from '../../components/date';
 import Comment from '../../components/comment';
+import PostRecommendation from '../../components/post_recommendation';
 import LoadMore from '../../components/load-more';
 import CommentInput from '../../components/comment-input';
 import Link from 'next/link';
@@ -59,10 +60,6 @@ export default function Post({ postData, allPostsData }) {
   const [commentContent, setCommentContent] = useState('');
 
   const [listOfSubmittedComments, setSubmittedComment] = useState([]);
-
-  function handleEmailChange(e) {
-    setEmailAddress(e.target.value);
-  }
 
   function handleCommentChange(e) {
     setCommentContent(e.target.value);
@@ -150,22 +147,11 @@ export default function Post({ postData, allPostsData }) {
           <section>
             <h3 className={utilStyles.headingMd}>Other essays you may like</h3>
             <div>
-            {allPostsData.map(({ id, date, title, contentPreview }) => (
-              <Link href={`/posts/${id}`}>
-              <div className={utilStyles.recommendedEntry} key={id}>
-                
-                  <div className={utilStyles.headingSmall}><a>{title}</a></div>
-               
-                <small className={utilStyles.lightText}>
-                  <Date dateString={date} />
-                </small>
-
-                <div dangerouslySetInnerHTML={{ __html: contentPreview.slice(0, 120) + "…"}} />
-              </div>
-              </Link>
+            {allPostsData.map(({ id, title, contentPreview }) => (
+              <PostRecommendation id={id} title={title} contentPreview={contentPreview}/>
             ))}
-          </div>
-        </section>
+            </div>
+          </section>
        
         </article>
         </section>
