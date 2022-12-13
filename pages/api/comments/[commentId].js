@@ -9,12 +9,26 @@ export default withApiAuthRequired(async function handler(req, res) {
 
   const { commentId } = req.query
 
-  const response = await fetch(`https://cobra.moonwith.com/delete/comment/${commentId}`, {
-    method: "PUT",
+  if (req.method === 'GET') {
+    const response = await fetch(`https://cobra.moonwith.com/comment/${commentId}`, {
+    method: "GET",
     headers: {
       Authorization: `Bearer ${accessToken}`
     }
   });
-  const data = await response.json();
-  res.status(200).json(data);
-});
+  const comment = await response.json();
+  res.status(200).json(comment);
+}  else if (req.method === 'PUT') {
+    const response = await fetch(`https://cobra.moonwith.com/delete/comment/${commentId}`, {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+      'Content-Type': 'application/json',
+    }
+  });
+  const deletedComment = await response.json();
+  res.status(200).json(JSON.stringify(deletedComment));
+}
+  }
+
+  );
