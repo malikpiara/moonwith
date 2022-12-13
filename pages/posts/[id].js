@@ -111,7 +111,7 @@ export default function Post({ postData, allPostsData }) {
                 OnSubmit={e => {
                   e.preventDefault();
                   setSubmittedComment([
-                    { id: nextId++, email: user.email, content: commentContent },
+                    { id: nextId++, author: user.nickname, content: commentContent },
                     ...listOfSubmittedComments, // Keeps old items at the end.
                   ]);
                   
@@ -135,7 +135,7 @@ export default function Post({ postData, allPostsData }) {
               <div>
                 {/* TODO: Fetch user details from Auth0 based on the user_id (sub). */}
                 {listOfSubmittedComments.map(comment => (
-                    <Comment author={comment.sub} content={comment.content} key={comment.id}/>
+                    <Comment author={comment.author} content={comment.content} key={comment.id}/>
                 ))}
               </div>
 

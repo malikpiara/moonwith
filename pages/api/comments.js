@@ -9,11 +9,12 @@ export default withApiAuthRequired(async function handler(req, res) {
   });
   
   const post_id = req.body.post_id
-  const author= req.body.author
+  const user_id = req.body.user_id
+  const author = req.body.author
   const content = req.body.content
 
   if (req.method === 'POST') {
-    const response = await fetch(`https://cobra.moonwith.com/comments/${post_id}/${author}/${content}`, {
+    const response = await fetch(`https://cobra.moonwith.com/comments/${post_id}/${user_id}/${author}/${content}`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${accessToken}`,

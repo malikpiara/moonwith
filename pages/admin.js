@@ -31,7 +31,8 @@ export default function AdminDashboard() {
         <div className={styles.dataWrapper} id={comment.id}>
           <div>{comment.content}</div>
           <div><Link href={`posts/${comment.post_id}`}>{comment.post_id}</Link></div>
-          <div>{comment.author}</div>
+          <div>By {comment.author}</div>
+          <div>{comment.createdAt}</div>
           <div>
             {comment.isDeleted ? (
               <small>Deleted</small>
