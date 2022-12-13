@@ -20,7 +20,7 @@ export default function Profile() {
   }, [])
 
   useEffect(() => {
-    fetch(`/cobra/api/private`)
+    fetch(`api/token`)
       .then((res) => res.json())
       .then((private_endpoint) => {
         setPrivate(private_endpoint)

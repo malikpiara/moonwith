@@ -114,10 +114,14 @@ export default function Post({ postData, allPostsData }) {
                     { id: nextId++, email: user.email, content: commentContent },
                     ...listOfSubmittedComments, // Keeps old items at the end.
                   ]);
-                  // Using next.js Rewrites to replace /cobra/:path* with my API.
-                  // Check next.config.js for more details.
-                  fetch(`/cobra/comments/${postData.id}/${user.email}/${commentContent}`, {
-                    method: 'put',
+                  
+                  fetch(`/api/comments`, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                      post_id: postData.id,
+                      author: user.sub,
+                      content: commentContent
+                    }),
                     headers: {'Content-Type':'application/json'}
                    }).then(response => console.log(response.json()));
                   setCommentContent('');
@@ -128,8 +132,9 @@ export default function Post({ postData, allPostsData }) {
               )}
 
               <div>
+                {/* TODO: Fetch user details from Auth0 based on the user_id (sub). */}
                 {listOfSubmittedComments.map(comment => (
-                    <Comment author={comment.email} content={comment.content} key={comment.id}/>
+                    <Comment author={comment.sub} content={comment.content} key={comment.id}/>
                 ))}
               </div>
 

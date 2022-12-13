@@ -6,6 +6,7 @@ import { useUser } from '@auth0/nextjs-auth0';
 export default function Comment({ author, content }) {
   // const date = parseISO(dateString);
   const { user, error, isLoading } = useUser();
+  
   return (
     <>
           <div className={`${commentStyles.commentContainer} ${utilStyles.flex} ${utilStyles.gap20}`}>

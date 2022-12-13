@@ -3,7 +3,7 @@ import styles from '../styles/utils.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Link from 'next/link';
 
-export default function AdminDashboard(req, res) {
+export default function AdminDashboard() {
 
   const [comments, setComments] = useState([]);
 
