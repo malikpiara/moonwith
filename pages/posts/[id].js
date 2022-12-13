@@ -119,9 +119,9 @@ export default function Post({ postData, allPostsData }) {
                     method: 'POST',
                     body: JSON.stringify({
                       post_id: postData.id,
-                      author: user.sub,
+                      author: user.nickname,
+                      user_id: user.sub,
                       content: commentContent,
-                      //createdAt: Date.now()
                     }),
                     headers: {'Content-Type':'application/json'}
                    }).then(response => console.log(response.json()));
