@@ -128,7 +128,7 @@ export default function Post({ postData, allPostsData }) {
                 }}
               />
               ) : (
-                <div className={utilStyles.commentsSignup}>🌙 Be part of my exclusive community. <Link href="/api/auth/login">Sign up</Link> in order to leave a comment and see the hidden side of the Moon.</div>
+                <div className={utilStyles.commentsSignup}>🌙 Be part of my exclusive community. <Link href={`/api/auth/login?returnTo=/posts/${postData.id}`}>Sign up</Link> in order to leave a comment and see the hidden side of the Moon.</div>
               )}
 
               <div>
