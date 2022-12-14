@@ -2,36 +2,36 @@ import { useState, useEffect } from 'react';
 import Comment from './comment';
 import CommentPlaceholder from './comments_placeholder';
 
-export default function ListOfComments({post_id}) {
-  const [listOfComments, setListOfComments] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+export default function ListOfComments({ post_id }) {
+	const [listOfComments, setListOfComments] = useState([]);
+	const [isLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true)
-    fetch(`/cobra/comments/${post_id}`)
-      .then((res) => res.json())
-      .then((listOfComments) => {
-        setListOfComments(listOfComments)
-        setLoading(false)
-      })
-  }, [])
+	useEffect(() => {
+		setLoading(true);
+		fetch(`/cobra/comments/${post_id}`)
+			.then((res) => res.json())
+			.then((listOfComments) => {
+				setListOfComments(listOfComments);
+				setLoading(false);
+			});
+	}, []);
 
-  if (isLoading) return (
-    <>
-  <CommentPlaceholder/>
-  <br/>
-  <CommentPlaceholder/>
-  <br/>
-  <CommentPlaceholder/>
-    </>
-  )
+	if (isLoading)
+		return (
+			<>
+				<CommentPlaceholder />
+				<br />
+				<CommentPlaceholder />
+				<br />
+				<CommentPlaceholder />
+			</>
+		);
 
-  return (
-    <>
-      {listOfComments
-      .map(comment => (
-        <Comment author={comment.author} content={comment.content}/>
-      ))}
-      </>
-  );
+	return (
+		<>
+			{listOfComments.map((comment) => (
+				<Comment author={comment.author} content={comment.content} />
+			))}
+		</>
+	);
 }
