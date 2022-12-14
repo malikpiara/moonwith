@@ -43,8 +43,8 @@ export default function Post({ postData, allPostsData }) {
 
   const { user, error, isLoading } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
+  /* if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>; */
 
   let nextId = 0;
 
@@ -77,23 +77,22 @@ export default function Post({ postData, allPostsData }) {
             <Date dateString={postData.date} />
           </div>
 
+        {/* TODO */}
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
           <section>
             <h3 className={utilStyles.headingMd}>Tags</h3>
-        
-          {
-            tags.map(tag => (
-              <Link href={`/tags/${tag}`}>
-                <span className='tag'>{tag.slice(0,1).toUpperCase() + tag.slice(1)}</span>
-              </Link>
-            ))
-          }
+      
+            {tags.map(tag => (
+                <Link href={`/tags/${tag}`}>
+                  <span className='tag'>{tag.slice(0,1).toUpperCase() + tag.slice(1)}</span>
+                </Link>
+              ))}
           </section>
 
           <br/>
           {/* FIX: I shouldn't be targetting the whole section but the LoadMore element.  */}
-          <section  onClick={handleClick}>
+          <section onClick={handleClick}>
             {!showMore ?
             (
               <>

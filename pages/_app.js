@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
   // depending on the isGreen truth value.
     useEffect(() => {
         document.body.className = pageProps.isGreen ? 'green' : 'purple';
-      });
+      }, [pageProps.isGreen]);
     return (
       <UserProvider>
         <main className={`${montserrat.variable} ${sourceSerif4.variable}`}>

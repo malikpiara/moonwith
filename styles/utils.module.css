@@ -133,6 +133,47 @@
     font-size: 14px;
   }
 
+  /* Skeleton Placeholders */
+  .commentAuthorPlaceholder {
+    margin-bottom: 20px;
+    width: 200px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: var(--skeleton-bg);
+  }
+
+  .commentPlaceholder {
+    width: 500px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: var(--skeleton-bg);
+  }
+
+  .avatarPlaceholder {
+    background-color: var(--skeleton-bg);
+    flex: 0 0 5em;
+    border-radius: 50px;
+    max-height: 45px;
+    max-width: 45px;
+  }
+
+  .pulse {
+    animation: pulse 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   #navbarMobile {
     display: none;
     overflow: hidden;

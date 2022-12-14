@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Comment from './comment';
+import CommentPlaceholder from './comments_placeholder';
 
 export default function ListOfComments({post_id}) {
   const [listOfComments, setListOfComments] = useState([]);
@@ -15,7 +16,15 @@ export default function ListOfComments({post_id}) {
       })
   }, [])
 
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) return (
+    <>
+  <CommentPlaceholder/>
+  <br/>
+  <CommentPlaceholder/>
+  <br/>
+  <CommentPlaceholder/>
+    </>
+  )
 
   return (
     <>

@@ -22,7 +22,7 @@ export default withApiAuthRequired(async function handler(req, res) {
     }
   });
   const data = await response.json();
-  res.status(200).json(JSON.stringify(data));
+  res.status(200).json(data);
 } else {
     // Redirecting to the homepage if the request is not POST.
     res.redirect('/')
