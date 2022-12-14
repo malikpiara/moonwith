@@ -39,4 +39,9 @@
     font-weight: 500;
     max-height: 45px;
     max-width: 45px;
+    cursor: pointer;
+}
+
+.commentContainer {
+    position: relative;
 }
