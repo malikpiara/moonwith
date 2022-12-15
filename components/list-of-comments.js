@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Comment from './comment';
 import CommentPlaceholder from './comments_placeholder';
+import React from 'react';
 
 export default function ListOfComments({ post_id }) {
 	const [listOfComments, setListOfComments] = useState([]);

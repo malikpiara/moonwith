@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "proxy": "http://localhost:3000",
   "dependencies": {
@@ -20,6 +21,6 @@
   },
   "devDependencies": {
     "eslint": "^8.29.0",
-    "eslint-plugin-react": "^7.31.11"
+    "eslint-config-prettier": "^8.5.0"
   }
 }

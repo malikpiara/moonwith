@@ -2,6 +2,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import { useUser } from '@auth0/nextjs-auth0';
 import commentStyles from './comment.module.css';
+import React from 'react';
 
 export default function CommentInput({
 	commentContent,

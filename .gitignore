@@ -30,5 +30,5 @@ yarn-error.log*
 .env.production.local
 
 # others
-.eslintrc.yml
+.eslintrc.json
 jsconfig.json

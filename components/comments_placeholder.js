@@ -1,5 +1,6 @@
 import commentStyles from './comment.module.css';
 import utilStyles from '../styles/utils.module.css';
+import React from 'react';
 
 export default function CommentPlaceholder() {
 	return (

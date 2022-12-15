@@ -1,5 +1,6 @@
 import styles from '../styles/utils.module.css';
 import Link from 'next/link';
+import React from 'react';
 
 export default function PostPreview({ id, title, contentPreview }) {
 	return (

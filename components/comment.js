@@ -1,4 +1,5 @@
 import { parseISO, format } from 'date-fns';
+import React from 'react';
 import { useState } from 'react';
 import commentStyles from './comment.module.css';
 import utilStyles from '../styles/utils.module.css';
