@@ -258,7 +258,7 @@
   color: inherit;
 }
 
-.postPreview h2 {
+.postPreview h3 {
   color: var(--primary-color);
 }
 
@@ -275,7 +275,23 @@
   margin-block-end: 20px;
 }
 
-@media (max-width: 700px) {
+.likeWidget {
+  display: flex;
+  position: absolute;
+  left: 25px;
+  width: 80px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 80px;
+  border: 2px solid var(--body-color);
+  transition: ease-in-out 0.3s;
+}
+
+.likeWidget:hover {
+  scale: 1.1;
+}
+
+@media (width < 700px) {
   .heading2Xl {
     font-size: 2.2rem;
   }
@@ -294,7 +310,7 @@
     flex-direction: column-reverse;
   }
   .shiftedImage {
-    right: 0px;
+    right: 0;
     flex-basis: 0;
   }
   .recommendedEntry {

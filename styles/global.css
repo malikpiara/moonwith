@@ -55,9 +55,9 @@ a:hover {
   text-decoration: underline;
 }
 
-img {
+section img {
   max-width: 100%;
-  display: block;
+  height: auto;
 }
 
 .tag {
@@ -99,7 +99,7 @@ footer {
   position: sticky;
 }
 
-@media (max-width: 700px) {
+@media (width < 700px) {
   footer {
     position: relative;
   }

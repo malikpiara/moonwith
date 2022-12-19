@@ -34,7 +34,7 @@
     padding: 1em 1.8em;
   }
 
-  @media(max-width: 700px) {
+  @media(width < 700px) {
     .headerBeige, .headerMw {
       display: none;
     }
