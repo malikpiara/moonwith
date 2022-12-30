@@ -283,7 +283,7 @@
   cursor: pointer;
   padding: 10px;
   border-radius: 80px;
-  border: 2px solid var(--body-color);
+  border: 1px solid #80808057;
   transition: ease-in-out 0.3s;
 }
 

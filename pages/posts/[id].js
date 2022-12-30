@@ -7,12 +7,13 @@ import {
 } from '../../lib/posts';
 import Date from '../../components/date';
 import Comment from '../../components/comment';
+import LikeButton from '../../components/like';
 import PostRecommendation from '../../components/post_recommendation';
 import LoadMore from '../../components/load-more';
 import CommentInput from '../../components/comment-input';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ListOfComments from '../../components/list-of-comments';
 import { useUser } from '@auth0/nextjs-auth0';
 
@@ -65,9 +66,34 @@ export default function Post({ postData, allPostsData }) {
 
 	const [listOfSubmittedComments, setSubmittedComment] = useState([]);
 
+	const [hasUserLike, setHasUserLike] = useState(false);
+	const [likeValue, setLikeValue] = useState(0);
+
 	function handleCommentChange(e) {
 		setCommentContent(e.target.value);
 	}
+
+	function handleLikeClick() {
+		!hasUserLike ? (
+			setLikeValue(l => l + 1),
+			setHasUserLike(true)
+		) : (
+			setLikeValue(l => l - 1),
+			setHasUserLike(false)
+		)}
+
+	// Check if the id of the user is in the response.
+	// if it is, update the state.
+	useEffect(() => {
+		fetch(`http://cobra.moonwith.com/likes/${postData.id}`)
+			.then((res) => res.json())
+			.then((likeValue) => {
+				setLikeValue(likeValue.length);
+				setHasUserLike(true)
+				console.log(likeValue)
+				likeValue.includes("") ? (console.log("Something")) : (console.log("Nothing"));
+			});
+	}, [postData.id]);
 
 	return (
 		<Layout>
@@ -77,9 +103,33 @@ export default function Post({ postData, allPostsData }) {
 			<section>
 				<article>
 					<h1 className={utilStyles.heading2Xl}>{postData.title}</h1>
+					
 					<div className={utilStyles.lightText}>
 						<Date dateString={postData.date} />
 					</div>
+
+					{ user ? (
+						<LikeButton likeCount={likeValue} onClick={() => {
+							handleLikeClick()
+	
+							fetch('/api/likes', {
+								method: 'POST',
+								body: JSON.stringify({
+									postId: postData.id,
+									userId: user.sub
+								}),
+								headers: { 'Content-Type': 'application/json' },
+							}).then((response) => console.log(response.json()));
+						}}
+						/>
+					) : (
+						<LikeButton likeCount={likeValue} onClick={() => {
+							window.location = `/api/auth/login?returnTo=/posts/${postData.id}`
+						}}
+						/>
+					) }
+
+					
 
 					{/* TODO */}
 					<div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
