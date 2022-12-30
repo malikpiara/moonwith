@@ -11,7 +11,7 @@ export default withApiAuthRequired(async function handler(req, res) {
 
 	if (req.method === 'GET') {
 		const response = await fetch(
-			`http://cobra.moonwith.com/likes/${postId}`,
+			`https://cobra.moonwith.com/likes/${postId}`,
 			{
 				method: 'GET',
 				headers: {
@@ -23,7 +23,7 @@ export default withApiAuthRequired(async function handler(req, res) {
 		res.status(200).json(comment);
 	} else if (req.method === 'PUT') {
 		const response = await fetch(
-			`http://cobra.moonwith.com/likes/${postId}`,
+			`https://cobra.moonwith.com/likes/${postId}`,
 			{
 				method: 'PUT',
 				headers: {

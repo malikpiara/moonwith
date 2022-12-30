@@ -13,7 +13,7 @@ export default withApiAuthRequired(async function handler(req, res) {
 
 	if (req.method === 'POST') {
 		const response = await fetch(
-			`http://cobra.moonwith.com/likes/${postId}/${userId}`,
+			`https://cobra.moonwith.com/likes/${postId}/${userId}`,
 			{
 				method: 'POST',
 				headers: {

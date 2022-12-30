@@ -85,7 +85,7 @@ export default function Post({ postData, allPostsData }) {
 	// Check if the id of the user is in the response.
 	// if it is, update the state.
 	useEffect(() => {
-		fetch(`http://cobra.moonwith.com/likes/${postData.id}`)
+		fetch(`https://cobra.moonwith.com/likes/${postData.id}`)
 			.then((res) => res.json())
 			.then((likeValue) => {
 				setLikeValue(likeValue.length);
