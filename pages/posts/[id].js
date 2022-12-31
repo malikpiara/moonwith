@@ -8,6 +8,7 @@ import {
 import Date from '../../components/date';
 import Comment from '../../components/comment';
 import LikeButton from '../../components/like';
+import LikeIsTrueButton from '../../components/likeIsTrue';
 import PostRecommendation from '../../components/post_recommendation';
 import LoadMore from '../../components/load-more';
 import CommentInput from '../../components/comment-input';
@@ -89,11 +90,12 @@ export default function Post({ postData, allPostsData }) {
 			.then((res) => res.json())
 			.then((likeValue) => {
 				setLikeValue(likeValue.length);
-				setHasUserLike(true)
+				likeValue.forEach(like => {
+					user?.sub == like.userId ? (console.log("Yes"), setHasUserLike(true)) : (console.log("No"));
+				});
 				console.log(likeValue)
-				likeValue.includes("") ? (console.log("Something")) : (console.log("Nothing"));
 			});
-	}, [postData.id]);
+	});
 
 	return (
 		<Layout>
@@ -108,7 +110,21 @@ export default function Post({ postData, allPostsData }) {
 						<Date dateString={postData.date} />
 					</div>
 
-					{ user ? (
+					{ hasUserLike ? 
+					(
+						<LikeIsTrueButton likeCount={likeValue} onClick={() => {
+							handleLikeClick()
+	
+							fetch(`/api/${postData.id}`, {
+								method: 'PUT',
+								body: JSON.stringify({
+									postId: postData.id
+								}),
+								headers: { 'Content-Type': 'application/json' },
+							}).then((response) => console.log(response.json()));
+						}}
+						/>
+					) : user ? (
 						<LikeButton likeCount={likeValue} onClick={() => {
 							handleLikeClick()
 	
@@ -122,7 +138,9 @@ export default function Post({ postData, allPostsData }) {
 							}).then((response) => console.log(response.json()));
 						}}
 						/>
-					) : (
+					) :
+					
+					(
 						<LikeButton likeCount={likeValue} onClick={() => {
 							window.location = `/api/auth/login?returnTo=/posts/${postData.id}`
 						}}

@@ -275,7 +275,7 @@
   margin-block-end: 20px;
 }
 
-.likeWidget {
+.likeWidget, .likeIsTrueWidget {
   display: flex;
   position: absolute;
   left: 25px;
@@ -287,7 +287,11 @@
   transition: ease-in-out 0.3s;
 }
 
-.likeWidget:hover {
+.likeIsTrueWidget {
+  background-color: #d0c4f4;
+}
+
+.likeWidget:hover, .likeIsTrueWidget:hover {
   scale: 1.1;
 }
 
