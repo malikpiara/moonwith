@@ -8,6 +8,7 @@ export default withApiAuthRequired(async function handler(req, res) {
 	});
 
 	const { postId } = req.query;
+	const id = req.body.id;
 
 	if (req.method === 'GET') {
 		const response = await fetch(
@@ -15,17 +16,17 @@ export default withApiAuthRequired(async function handler(req, res) {
 			{
 				method: 'GET',
 				headers: {
-					Authorization: `Bearer ${accessToken}`,
+					'Content-Type': 'application/json',
 				},
 			}
 		);
-		const comment = await response.json();
-		res.status(200).json(comment);
-	} else if (req.method === 'PUT') {
+		const like = await response.json();
+		res.status(200).json(like);
+	} else if (req.method === 'DELETE') {
 		const response = await fetch(
-			`https://cobra.moonwith.com/likes/${postId}`,
+			`https://cobra.moonwith.com/likes/${id}`,
 			{
-				method: 'PUT',
+				method: 'DELETE',
 				headers: {
 					Authorization: `Bearer ${accessToken}`,
 					'Content-Type': 'application/json',

@@ -8,7 +8,7 @@ export default function LikeButton({
  }) {
 	return (
 		<>
-			<div onClick={onClick} className={`${styles.likeWidget}`}>{label + ` ${likeCount}`}</div>
+			<div onClick={onClick} className={`${styles.likeWidget}`}>{label + ` ${likeCount}` + " likes"}</div>
 		</>
 	);
 }

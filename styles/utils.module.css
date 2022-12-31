@@ -277,9 +277,10 @@
 
 .likeWidget, .likeIsTrueWidget {
   display: flex;
-  position: absolute;
-  left: 25px;
-  width: 80px;
+  position: relative;
+  justify-content: space-around;
+  margin-top: 10px;
+  width: 130px;
   cursor: pointer;
   padding: 10px;
   border-radius: 80px;

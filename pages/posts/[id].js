@@ -75,25 +75,29 @@ export default function Post({ postData, allPostsData }) {
 	}
 
 	function handleLikeClick() {
-		!hasUserLike ? (
-			setLikeValue(l => l + 1),
-			setHasUserLike(true)
-		) : (
+		hasUserLike ? (
 			setLikeValue(l => l - 1),
 			setHasUserLike(false)
+		) : (
+			setLikeValue(l => l + 1),
+			setHasUserLike(true)
 		)}
 
 	// Check if the id of the user is in the response.
 	// if it is, update the state.
+	const [likeId, setLikeId] = useState(0)
+
 	useEffect(() => {
 		fetch(`https://cobra.moonwith.com/likes/${postData.id}`)
 			.then((res) => res.json())
 			.then((likeValue) => {
 				setLikeValue(likeValue.length);
 				likeValue.forEach(like => {
-					user?.sub == like.userId ? (console.log("Yes"), setHasUserLike(true)) : (console.log("No"));
+					// If the userId fetched from Auth0 is equal to a userId
+					// in the list of likes, setHasUserLike to true.
+					user?.sub == like.userId ? (setHasUserLike(true)) : (setHasUserLike(false));
+					setLikeId(like.id)
 				});
-				console.log(likeValue)
 			});
 	});
 
@@ -113,20 +117,20 @@ export default function Post({ postData, allPostsData }) {
 					{ hasUserLike ? 
 					(
 						<LikeIsTrueButton likeCount={likeValue} onClick={() => {
-							handleLikeClick()
 	
-							fetch(`/api/likes/${postData.id}`, {
-								method: 'PUT',
+							fetch(`/api/likes/${likeId}`, {
+								method: 'DELETE',
 								body: JSON.stringify({
-									postId: postData.id
+									id: likeId
 								}),
 								headers: { 'Content-Type': 'application/json' },
 							}).then((response) => console.log(response.json()));
+
+							handleLikeClick()
 						}}
 						/>
 					) : user ? (
 						<LikeButton likeCount={likeValue} onClick={() => {
-							handleLikeClick()
 	
 							fetch('/api/likes', {
 								method: 'POST',
@@ -136,6 +140,8 @@ export default function Post({ postData, allPostsData }) {
 								}),
 								headers: { 'Content-Type': 'application/json' },
 							}).then((response) => console.log(response.json()));
+
+							handleLikeClick()
 						}}
 						/>
 					) :
@@ -239,6 +245,7 @@ export default function Post({ postData, allPostsData }) {
 							{allPostsData.map(({ id, title, contentPreview }) => (
 								<PostRecommendation
 									id={id}
+									key={id}
 									title={title}
 									contentPreview={contentPreview}
 								/>
