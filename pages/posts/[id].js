@@ -115,7 +115,7 @@ export default function Post({ postData, allPostsData }) {
 						<LikeIsTrueButton likeCount={likeValue} onClick={() => {
 							handleLikeClick()
 	
-							fetch(`/api/${postData.id}`, {
+							fetch(`/api/likes/${postData.id}`, {
 								method: 'PUT',
 								body: JSON.stringify({
 									postId: postData.id
