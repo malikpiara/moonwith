@@ -61,12 +61,13 @@ section img {
 }
 
 .tag {
-  background-color: var(--tag-bg-color);
+  border: solid;
   border-radius: 20px;
   padding: 8px 14px;
   margin-right: 10px;
   font-size: 18px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .siteTitle {
@@ -86,7 +87,8 @@ section img {
 }
 
 footer {
-  background-color: rgb(255, 225, 154);
+  writing-mode: vertical-rl;
+  /* background-color: rgb(255, 225, 154); */
   color: #010101;
   text-align: center;
   margin: 0;
@@ -95,12 +97,13 @@ footer {
   letter-spacing: 1px;
   font-size: 12px;
   font-weight: 500;
-  bottom: 0;
+  bottom: 50px;
   position: sticky;
 }
 
 @media (width < 700px) {
   footer {
     position: relative;
+    writing-mode: horizontal-tb;
   }
 }
