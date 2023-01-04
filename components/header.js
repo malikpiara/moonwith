@@ -7,77 +7,62 @@ import { useRouter } from 'next/router';
 const name = 'Malik Piara';
 export const siteTitle = 'Moonwith';
 
-export default function HeaderMobile() {
-	const router = useRouter();
+export default function Header() {
+    const router = useRouter();
     return (
-        <header id={utilStyles.navbarMobile}>
-				<div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-					<Link href="/">
-						<Image
-							priority
-							src="/images/profile.jpg"
-							className={utilStyles.borderCircle}
-							height={50}
-							width={50}
-							alt={name}
-						/>
+    <header className={styles.header}>
+				<>
+					<Link href={'/'}>
+						<h1 className={'siteTitle'}>{siteTitle}</h1>
 					</Link>
 
-					<h1 className={'siteTitle'}>
-						<Link href="/" title="Malik's Blog">
-							{siteTitle}
-						</Link>
-					</h1>
-				</div>
-
-				<ul
-					style={{
-						display: 'flex',
-						flexWrap: 'nowrap',
-						margin: '0px',
-						padding: '0px',
-						justifyContent: 'space-between',
-					}}
-				>
-					<Link href="/">
-						<li
+					<ul className={utilStyles.list}>
+						<Link
 							className={`${styles.navigationItem} ${
 								router.pathname == '/' ? styles.navigationItemActive : ''
 							}`}
+							href="/"
 						>
               Essays
-						</li>
-					</Link>
-					<Link href="/about">
-						<li
+						</Link>
+						<Link
 							className={`${styles.navigationItem} ${
 								router.pathname == '/about' ? styles.navigationItemActive : ''
 							}`}
+							href="/about"
 						>
               About
-						</li>
-					</Link>
-					<Link href="/projects">
-						<li
+						</Link>
+						<Link
 							className={`${styles.navigationItem} ${
 								router.pathname == '/projects'
 									? styles.navigationItemActive
 									: ''
 							}`}
+							href="/projects"
 						>
               Projects
-						</li>
-					</Link>
-					<Link href="/contact">
-						<li
+						</Link>
+						<Link
 							className={`${styles.navigationItem} ${
 								router.pathname == '/contact' ? styles.navigationItemActive : ''
 							}`}
+							href="/contact"
 						>
               Get in touch
-						</li>
+						</Link>
+					</ul>
+
+					<Link href="/">
+						<Image
+							priority
+							src="/images/profile.jpg"
+							className={utilStyles.borderCircle}
+							height={65}
+							width={65}
+							alt={name}
+						/>
 					</Link>
-				</ul>
+				</>
 			</header>
-    )
-}
+)}

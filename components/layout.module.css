@@ -16,26 +16,13 @@
   
   .header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .headerMw {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em 1.8em;
-  }
-
-  .headerBeige {
-    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1em 1.8em;
   }
 
   @media(width < 700px) {
-    .headerBeige, .headerMw {
+    .header {
       display: none;
     }
     .container {

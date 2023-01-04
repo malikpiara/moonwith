@@ -1,8 +1,7 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import Header from '../components/header';
 import HeaderMobile from '../components/headerMobile';
 import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -35,61 +34,7 @@ export default function Layout({ children, home, wide }) {
 
 			<HeaderMobile/>
 
-			<header className={wide ? styles.headerBeige : styles.headerMw}>
-				<>
-					<Link href={'/'}>
-						<h1 className={'siteTitle'}>{siteTitle}</h1>
-					</Link>
-
-					<ul className={utilStyles.list}>
-						<Link
-							className={`${styles.navigationItem} ${
-								router.pathname == '/' ? styles.navigationItemActive : ''
-							}`}
-							href="/"
-						>
-              Essays
-						</Link>
-						<Link
-							className={`${styles.navigationItem} ${
-								router.pathname == '/about' ? styles.navigationItemActive : ''
-							}`}
-							href="/about"
-						>
-              About
-						</Link>
-						<Link
-							className={`${styles.navigationItem} ${
-								router.pathname == '/projects'
-									? styles.navigationItemActive
-									: ''
-							}`}
-							href="/projects"
-						>
-              Projects
-						</Link>
-						<Link
-							className={`${styles.navigationItem} ${
-								router.pathname == '/contact' ? styles.navigationItemActive : ''
-							}`}
-							href="/contact"
-						>
-              Get in touch
-						</Link>
-					</ul>
-
-					<Link href="/">
-						<Image
-							priority
-							src="/images/profile.jpg"
-							className={utilStyles.borderCircle}
-							height={65}
-							width={65}
-							alt={name}
-						/>
-					</Link>
-				</>
-			</header>
+			<Header/>
 
 			{!wide && (
 				<div className={styles.container}>
