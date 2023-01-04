@@ -37,6 +37,7 @@ export default function Home({ allPostsData }) {
 					{allPostsData
 						.map(({ id, title, contentPreview }) => (
 							<PostPreview
+								key={id}
 								id={id}
 								title={title}
 								contentPreview={contentPreview}

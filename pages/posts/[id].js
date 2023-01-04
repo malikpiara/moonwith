@@ -161,8 +161,9 @@ export default function Post({ postData, allPostsData }) {
 					<section>
 						<h3 className={utilStyles.headingMd}>Tags</h3>
 
+						{/* TODO: Create a Tag component */}
 						{tags.map((tag) => (
-							<Link href={`/tags/${tag}`}>
+							<Link key={tag} href={`/tags/${tag}`}>
 								<span className="tag">
 									{tag.slice(0, 1).toUpperCase() + tag.slice(1)}
 								</span>
