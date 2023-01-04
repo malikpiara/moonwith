@@ -7,6 +7,17 @@ import { useRouter } from 'next/router';
 const name = 'Malik Piara';
 export const siteTitle = 'Moonwith';
 
+/* ChatGPT suggested I used a map function and an array of objects in order to:
+1. Improve code readibility.
+2. Make adding and removing links easier. */
+const navItems = [  { href: '/', label: 'Essays' },  { href: '/about', label: 'About' },  { href: '/projects', label: 'Projects' },  { href: '/contact', label: 'Get in touch' } ];
+
+function getNavItemClassName(router, href) {
+	return `${styles.navigationItem} ${
+		router.pathname === href ? styles.navigationItemActive : ''
+	}`
+}
+
 export default function HeaderMobile() {
 	const router = useRouter();
     return (
@@ -39,44 +50,13 @@ export default function HeaderMobile() {
 						justifyContent: 'space-between',
 					}}
 				>
-					<Link href="/">
-						<li
-							className={`${styles.navigationItem} ${
-								router.pathname == '/' ? styles.navigationItemActive : ''
-							}`}
-						>
-              Essays
-						</li>
-					</Link>
-					<Link href="/about">
-						<li
-							className={`${styles.navigationItem} ${
-								router.pathname == '/about' ? styles.navigationItemActive : ''
-							}`}
-						>
-              About
-						</li>
-					</Link>
-					<Link href="/projects">
-						<li
-							className={`${styles.navigationItem} ${
-								router.pathname == '/projects'
-									? styles.navigationItemActive
-									: ''
-							}`}
-						>
-              Projects
-						</li>
-					</Link>
-					<Link href="/contact">
-						<li
-							className={`${styles.navigationItem} ${
-								router.pathname == '/contact' ? styles.navigationItemActive : ''
-							}`}
-						>
-              Get in touch
-						</li>
-					</Link>
+					{navItems.map((navItem) => (
+						<Link key={navItem.href} href={navItem.href}>
+							<li className={getNavItemClassName(router, navItem.href)}>
+								{navItem.label}
+							</li>
+						</Link>
+					))}
 				</ul>
 			</header>
     )
