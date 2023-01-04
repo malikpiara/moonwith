@@ -1,16 +1,15 @@
 import Head from 'next/head';
 import Header from '../components/header';
 import HeaderMobile from '../components/headerMobile';
+import Footer from '../components/footer';
 import styles from './layout.module.css';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React from 'react';
 
 const name = 'Malik Piara';
 export const siteTitle = 'Moonwith';
 
 export default function Layout({ children, home, wide }) {
-	const router = useRouter();
 	return (
 		<div className={styles.containerWide}>
 			<Head>
@@ -54,9 +53,8 @@ export default function Layout({ children, home, wide }) {
 				</div>
 			)}
 
-			<footer>
-				<span>Only you know who you can be</span>
-			</footer>
+			{/* This is no longer a real footer. TODO */}
+			<Footer/>
 		</div>
 	);
 }

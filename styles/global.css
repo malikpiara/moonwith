@@ -86,6 +86,17 @@ section img {
   background-color: var(--bg-contrast-1);
 }
 
+.gradient-overlay {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--body-bg) 100%);
+  width: auto;
+  height: 100px;
+  position: sticky;
+  display: block;
+  z-index: 10;
+  margin: -100px -30px 0;
+  bottom: -30px;
+}
+
 footer {
   writing-mode: vertical-rl;
   /* background-color: rgb(255, 225, 154); */
@@ -99,6 +110,7 @@ footer {
   font-weight: 500;
   bottom: 50px;
   position: sticky;
+  margin-right: -50px;
 }
 
 @media (width < 700px) {

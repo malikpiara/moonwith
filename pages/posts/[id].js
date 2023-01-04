@@ -252,6 +252,7 @@ export default function Post({ postData, allPostsData }) {
 							))}
 						</div>
 					</section>
+					<div className='gradient-overlay'></div>
 				</article>
 			</section>
 		</Layout>

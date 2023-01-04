@@ -43,6 +43,7 @@ export default function Home({ allPostsData }) {
 							></PostPreview>
 						))
 						.slice(0, showMore)}
+						<div className='gradient-overlay'></div>
 				</div>
 
 				<br />
