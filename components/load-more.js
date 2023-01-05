@@ -1,10 +1,12 @@
 import styles from './layout.module.css';
 import React from 'react';
 
-export default function LoadMore({ label = 'Load More' }) {
+export default function LoadMore({ label = 'Load More', onClick }) {
 	return (
 		<>
-			<div className={`${styles.loadMore}`}>{label}</div>
+			<div className={`${styles.loadMore}`} onClick={onClick}>
+				{label}
+			</div>
 		</>
 	);
 }

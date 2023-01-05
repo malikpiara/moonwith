@@ -165,18 +165,18 @@ export default function Post({ postData, allPostsData }) {
 						{tags.map((tag) => (
 							<Link key={tag} href={`/tags/${tag}`}>
 								<span className="tag">
-									{tag.slice(0, 1).toUpperCase() + tag.slice(1)}
+									{tag.slice(0, 1).toUpperCase()}{tag.slice(1)}
 								</span>
 							</Link>
 						))}
 					</section>
 
 					<br />
-					{/* FIX: I shouldn't be targetting the whole section but the LoadMore element.  */}
-					<section onClick={handleClick}>
+					
+					<section>
 						{!showMore ? (
 							<>
-								<LoadMore label={'Load Comments'} />
+								<LoadMore label={'Load Comments'} onClick={handleClick} />
 							</>
 						) : (
 							<>

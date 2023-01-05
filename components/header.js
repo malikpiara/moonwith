@@ -9,7 +9,8 @@ export const siteTitle = 'Moonwith';
 
 /* ChatGPT suggested I used a map function and an array of objects in order to:
 1. Improve code readibility.
-2. Make adding and removing links easier. */
+2. Make adding and removing links easier.
+*/
 const navItems = [  { href: '/', label: 'Essays' },  { href: '/about', label: 'About' },  { href: '/projects', label: 'Projects' },  { href: '/contact', label: 'Get in touch' } ];
 
 function getNavItemClassName(router, href) {

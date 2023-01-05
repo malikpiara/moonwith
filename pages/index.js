@@ -29,10 +29,7 @@ export default function Home({ allPostsData }) {
 				<title>{siteTitle}</title>
 			</Head>
 
-			<section
-				onClick={handleClick}
-				className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
-			>
+			<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
 				<div>
 					{allPostsData
 						.map(({ id, title, contentPreview }) => (
@@ -49,7 +46,7 @@ export default function Home({ allPostsData }) {
 
 				<br />
 				{showMore <= allPostsData.length && (
-					<LoadMore label={'Load More Posts'} />
+					<LoadMore label={'Load More Posts'} onClick={handleClick} />
 				)}
 			</section>
 		</Layout>
