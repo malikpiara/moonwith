@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import heroPic from '../public/images/malik.webp'
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 
@@ -49,7 +50,8 @@ export default function About() {
 					<div className={utilStyles.shiftedImage}>
 						<Image
 							priority
-							src="/images/malik.webp"
+							placeholder='blur'
+							src={heroPic}
 							srcSet="2x"
 							width={600}
 							height={420}

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
+import profilePic from '../public/images/profile.jpg'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -41,7 +42,8 @@ export default function Header() {
 					<Link href="/">
 						<Image
 							priority
-							src="/images/profile.jpg"
+							placeholder='blur'
+							src={profilePic}
 							className={utilStyles.borderCircle}
 							height={65}
 							width={65}
