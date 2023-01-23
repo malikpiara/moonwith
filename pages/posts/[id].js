@@ -99,7 +99,7 @@ export default function Post({ postData, allPostsData }) {
 					setLikeId(like.id)
 				});
 			});
-	});
+	}, []);
 
 	return (
 		<Layout>
