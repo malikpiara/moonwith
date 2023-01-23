@@ -9,7 +9,7 @@
   "proxy": "http://localhost:3000",
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.9.2",
-    "@next/font": "^13.1.2",
+    "@next/font": "^13.1.4",
     "date-fns": "^2.29.2",
     "eslint-config-next": "^13.1.2",
     "gray-matter": "^4.0.3",
