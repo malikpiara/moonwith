@@ -110,9 +110,9 @@ export default function Post({ postData, allPostsData }) {
 				<article>
 					<h1 className={utilStyles.heading2Xl}>{postData.title}</h1>
 					
-					<div className={utilStyles.lightText}>
+					{/* <div className={utilStyles.lightText}>
 						<Date dateString={postData.date} />
-					</div>
+					</div> */}
 
 					{ hasUserLike ? 
 					(
