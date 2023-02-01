@@ -1,6 +1,8 @@
-# 🌙 Moonwith
+# About The Project
 
-My personal platform. A blog with posts written in markdown + a comment system enabled by Cobra, my API. Authentication is powered by Auth0 and Next.js API routes. Most pages are pre-rendered statically. I'm using client-side data fetching at the component level to retrieve comments.
+A Next.js blog with markdown files + a like and comment system enabled by [Cobra](https://github.com/malikpiara/cobra). Authentication is powered by Auth0 and Next.js API routes. Most pages are pre-rendered statically. I'm using client-side data fetching at the component level to retrieve comments.
+
+At [moonwith.com/piarali](https://moonwith.com/piarali) you can access my URL shortner. Using Incremental Static Regeneration (ISR) to re-generate this page every time there is a new request.
 
 ## Get Started
 
@@ -10,26 +12,21 @@ My personal platform. A blog with posts written in markdown + a comment system e
 
 ## Deploying
 
-Vercel is the fastest way to deploy your Next.js application with zero configuration.
-When deploying to Vercel, the platform automatically detects Next.js, runs `next build`, and optimizes the build output for you.
+Vercel is the fastest way to deploy a Next.js application. When deploying to Vercel, the platform automatically detects Next.js, runs `next build`, and optimizes the build output for you.
 
 At `.env.example` you can find the environmental variables that make authentication with [Auth0](https://auth0.com/docs/quickstart/webapp/nextjs/interactive) possible.
 
-`AUTH0_SECRET`: A long secret value used to encrypt the session cookie. You can generate a suitable string using openssl rand -hex 32 on the command line.
-
 ## Current Status
 
-Started building a comment system in November for my frontend module assessment at university. Right now, comments are retrieved from the [cobra](https://github.com/malikpiara/cobra) API. I'm using client-side data fetching with `useEffect` to load comments without rebuilding my static pages. Doing so, we reduce the number of requests to the server.
-
-You can see all of the comments in real time at [cobra.moonwith.com/comments](https://cobra.moonwith.com/comments).
-
-At [moonwith.com/piarali](https://moonwith.com/piarali) you can access my URL shortner. Using Incremental Static Regeneration (ISR) to re-generate this page every time there is a new request.
+Started working on a Like system in December. It's still not fully implemented and the next steps will be replacing the emoji placeholder with an SVG icon and refactoring the components so there's only one.
 
 ## Next Steps
 
-- Start using CSS variables more broadly.
-- Start working on a way of managing comments and piara.li from an admin page within Moonwith.
-- Potentially introduce On-Demand Revalidation on the URL shortner page.
+1. Adopting CSS variables more broadly and refactor CSS modules to make the frontend less repetitive and more organised.
+2. Improving the comment dashboard so it's more intuitive, safer and less time consuming.
+3. Creating an RSS feed. Multiple people have requested it.
+4. Replacing the Next.js 404 page with something more personal and that gives the users context.
+5. Reintroducing the newsletter subscription module. 
 
 ## Project History
 
