@@ -31,13 +31,7 @@ export default function Comment(props) {
 						<p>{props.content}</p>
 					</div>
 					<div>
-						{showMore ? (
-							<>
-								<ProfilePreview />
-							</>
-						) : (
-							<></>
-						)}
+						{showMore && <ProfilePreview />}
 					</div>
 				</div>
 			</div>

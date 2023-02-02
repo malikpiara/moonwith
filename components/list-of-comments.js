@@ -24,6 +24,10 @@ export default function ListOfComments({ post_id }) {
 		} catch {console.error();}
 	}, [post_id]);
 
+	const commentElements = listOfComments.map((comment) => (
+		<Comment key={comment.id} author={comment.author} content={comment.content} />
+	))
+
 	if (isLoading)
 		return (
 			<>
@@ -37,9 +41,7 @@ export default function ListOfComments({ post_id }) {
 
 	return (
 		<>
-			{listOfComments.map((comment) => (
-				<Comment key={comment.id} author={comment.author} content={comment.content} />
-			))}
+			{commentElements}
 		</>
 	);
 }

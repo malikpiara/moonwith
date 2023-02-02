@@ -60,7 +60,14 @@ export default function Post({ postData, allPostsData }) {
 		setShowMore(true);
 	}
 
-	const tags = postData.tags;
+	// TODO: Create a Tag component.
+	const tagElements = postData.tags.map((tag) => (
+		<Link key={tag} href={`/tags/${tag}`}>
+			<span className="tag">
+				{tag.slice(0, 1).toUpperCase()}{tag.slice(1)}
+			</span>
+		</Link>
+	))
 
 	//const [emailAddress, setEmailAddress] = useState('');
 	const [commentContent, setCommentContent] = useState('');
@@ -160,15 +167,7 @@ export default function Post({ postData, allPostsData }) {
 
 					<section>
 						<h3 className={utilStyles.headingMd}>Tags</h3>
-
-						{/* TODO: Create a Tag component */}
-						{tags.map((tag) => (
-							<Link key={tag} href={`/tags/${tag}`}>
-								<span className="tag">
-									{tag.slice(0, 1).toUpperCase()}{tag.slice(1)}
-								</span>
-							</Link>
-						))}
+						{tagElements}
 					</section>
 
 					<br />
