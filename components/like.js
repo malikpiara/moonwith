@@ -4,25 +4,15 @@ import React from 'react';
 export default function LikeButton({
     likeCount,
     onClick,
-	likeIsTrue
+	hasLike
  }) {
 	const label = '💜'
 
 	return (
-		<>
-			{likeIsTrue ? (
 		<div
 			onClick={onClick}
-			className={`${styles.likeIsTrueWidget}`}>{label + ` ${likeCount}` + " likes"}
+			className={hasLike ? styles.likeIsTrueWidget : styles.likeWidget }>
+				{label + ` ${likeCount}` + " likes"}
 		</div>
-		
-		) : (
-		<div
-			onClick={onClick}
-			className={`${styles.likeWidget}`}>{label + ` ${likeCount}` + " likes"}
-		</div>
-		)
-	}
-		</>
 	);
 }

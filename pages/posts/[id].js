@@ -80,13 +80,12 @@ export default function Post({ postData, allPostsData }) {
 		setCommentContent(e.target.value);
 	}
 
-	function handleLikeClick() {
+	function toggleLike() {
+		setHasUserLike(prevState => !prevState)
 		hasUserLike ? (
-			setLikeValue(prevLikeValue => prevLikeValue - 1),
-			setHasUserLike(false)
+			setLikeValue(prevLikeValue => prevLikeValue - 1)
 		) : (
-			setLikeValue(prevLikeValue => prevLikeValue + 1),
-			setHasUserLike(true)
+			setLikeValue(prevLikeValue => prevLikeValue + 1)
 		)}
 
 	// Check if the id of the user is in the response.
@@ -122,7 +121,7 @@ export default function Post({ postData, allPostsData }) {
 
 					{ hasUserLike ? 
 					(
-						<LikeButton likeIsTrue likeCount={likeValue} onClick={() => {
+						<LikeButton hasLike likeCount={likeValue} onClick={() => {
 	
 							fetch(`/api/likes/${likeId}`, {
 								method: 'DELETE',
@@ -132,7 +131,7 @@ export default function Post({ postData, allPostsData }) {
 								headers: { 'Content-Type': 'application/json' },
 							}).then((response) => console.log(response.json()));
 
-							handleLikeClick()
+							toggleLike()
 						}}
 						/>
 					) : user ? (
@@ -147,7 +146,7 @@ export default function Post({ postData, allPostsData }) {
 								headers: { 'Content-Type': 'application/json' },
 							}).then((response) => console.log(response.json()));
 
-							handleLikeClick()
+							toggleLike()
 						}}
 						/>
 					) :
@@ -158,8 +157,6 @@ export default function Post({ postData, allPostsData }) {
 						}}
 						/>
 					) }
-
-					
 
 					{/* TODO */}
 					<div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
