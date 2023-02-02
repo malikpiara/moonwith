@@ -25,7 +25,7 @@ export default function ListOfComments({ post_id }) {
 	}, [post_id]);
 
 	const commentElements = listOfComments.map((comment) => (
-		<Comment key={comment.id} author={comment.author} content={comment.content} />
+		<Comment key={comment.id} {...comment} />
 	))
 
 	if (isLoading)

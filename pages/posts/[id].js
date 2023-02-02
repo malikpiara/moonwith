@@ -83,10 +83,10 @@ export default function Post({ postData, allPostsData }) {
 
 	function handleLikeClick() {
 		hasUserLike ? (
-			setLikeValue(l => l - 1),
+			setLikeValue(prevLikeValue => prevLikeValue - 1),
 			setHasUserLike(false)
 		) : (
-			setLikeValue(l => l + 1),
+			setLikeValue(prevLikeValue => prevLikeValue + 1),
 			setHasUserLike(true)
 		)}
 
@@ -106,7 +106,7 @@ export default function Post({ postData, allPostsData }) {
 					setLikeId(like.id)
 				});
 			});
-	}, []);
+	}, [user?.sub]);
 
 	return (
 		<Layout>
