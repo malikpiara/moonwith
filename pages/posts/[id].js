@@ -8,7 +8,6 @@ import {
 import Date from '../../components/date';
 import Comment from '../../components/comment';
 import LikeButton from '../../components/like';
-import LikeIsTrueButton from '../../components/likeIsTrue';
 import PostRecommendation from '../../components/post_recommendation';
 import LoadMore from '../../components/load-more';
 import CommentInput from '../../components/comment-input';
@@ -123,7 +122,7 @@ export default function Post({ postData, allPostsData }) {
 
 					{ hasUserLike ? 
 					(
-						<LikeIsTrueButton likeCount={likeValue} onClick={() => {
+						<LikeButton likeIsTrue likeCount={likeValue} onClick={() => {
 	
 							fetch(`/api/likes/${likeId}`, {
 								method: 'DELETE',
