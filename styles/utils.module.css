@@ -133,6 +133,19 @@
   font-size: 14px;
 }
 
+.postButton {
+  cursor: pointer;
+  padding: 12px 18px;
+  border: none;
+  background-color: var(--body-color);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  width: 200px;
+}
+
 /* Skeleton Placeholders */
 .commentAuthorPlaceholder {
   margin-bottom: 20px;

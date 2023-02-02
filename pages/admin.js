@@ -2,9 +2,14 @@ import { useState, useEffect } from 'react';
 import styles from '../styles/utils.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Link from 'next/link';
+import Button from '../components/button';
 
 export default function AdminDashboard() {
 	const [comments, setComments] = useState([]);
+
+	function handleClick() {
+		window.open('https://github.com/malikpiara/moonwith/new/main/posts')
+	}
 
 	const deleteComment = async (commentId) => {
 		const response = await fetch(`/api/comments/${commentId}`, {
@@ -24,9 +29,11 @@ export default function AdminDashboard() {
 
 	return (
 		<div className={styles.adminDashboardWrapper}>
+			<Button onClick={handleClick} value="+ New Post"/>
+			
 			<h2>Manage Comments</h2>
 			{comments.map((comment) => (
-				<div className={styles.dataWrapper} id={comment.id}>
+				<div key={comment.id} className={styles.dataWrapper} id={comment.id}>
 					<div>{comment.content}</div>
 					<div>
 						<Link href={`posts/${comment.post_id}`}>{comment.post_id}</Link>
