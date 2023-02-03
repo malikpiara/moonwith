@@ -11,6 +11,7 @@ import LikeButton from '../../components/like';
 import PostRecommendation from '../../components/post_recommendation';
 import LoadMore from '../../components/load-more';
 import CommentInput from '../../components/comment-input';
+import Tag from '../../components/tag';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 import { useState, useEffect } from 'react';
@@ -59,13 +60,8 @@ export default function Post({ postData, allPostsData }) {
 		setShowMore(true);
 	}
 
-	// TODO: Create a Tag component.
 	const tagElements = postData.tags.map((tag) => (
-		<Link key={tag} href={`/tags/${tag}`}>
-			<span className="tag">
-				{tag.slice(0, 1).toUpperCase()}{tag.slice(1)}
-			</span>
-		</Link>
+			<Tag key={tag} tag={tag}/>
 	))
 
 	//const [emailAddress, setEmailAddress] = useState('');
