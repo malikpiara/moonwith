@@ -14,74 +14,57 @@ export async function getStaticProps() {
 }
 
 export default function Projects() {
-	return (
-		<Layout children>
-			<Head>
-				<title>{siteTitle}</title>
-			</Head>
+	const projects = [
+		{
+			title: 'This Site',
+			tags: ['web development'],
+			description:
+			<>
+			<p>Every aspect of this platform was crafted from scratch by me. From the design to the frontend to the API that powers the comment section.</p>
+			<p>A blog written in React (Next.js) enhanced by a Typescript API connected to a PostgreSQL database. Authentication is powered by Auth0.</p>
+			</>
+		},
 
-			<section>
-				<h1 className={utilStyles.heading2Xl}>Projects</h1>
-
+		{title: 'Upframe (2016-2020)',
+		description:
+		<>
+		<p>
+		My pride and joy. Upframe was my first attempt at building a scalable organisation and business model. Boostrapped from highschool.
+		</p>
+		<p>
+		Our aim was to help first-time founders get unstuck and to move
+		faster with a sense of accountability. And to give them get a sense
+		of community. The ways in which we did so changed over time, as we
+		learned about the needs and constraints of the market.
+		</p>
 				<p>
-          We may not get picked today, tomorrow or the day after. In fact, the
-          phone might never ring. But we don't have to wait around. We can
-          decide that we will pick ourselves. Regardless of whether someone out
-          there is listening. — We can choose to do the work, to write a new
-          essay, paint a new canvas, build a new product.
+					<a
+						className="link"
+						href="https://www.linkedin.com/company/upframe/"
+						target="_blank" rel="noreferrer"
+					>
+		  The last iteration
+					</a>{' '}
+		was a platform that enabled first-time founders to find mentors and
+		book video calls with them right away. Akin to Calendly with a
+		powerful people search.
 				</p>
 
-				<p>
-          Because I don’t want to wait around to get picked, I decided to build
-          or improve a new product (almost) every week. This is a quick overview
-          of the best things I built so far. The best is yet to come.
-				</p>
+		<p>
+		We had recurring revenue, a poweful vision, a solid business model
+		and the track record of enabling 1000+ conversations and video calls
+		between mentors and mentees worldwide. From Portugal, to Nigeria to
+		Pakistan. — Unfortunately, I made a lot of mistakes that led us to
+		be in a difficult position and ultimately killed the company.
+		</p>
 
-				<section>
-					<h2 className={utilStyles.headingLg} id="upframe">
-            Upframe (2016-2020)
-					</h2>
-					<p>
-            My pride and joy. Upframe was my first attempt at building a
-            scalable organisation and business model. Boostrapped from
-            highschool.
-					</p>
-
-					<p>
-            Our aim was to help first-time founders get unstuck and to move
-            faster with a sense of accountability. And to give them get a sense
-            of community. The ways in which we did so changed over time, as we
-            learned about the needs and constraints of the market.
-					</p>
-					<p>
-						<a
-							className="link"
-							href="https://www.linkedin.com/company/upframe/"
-							target="_blank" rel="noreferrer"
-						>
-              The last iteration
-						</a>{' '}
-            was a platform that enabled first-time founders to find mentors and
-            book video calls with them right away. Akin to Calendly with a
-            powerful people search.
-					</p>
-
-					<p>
-            We had recurring revenue, a poweful vision, a solid business model
-            and the track record of enabling 1000+ conversations and video calls
-            between mentors and mentees worldwide. From Portugal, to Nigeria to
-            Pakistan. — Unfortunately, I made a lot of mistakes that led us to
-            be in a difficult position and ultimately killed the company.
-					</p>
-
-					<p>
-            I designed the platform (UX/UI), handled the business development,
-            product discovery and requirements engineering. Recruited and led a
-            team of 5 people and learned a great deal about internet software,
-            B2B, intercultural differences and product management.
-					</p>
-
-					<Image
+		<p>
+		I designed the platform (UX/UI), handled the business development,
+		product discovery and requirements engineering. Recruited and led a
+		team of 5 people and learned a great deal about internet software,
+		B2B, intercultural differences and product management.
+		</p>
+		<Image
 						priority
 						src="/images/upf.png"
 						className=""
@@ -89,11 +72,13 @@ export default function Projects() {
 						width={680}
 						alt="screenshot from upframe"
 					/>
-
-					<h2 className={utilStyles.headingLg}>
-            351, the Portuguese Startup Community
-					</h2>
-					<p>
+		</>},
+	
+	{
+		title: '351, the Portuguese Startup Community',
+		description:
+		<>
+			<p>
             When I organised my first conference and startup events or created
             my first company, I was a teenager. I didn't have the experience or
             network so I had to spend a lot of time and energy to make it
@@ -134,9 +119,13 @@ export default function Projects() {
 						</a>
             .
 					</p>
-
-					<h2 className={utilStyles.headingLg}>Fuzzboard.com (2020 - 2022)</h2>
-					<p>
+		</>
+	},
+	{
+		title: 'Fuzzboard.com (2020 - 2022)',
+		description:
+		<>
+		<p>
             This lay-off crisis brought up by Covid-19 inspired me to build{' '}
 						<a
 							className="link"
@@ -197,59 +186,40 @@ export default function Projects() {
             because that was the most impactful way of helping people in the
             long-run.{' '}
 					</p>
+		</>
+	}
+	]
+	const project = projects.map(item => (
+		<>
+		<div className='utilStyles.projectWrapper'>
+			<h2 className={utilStyles.headingLg}>{item.title}</h2>
+			<p>{item.description}</p>
+		</div>
+		</>
+		))
+	return (
+		<Layout>
+			<Head>
+				<title>{siteTitle}</title>
+			</Head>
 
-					<h2 className={utilStyles.headingLg}>
-            Slack alternative for teams that hate distractions
-					</h2>
-					<p>
-            I used to operate teams thinking only about what was best for me.
-            One thing that took a painful amount of time to realise was that{' '}
-						<b>great</b> designers and engineers need time and space to do their
-            best work.
-					</p>
-					<p>
-            On <a href="#upframe">Upframe's</a> last year, we decided to kill
-            most meetings and work asynchronously, communicating daily with
-            long-form writting. It was unconventional and I don't think that
-            approach will work for everyone because different teams have
-            different needs.
-					</p>
-					<p>
-            I believe the tools we use end up shaping the way we work (think
-            about cutlery vs chopsticks and how their adoption affects the way
-            people cook) so I'm building an alternative to Slack or Discord that
-            is calm by default based on what I learned working that way. This
-            time, my only goal is to keep learning as much as I can about
-            software engineering and product development while I finish my
-            studies.
-					</p>
+			<section>
+				<h1 className={utilStyles.heading2Xl}>Projects</h1>
 
-					<p>
-            The app is online and can already replace daily standups. But it's
-            not ready for public adoption. To get updates:
-					</p>
-					<p>
-            1){' '}
-						<a
-							className="link"
-							target="_blank"
-							href="https://github.com/malikpiara/fuzzboard" rel="noreferrer"
-						>
-              Check the Github repository
-						</a>
-            .
-					</p>
-					<p>
-            2){' '}
-						<a
-							className="link"
-							target="_blank"
-							href="https://twitter.com/malikpiara/status/1395749135836499968" rel="noreferrer"
-						>
-              Follow this Twitter thread
-						</a>
-            .
-					</p>
+				<p>
+          We may not get picked today, tomorrow or the day after. In fact, the
+          phone might never ring. But we don't have to wait around. We can
+          decide that we will pick ourselves. Regardless of whether someone out
+          there is listening. — We can choose to do the work, to write a new
+          essay, paint a new canvas, build a new product.
+				</p>
+
+				<p>
+          Here's is an overview of some of the most interesting things I created until this point.
+				</p>
+
+				<section>
+					{project}
 				</section>
 			</section>
 		</Layout>

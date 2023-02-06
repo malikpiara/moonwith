@@ -76,6 +76,10 @@
   background-color: var(--bg-contrast-1);
 }
 
+.projectWrapper:hover {
+  background-color: var(--bg-contrast-1);
+}
+
 .flex {
   display: flex;
 }
