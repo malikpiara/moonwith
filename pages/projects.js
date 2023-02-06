@@ -191,7 +191,7 @@ export default function Projects() {
 	]
 	const project = projects.map(item => (
 		<>
-		<div className='utilStyles.projectWrapper'>
+		<div className={utilStyles.projectWrapper}>
 			<h2 className={utilStyles.headingLg}>{item.title}</h2>
 			<p>{item.description}</p>
 		</div>

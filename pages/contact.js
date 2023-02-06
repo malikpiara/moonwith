@@ -55,7 +55,7 @@ export default function Contact() {
 						<li>
 							<a
 								className="link"
-								href="https://instagram.com/malikpiara/"
+								href="https://instagram.com/likpiara/"
 								target="_blank" rel="noreferrer"
 							>
                 Instagram.
