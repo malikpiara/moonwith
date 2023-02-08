@@ -213,7 +213,7 @@
   }
 }
 
-#navbarMobile {
+.navbarMobile {
   display: none;
   overflow: hidden;
   position: fixed;
@@ -366,11 +366,11 @@
     padding: 0em;
     font-size: 0.9em;
   }
-  #navbarMobile {
+  .navbarMobile {
     display: flex;
     flex-direction: column;
   }
-  #navbarMobile a {
+  .navbarMobile a {
     color: inherit;
     text-decoration: none;
   }

@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import profilePic from '../public/images/profile.jpg'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import ArrowLeftIcon from './arrowLeftIcon';
 
 const name = 'Malik Piara';
 export const siteTitle = 'Moonwith';
@@ -25,7 +26,7 @@ export default function HeaderMobile({ home, children }) {
     return (
 		<>
 		{home && (
-        <header id={utilStyles.navbarMobile}>
+        <header class={utilStyles.navbarMobile}>
 				<div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
 					<Link href="/">
 						<Image
@@ -67,7 +68,10 @@ export default function HeaderMobile({ home, children }) {
 
 	{!home && (
 	<div className={styles.backToHome}>
-		<Link href="/">← Back to home</Link>
+		<Link href="/">
+			<ArrowLeftIcon/>
+			<span>Back to home</span>
+		</Link>
 	</div>
 	)}
 </>
