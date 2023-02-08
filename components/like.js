@@ -1,18 +1,20 @@
 import styles from '../styles/utils.module.css';
 import React from 'react';
+import Heart from './heartIcon';
 
 export default function LikeButton({
-    likeCount,
+    likeCount = 0,
     onClick,
 	hasLike
  }) {
-	const label = '💜'
-
 	return (
+		<>
 		<div
 			onClick={onClick}
 			className={hasLike ? styles.likeIsTrueWidget : styles.likeWidget }>
-				{label + ` ${likeCount}` + " likes"}
+				{hasLike ? <Heart filled/> : <Heart/> }
+				{`${likeCount}`}
 		</div>
+		</>
 	);
 }

@@ -12,7 +12,7 @@ export const siteTitle = 'Moonwith';
 1. Improve code readibility.
 2. Make adding and removing links easier.
 */
-const navItems = [  { href: '/', label: 'Essays' },  { href: '/about', label: 'About' },  { href: '/projects', label: 'Projects' },  { href: '/contact', label: 'Get in touch' } ];
+const navItems = [  { href: '/', label: 'Essays' },  { href: '/about', label: 'About' },  { href: '/projects', label: 'Projects' },  { href: '/contact', label: 'Contact' } ];
 
 function getNavItemClassName(router, href) {
 	return `${styles.navigationItem} ${

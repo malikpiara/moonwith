@@ -301,19 +301,21 @@
 
 .likeWidget, .likeIsTrueWidget {
   display: flex;
+  align-items: center;
   position: relative;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 5px;
   margin-top: 10px;
-  width: 130px;
+  width: 80px;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px;
   border-radius: 80px;
-  border: 1px solid #80808057;
+  border: 1px solid #00000057;
   transition: ease-in-out 0.3s;
 }
 
 .likeIsTrueWidget {
-  background-color: #d0c4f4;
+  background-color: #d0c4f4a9;
 }
 
 .likeWidget:hover, .likeIsTrueWidget:hover {
