@@ -31,18 +31,19 @@ export default function Layout({ children, home, wide }) {
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 
-			<HeaderMobile/>
+			{!home && (
+				<HeaderMobile/>
+			)}
+
+			{home && (
+				<HeaderMobile home/>
+			)}
 
 			<Header/>
 
 			{!wide && (
 				<div className={styles.container}>
 					<main>{children}</main>
-					{!home && (
-						<div className={styles.backToHome}>
-							<Link href="/">← Back to home</Link>
-						</div>
-					)}
 					<br />
 				</div>
 			)}

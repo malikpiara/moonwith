@@ -20,9 +20,11 @@ function getNavItemClassName(router, href) {
 	}`
 }
 
-export default function HeaderMobile() {
+export default function HeaderMobile({ home, children }) {
 	const router = useRouter();
     return (
+		<>
+		{home && (
         <header id={utilStyles.navbarMobile}>
 				<div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
 					<Link href="/">
@@ -61,6 +63,13 @@ export default function HeaderMobile() {
 						</Link>
 					))}
 				</ul>
-			</header>
+			</header>)}
+
+	{!home && (
+	<div className={styles.backToHome}>
+		<Link href="/">← Back to home</Link>
+	</div>
+	)}
+</>
     )
 }

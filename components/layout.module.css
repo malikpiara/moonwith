@@ -62,6 +62,9 @@
   
   .backToHome {
     margin: 3rem 0 0;
+    margin-bottom: -180px;
+    margin-top: -160px;
+    padding: 10px;
   }
 
   .loadMore {
