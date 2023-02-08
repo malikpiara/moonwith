@@ -17,6 +17,7 @@ import utilStyles from '../../styles/utils.module.css';
 import { useState, useEffect } from 'react';
 import ListOfComments from '../../components/list-of-comments';
 import { useUser } from '@auth0/nextjs-auth0';
+import CommentButton from '../../components/commentButton';
 
 export async function getStaticProps({ params }) {
 	const postData = await getPostData(params.id);
@@ -58,6 +59,10 @@ export default function Post({ postData, allPostsData }) {
 
 	function handleClick() {
 		setShowMore(true);
+	}
+
+	function handleCommentClick() {
+		window.open('#comments', "_self")
 	}
 
 	const tagElements = postData.tags.map((tag) => (
@@ -117,6 +122,7 @@ export default function Post({ postData, allPostsData }) {
 
 					{ hasUserLike ? 
 					(
+						<div className={utilStyles.postMeta}>
 						<LikeButton hasLike likeCount={likeValue} onClick={() => {
 	
 							fetch(`/api/likes/${likeId}`, {
@@ -130,7 +136,10 @@ export default function Post({ postData, allPostsData }) {
 							toggleLike()
 						}}
 						/>
+						<CommentButton onClick={handleCommentClick}/>
+						</div>
 					) : user ? (
+						<div className={utilStyles.postMeta}>
 						<LikeButton likeCount={likeValue} onClick={() => {
 	
 							fetch('/api/likes', {
@@ -145,13 +154,18 @@ export default function Post({ postData, allPostsData }) {
 							toggleLike()
 						}}
 						/>
+						<CommentButton onClick={handleCommentClick}/>
+						</div>
 					) :
 					
 					(
+						<div className={utilStyles.postMeta}>
 						<LikeButton likeCount={likeValue} onClick={() => {
 							window.location = `/api/auth/login?returnTo=/posts/${postData.id}`
 						}}
 						/>
+						<CommentButton onClick={handleCommentClick}/>
+						</div>
 					) }
 
 					{/* TODO */}
@@ -164,7 +178,7 @@ export default function Post({ postData, allPostsData }) {
 
 					<br />
 					
-					<section>
+					<section id="comments">
 						{!showMore ? (
 							<>
 								<LoadMore label={'Load Comments'} onClick={handleClick} />
