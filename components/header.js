@@ -39,7 +39,7 @@ export default function Header() {
 					))}
 					</ul>
 
-					<Link href="/">
+					<Link href="/links">
 						<Image
 							priority
 							placeholder='blur'

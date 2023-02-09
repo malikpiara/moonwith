@@ -1,0 +1,56 @@
+.wrapper {
+    margin: auto;
+    height: 100%;
+    text-align: center;
+    max-width: 32rem;
+    padding: 1rem;
+    padding-top: 3rem;
+    font-size: 1.1rem;
+}
+
+.name {
+    font-weight: 800;
+    font-size: 30px;
+    margin: 0;
+}
+
+.bio {
+    margin: 0;
+}
+
+.ul {
+    padding: 0;
+}
+
+.li {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.li a {
+    text-decoration: none;
+}
+
+.linkWrapper {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    transition: 0.5s ease-in-out;
+    height: 60px;
+}
+
+.linkWrapper:hover {
+    background-color: #f1f5f9;
+    scale: 1.05;
+}
+
+.icon {
+    width: 2.5rem;
+}
