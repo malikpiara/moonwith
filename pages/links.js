@@ -44,6 +44,66 @@ export default function LinkPage() {
                     </dt>
                 </Link>
             </li>
+            <li className={linkPageStyles.li}>
+                <Link href="https://instagram.com/likpiara/" target="_blank">
+                    <dt className={linkPageStyles.linkWrapper}>
+                        <div className={linkPageStyles.icon}>
+                            #
+                        </div>
+                        <div className={linkPageStyles.linkText}>
+                            <p>Instagram</p>
+                        </div>
+                    </dt>
+                </Link>
+            </li>
+            <li className={linkPageStyles.li}>
+                <Link href="https://linkedin.com/in/malikpiara/" target="_blank">
+                    <dt className={linkPageStyles.linkWrapper}>
+                        <div className={linkPageStyles.icon}>
+                            #
+                        </div>
+                        <div className={linkPageStyles.linkText}>
+                            <p>LinkedIn</p>
+                        </div>
+                    </dt>
+                </Link>
+            </li>
+            <li className={linkPageStyles.li}>
+                <Link href="https://twitter.com/malikpiara" target="_blank">
+                    <dt className={linkPageStyles.linkWrapper}>
+                        <div className={linkPageStyles.icon}>
+                            #
+                        </div>
+                        <div className={linkPageStyles.linkText}>
+                            <p>Twitter</p>
+                        </div>
+                    </dt>
+                </Link>
+            </li>
+            <li className={linkPageStyles.li}>
+                <Link href="https://t.me/malikpiara" target="_blank">
+                    <dt className={linkPageStyles.linkWrapper}>
+                        <div className={linkPageStyles.icon}>
+                            #
+                        </div>
+                        <div className={linkPageStyles.linkText}>
+                            <p>Telegram</p>
+                        </div>
+                    </dt>
+                </Link>
+            </li>
+            <li className={linkPageStyles.li}>
+                <Link href="https://wa.me/+351962119084" target="_blank">
+                    <dt className={linkPageStyles.linkWrapper}>
+                        <div className={linkPageStyles.icon}>
+                            #
+                        </div>
+                        <div className={linkPageStyles.linkText}>
+                            <p>WhatsApp</p>
+                        </div>
+                    </dt>
+                </Link>
+            </li>
         </ul>
         </div>
         </>
