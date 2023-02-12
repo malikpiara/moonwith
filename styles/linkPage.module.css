@@ -18,6 +18,15 @@
     margin: 0;
 }
 
+.iconContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
 .ul {
     padding: 0;
 }
