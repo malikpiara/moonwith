@@ -26,74 +26,29 @@ Spending most of our days entangled in a work-home routine is akin to the first 
 
 Looking at the future we cannot tell when life changing events will take place. A couple of years ago, I would not believe anyone if they told me I would be living in Berlin. Having that in mind, **we can put ourselves in situations that enable serendipity to take place**. Join communities. Read books. Let people know what you’re working on. Talk to strangers. Go to parties where you don't know most people. Send a letter to someone you admire. Install a dating app. Move to a city that has more things going on. Create your own luck.
 
-<table class="blogpost-table">
-  <tr>
-    <th>Ways to create your own luck</th>
-  </tr>
-  <tr>
-    <td>Join a meetup group in your city.</td>
-  </tr>
-  <tr>
-  <td>Install a dating app.</td>
-  </tr>
-  <tr>
-  <td>Host a dinner where every guest has to bring a plus one.</td>
-  </tr>
-  <tr>
-  <td>Go to a hackathon. With friends. Or alone.</td>
-  </tr>
-  <tr>
-  <td>Share your ideas publicly. On social media. With your friends.</td>
-  </tr>
-  <tr>
-  <td>Ask for help in public. Share your challanges.</td>
-  </tr>
-  <tr>
-  <td>Email or tweet someone you admire.</td>
-  </tr>
-   <tr>
-  <td>Go to dinner parties. From friends. From acquiantances.</td>
-  </tr>
-   <tr>
-  <td>Grab a coffee with someone new every week.</td>
-  </tr>
-   <tr>
-  <td>Join a community.</td>
-  </tr>
-  <tr>
-  <td>Create your own community.</td>
-  </tr>
-  <tr>
-  <td>Take classes unrelated with your major.</td>
-  </tr>
-  <tr>
-    <td>Walk into a random college class and sit in.</td>
-  </tr>
-  <tr>
-  <td>Work or study from different places. Cafés. Coworking places. Public libraries.</td>
-  </tr>
-  <tr>
-    <td>Start a <a class="link" href="https://moonwith.com/tag/hackasundays/" target="_blank">hacksunday</a> challange.</td>
-  </tr>
-  <tr>
-    <td>Create and maintain a Twitter account.</td>
-  </tr>
-  <tr>
-    <td>Keep your direct/private messages open on social media.</td>
-  </tr>
-  <tr>
-    <td>Add a location to your Instagram posts.</td>
-  </tr>
-  <tr>
-    <td>Take public transports.</td>
-  </tr>
-  <tr>
-    <td>Use stickers on your laptop.</td>
-  </tr>
-  <tr>
-    <td>Take the most crowded path to work.</td>
-  </tr>
-  <tr>
-    <td>Move to a city that has more things going on in your industry.</td>
-  </tr>
-</table>
+| Ways to create your own luck |
+| ------------- |
+| Join a meetup group in your city  |
+| Install a dating app  |
+| Host a dinner where every guest has to bring a plus one  |
+| Go to a hackathon. With friends. Or alone  |
+| Share your ideas publicly. On social media. With your friends  |
+| Ask for help in public. Share your challanges |
+| Email or tweet someone you admire |
+| Go to dinner parties. From friends. From acquiantances |
+| Grab a coffee with someone new every week |
+| Join a community |
+| Create your own community |
+| Take classes unrelated with your major |
+| Walk into a random college class and sit in |
+| Work or study from different places. Cafés. Coworking places. Public libraries |
+| Create and maintain a Twitter account |
+| Keep your direct/private messages open on social media |
+| Add a location to your Instagram posts |
+| Take public transports |
+| Use stickers on your laptop |
+| Take the most crowded path to work |
+| Move to a city that has more things going on in your industry |
+
+- [x] Done
+- [ ] To Do
