@@ -49,6 +49,3 @@ Looking at the future we cannot tell when life changing events will take place. 
 | Use stickers on your laptop |
 | Take the most crowded path to work |
 | Move to a city that has more things going on in your industry |
-
-- [x] Done
-- [ ] To Do
