@@ -10,6 +10,26 @@
   --font-family-nav: 'var(--montserrat)'; */
 }
 
+table {
+  overflow-x: hidden;
+}
+
+table {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+tr {
+  display: flex;
+  padding: 5px;
+  padding-left: 12px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #dcd1ef;
+}
+
 .purple {
   --body-bg: #f1ebfc;
 }
