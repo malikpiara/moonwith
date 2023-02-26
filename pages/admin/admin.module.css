@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+.subscriber_page {
+    display: table;
+    overflow: visible;
+    border-spacing: 0;
+    width: 100%;
+    table-layout: auto;
+    line-height: 150%;
+}
+
+.subscriber_page th {
+    border-spacing: 0;
+    margin-right: 200px;
+    text-align: left;
+    padding: 0 12px;
+}
+
+.subscriber_page tr {
+    height: 44px;
+    padding: 0;
+    display: table-row;
+}
+
+.subscriber {
+    border-right: 1px solid #ffffff;
+    padding: 0 12px;
+    min-width: 300px;
+    max-width: 300px;
+}

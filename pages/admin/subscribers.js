@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from '../../styles/utils.module.css';
+import admin from './admin.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Nav from '../../components/adminNav';
 import { supabase } from '../../lib/supabaseClient';
@@ -33,7 +34,7 @@ export default function AdminDashboard({ subscribers }) {
 		if (error) {
 		  console.error(error)
 		}
-		console.log("Something")
+		
 		// Clear the email input
 		setEmail('')
 	}
@@ -55,16 +56,20 @@ export default function AdminDashboard({ subscribers }) {
     		</form>
 			<br/>
 
-			<table>
+			<div className={admin.container}>
+			<table className={admin.subscriber_page}>
 			<tbody>
 				<th>Subscriber</th>
+				<th>Subscription Date</th>
         {subscribers.map((subscriber) => (
 			<tr key={subscriber.id}>
-          <td key={subscriber.id}>{subscriber.email}</td>
+          <td className={admin.subscriber} key={subscriber.id}>{subscriber.email}</td>
+		  <td className={admin.subscriber} key={subscriber.id}>{subscriber.created_at}</td>
 		  </tr>
         ))}
 		</tbody>
       </table>
+	  </div>
 			</div>
 
 		</div>
