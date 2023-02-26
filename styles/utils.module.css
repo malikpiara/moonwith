@@ -286,8 +286,50 @@
   color: var(--primary-color);
 }
 
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
 .adminDashboardWrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  margin: 0;
+  margin-right: 20px;
+  column-gap: 20px;
+}
+
+.adminNav {
+  display: flex;
+  background-color: white;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.adminNav div input {
   margin: 20px;
+}
+
+.adminNavItem {
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  transition: ease-in-out 0.3s;
+}
+
+.adminNavItem a {
+  text-decoration: none;
+}
+
+.adminNavItem:hover,
+.adminNavItemActive {
+  background-color: var(--bg-contrast-1);
 }
 
 .dataWrapper {

@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
-import styles from '../styles/utils.module.css';
+import styles from '../../styles/utils.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Link from 'next/link';
-import Button from '../components/button';
+import Nav from '../../components/adminNav';
+
+export const getServerSideProps = withPageAuthRequired();
 
 export default function AdminDashboard() {
 	const [comments, setComments] = useState([]);
@@ -29,9 +31,13 @@ export default function AdminDashboard() {
 
 	return (
 		<div className={styles.adminDashboardWrapper}>
-			<Button onClick={handleClick} value="+ New Post"/>
 			
-			<h2>Manage Comments</h2>
+		<Nav onClick={handleClick} />
+	  
+			<div>
+
+			<h2>Comments</h2>
+			<div className={styles.twoColumns}>
 			{comments.map((comment) => (
 				<div key={comment.id} className={styles.dataWrapper} id={comment.id}>
 					<div>{comment.content}</div>
@@ -54,11 +60,9 @@ export default function AdminDashboard() {
 					</div>
 				</div>
 			))}
+			</div>
+			</div>
+
 		</div>
 	);
 }
-
-/* Protecting this page (Server side rendered)
-I can also choose Client-Side Rendered (CSR) Page implementation:
-https://github.com/auth0/nextjs-auth0/blob/main/EXAMPLES.md */
-export const getServerSideProps = withPageAuthRequired();
