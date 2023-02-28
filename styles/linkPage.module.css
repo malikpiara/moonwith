@@ -16,6 +16,7 @@
 
 .bio {
     margin: 0;
+    margin-inline: 60px;
 }
 
 .iconContainer {
