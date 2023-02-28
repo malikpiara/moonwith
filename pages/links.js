@@ -4,8 +4,20 @@ import utilStyles from '../styles/utils.module.css';
 import linkPageStyles from '../styles/linkPage.module.css';
 import Link from 'next/link';
 import LinkItem from '../components/linkItem';
+import { supabase } from '../lib/supabaseClient';
 
-export default function LinkPage() {
+export async function getServerSideProps() {
+    const { data, error } = await supabase.from('linkPage').upsert({ id: 1 }).select().single()
+
+    return {
+      props: {
+		linkPage: data
+      },
+    }
+}
+
+
+export default function LinkPage(data) {
     return (
         <>
         <div className={linkPageStyles.wrapper}>
@@ -19,7 +31,7 @@ export default function LinkPage() {
                                 alt='Malik'
                             />
             <h1 className={linkPageStyles.name}>Malik Piara</h1>
-            <p className={linkPageStyles.bio}>Here to listen, learn and help people grow.</p>
+            <p className={linkPageStyles.bio}>{data.linkPage.bio}</p>
             <div className={linkPageStyles.iconContainer}>
                 <span>
                     <Link href="https://instagram.com/likpiara/" target="_blank">
@@ -72,6 +84,7 @@ viewBox="0 0 24 24">
             <ul className={linkPageStyles.ul}>
                 <LinkItem url="/" label="My Personal Blog"/>
                 <LinkItem url="https://instagram.com/earnestcards/" label="Cards for Deeper Conversations"/>
+                <LinkItem url="https://piara.li/book/" label="Office Hours (CODE University)"/>
             </ul>
         </div>
         </>
