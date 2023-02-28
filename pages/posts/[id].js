@@ -18,6 +18,7 @@ import { useState, useEffect } from 'react';
 import ListOfComments from '../../components/list-of-comments';
 import { useUser } from '@auth0/nextjs-auth0';
 import CommentButton from '../../components/commentButton';
+import NewsletterForm from '../../components/newsletterForm';
 
 export async function getStaticProps({ params }) {
 	const postData = await getPostData(params.id);
@@ -176,6 +177,8 @@ export default function Post({ postData, allPostsData }) {
 						{tagElements}
 					</section>
 
+					<br />
+					<NewsletterForm/>
 					<br />
 					
 					<section id="comments">

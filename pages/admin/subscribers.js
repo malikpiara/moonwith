@@ -47,13 +47,15 @@ export default function AdminDashboard({ subscribers }) {
 			<div>
 			<h2>Subscribers ({subscribers.length})</h2>
 
+			<section className="subAdmin">
+
 			<form onSubmit={handleSubmit}>
-				<label>
-					Email:
-					<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-				</label>
-				<button type="submit">Add Subscriber</button>
+				
+				<input className={styles.input} type="email" placeholder='Type email' required value={email} onChange={(e) => setEmail(e.target.value)} />
+				
+				<button type="submit" className={`${styles.button} ${styles.primary}`}>Add Subscriber</button>
     		</form>
+			</section>
 			<br/>
 
 			<div className={admin.container}>
