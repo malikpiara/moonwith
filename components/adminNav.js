@@ -9,17 +9,22 @@ export default function AdminNav({onClick}) {
             router.pathname === href ? styles.adminNavItemActive : ''
         }`
     }
+
     const router = useRouter();
+
     return (
         <div className={styles.adminNav}>
 				
 				<div>
-				    <Button onClick={onClick} value="+ New Post"/>
+				    {/* <Button onClick={onClick} value="+ New Post"/> */}
 				    <div className={getNavItemClassName(router, "/admin")} >
                         <Link href="/admin/">Comments</Link>
                     </div>
 				    <div className={getNavItemClassName(router,"/admin/subscribers")}>
                         <Link href="/admin/subscribers">Subscribers</Link>
+                    </div>
+                    <div onClick={onClick} className={getNavItemClassName(router, "/admin/post")} >
+                        <Link href="#">See Posts</Link>
                     </div>
 				</div>
 			</div>

@@ -3,15 +3,24 @@ import Header from '../components/header';
 import HeaderMobile from '../components/headerMobile';
 import Footer from '../components/footer';
 import styles from './layout.module.css';
-import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const name = 'Malik Piara';
 export const siteTitle = 'Moonwith';
 
+function handleKeyPress(event) {
+	if (event.keyCode == 49) {
+		window.location.href = '/admin'
+	}
+}
+
 export default function Layout({ children, home, wide }) {
 	return (
 		<div className={styles.containerWide}>
+		{useEffect(() => {
+				document.addEventListener('keydown', handleKeyPress)
+				}
+		)}
 			<Head>
 				<meta
 					name="viewport"

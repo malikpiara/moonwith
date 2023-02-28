@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import styles from '../../styles/utils.module.css';
 import admin from './admin.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
@@ -26,6 +26,19 @@ export default function AdminDashboard({ subscribers }) {
 		window.open('https://github.com/malikpiara/moonwith/new/main/posts')
 	}
 
+	function handleKeyPress(event) {
+		if (event.keyCode == 49) {
+			window.location.href = '/admin'
+		} else if (event.keyCode == 50) {
+			window.location.href = '/admin/subscribers'
+		} else if (event.keyCode == 51) {
+			window.location.href = '/'
+		} else if (event.keyCode == 52) {
+			if (!element) {setElement(true)}
+			else if (element) {setElement(false)}
+		}
+	}
+
 	const handleSubmit = async (event) => {
 		event.preventDefault()
 	
@@ -41,6 +54,11 @@ export default function AdminDashboard({ subscribers }) {
 
 	return (
 		<div className={styles.adminDashboardWrapper}>
+
+		{useEffect(() => {
+				document.addEventListener('keydown', handleKeyPress)
+				}
+		)}
 			
 		<Nav onClick={handleClick} />
 	  
