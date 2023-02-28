@@ -128,12 +128,20 @@
   color: #ffffff;
 }
 
+.input {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid #774c2830;
+  flex-grow: 3;
+}
+
 .button {
-  box-sizing: border-box;
   cursor: pointer;
   border: 0;
   text-align: center;
-  padding: 10px 20px;
+  padding: 12px 20px;
   opacity: 1;
   outline: 0;
   text-decoration: none;
@@ -141,7 +149,17 @@
   font-family: var(--font-family-body);
   font-weight: 600;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 16px;
+  flex-grow: 1;
+  transition: ease-in-out 0.3s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.wide {
+  padding: 12px 60px;
 }
 
 .postButton {

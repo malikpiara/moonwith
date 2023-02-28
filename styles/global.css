@@ -10,6 +10,26 @@
   --font-family-nav: 'var(--montserrat)'; */
 }
 
+h5 {
+  font-weight: 900;
+  font-size: 1.1rem;
+  margin: 5px 0px;
+}
+
+.sub {
+  background-color: #774c2814;
+  padding: 30px;
+  margin-block: 20px;
+  border-radius: 15px;
+}
+
+.sub form,
+.subAdmin form {
+  display: flex;
+  gap: 10px;
+  margin-block: 15px;
+}
+
 table {
   overflow-x: hidden;
 }
@@ -134,6 +154,9 @@ footer {
 }
 
 @media (width < 700px) {
+  .sub form {
+    flex-direction: column;
+  }
   footer {
     position: relative;
     writing-mode: horizontal-tb;
