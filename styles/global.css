@@ -10,6 +10,17 @@
   --font-family-nav: 'var(--montserrat)'; */
 }
 
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+body {
+  animation: fade ease 2s;
+  animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+
 h5 {
   font-weight: 900;
   font-size: 1.1rem;

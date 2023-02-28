@@ -26,7 +26,7 @@ export default function HeaderMobile({ home, children }) {
     return (
 		<>
 		{home && (
-        <header class={utilStyles.navbarMobile}>
+        <header className={utilStyles.navbarMobile}>
 				<div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
 					<Link href="/">
 						<Image
