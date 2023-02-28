@@ -3,6 +3,9 @@ import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
+import Link from 'next/link';
+import earnestPic from '../public/images/earnest.jpeg'
+import upframePic from '../public/images/upf.png'
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData();
@@ -16,7 +19,28 @@ export async function getStaticProps() {
 export default function Projects() {
 	const projects = [
 		{
-			title: 'This Site',
+			title: 'Earnest Cards',
+			tags: ['mobile app'],
+			description:
+			<>
+			<p>Self-knowledge and the ability to connect with other people is a skill we can build and improve like anything else.</p>
+			<p>"Earnest Cards" is an app with thoughtful questions you can use to kickstart deep conversations and personal reflections.</p>
+			<Link href="https://play.google.com/store/apps/details?id=com.moonwith.earnest">Download the App for Android</Link>
+			<p>Occasionaly, I share new questions on Instagram: <Link href="https://www.instagram.com/earnestcards/">@earnestcards</Link>.</p>
+			<Image
+						priority
+						placeholder='blur'
+						src={earnestPic}
+						className=""
+						height={448}
+						width={680}
+						alt="promo picture of the Earnest Cards."
+			/>
+			</>
+		},
+
+		{
+			title: 'This Website',
 			tags: ['web development'],
 			description:
 			<>
@@ -66,7 +90,8 @@ export default function Projects() {
 		</p>
 		<Image
 						priority
-						src="/images/upf.png"
+						placeholder='blur'
+						src={upframePic}
 						className=""
 						height={448}
 						width={680}
@@ -215,7 +240,7 @@ export default function Projects() {
 				</p>
 
 				<p>
-          Here's is an overview of some of the most interesting things I created until this point.
+          Here's is an overview of some of the most interesting products, communities and organisations I created.
 				</p>
 
 				<section>
