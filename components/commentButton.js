@@ -1,6 +1,6 @@
 import styles from '../styles/utils.module.css';
 import React from 'react';
-import SpeechBubble from './speechIcon';
+import SpeechBubble from './icons/speechIcon';
 
 export default function CommentButton({
     likeCount = 0,
