@@ -3,11 +3,13 @@ import styles from '../../styles/utils.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Link from 'next/link';
 import Nav from '../../components/adminNav';
+import { CommentPlaceholderAdmin } from '../../components/placeholderCommentAdmin';
 
 export const getServerSideProps = withPageAuthRequired();
 
 export default function AdminDashboard() {
 	const [comments, setComments] = useState([]);
+	const [isLoading, setLoading] = useState(false);
 
 	const [element, setElement] = useState(false);
 
@@ -36,10 +38,12 @@ export default function AdminDashboard() {
 	};
 
 	useEffect(() => {
+		setLoading(true);
 		fetch('/cobra/comments')
 			.then((res) => res.json())
 			.then((comments) => {
 				setComments(comments);
+				setLoading(false);
 			});
 	}, []);
 
@@ -75,9 +79,23 @@ export default function AdminDashboard() {
 	  
 			<div>
 
-			<h2>Comments</h2>
+			<h3>Comments</h3>
+			
+
 			<div className={styles.twoColumns}>
-			{comments.map((comment) => (
+
+			{isLoading ? (
+					<>
+					<CommentPlaceholderAdmin/>
+					<CommentPlaceholderAdmin/>
+					<CommentPlaceholderAdmin/>
+					<CommentPlaceholderAdmin/>
+					<CommentPlaceholderAdmin/>
+					<CommentPlaceholderAdmin/>
+					</>
+			) : (
+				<>
+				{comments.map((comment) => (
 				<div key={comment.id} className={styles.dataWrapper} id={comment.id}>
 					<div>{comment.content}</div>
 					<div>
@@ -99,6 +117,10 @@ export default function AdminDashboard() {
 					</div>
 				</div>
 			))}
+				</>
+			)}
+
+			
 			</div>
 			</div>
 

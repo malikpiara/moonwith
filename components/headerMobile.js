@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import profilePic from '../public/images/profile.jpg'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import ArrowLeftIcon from './arrowLeftIcon';
+import ArrowLeftIcon from './icons/arrowLeftIcon';
 
 const name = 'Malik Piara';
 export const siteTitle = 'Moonwith';

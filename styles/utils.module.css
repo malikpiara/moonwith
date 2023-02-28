@@ -184,6 +184,13 @@
   background-color: var(--skeleton-bg);
 }
 
+.mediumPlaceholder {
+  width: 400px;
+  height: 20px;
+  border-radius: 6px;
+  background-color: var(--skeleton-bg);
+}
+
 .commentPlaceholder {
   width: 500px;
   height: 20px;
@@ -333,11 +340,13 @@
 }
 
 .adminNavItem {
+  font-size: 18px;
   padding: 8px;
   margin: 8px;
   border-radius: 8px;
-  display: grid;
-  gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   transition: ease-in-out 0.3s;
 }
 
@@ -401,13 +410,13 @@
   scale: 1.1;
 }
 
-@keyframes rollout {
-  0% { transform: translateY(-200px); }
-  100% { transform: none; }
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: .98 }
 }
 
 .magic {
-  animation: rollout 0.4s;
+  animation: fade ease 0.5s;
   padding: 1.5rem;
   background-color: var(--primary-color);
   opacity: .98;

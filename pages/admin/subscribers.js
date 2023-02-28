@@ -63,7 +63,7 @@ export default function AdminDashboard({ subscribers }) {
 		<Nav onClick={handleClick} />
 	  
 			<div>
-			<h2>Subscribers ({subscribers.length})</h2>
+			<h3>Subscribers ({subscribers.length})</h3>
 
 			<section className="subAdmin">
 
