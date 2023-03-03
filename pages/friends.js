@@ -15,7 +15,7 @@ export default function About() {
 
 			<section className={utilStyles.fullWidth}>
             <h1 className={utilStyles.headingSpecial}>
-            👀 Friends who also write
+            Friends who blog
             </h1>
                 
 
@@ -53,6 +53,24 @@ export default function About() {
                     <h5>Gustavo Pimenta</h5>
                     <small>gustavopimenta.com</small>
                     <p>Learning, productivity, personal reinvention, product management. Based in Lisbon.</p>
+                    # learning
+                </div>
+                <div className={utilStyles.friendItem} onClick={() => window.open('https://www.betaglyph.com/')}>
+                    <h5>Nuno Carneiro</h5>
+                    <small>betaglyph.com</small>
+                    <p>A curated list of book reviews on personal development, business, science, technology and history. Based in Lisbon.</p>
+                    # books
+                </div>
+                <div className={utilStyles.friendItem} onClick={() => window.open('https://blog.juliusbachmann.com/')}>
+                    <h5>Julius Bachmann</h5>
+                    <small>blog.juliusbachmann.com</small>
+                    <p>Making venture more human. Coaching, personal development, leadership, productivity and change. Based in Berlin.</p>
+                    # venture
+                </div>
+                <div className={utilStyles.friendItem} onClick={() => window.open('https://inessantossilva.substack.com/')}>
+                    <h5>Inês Santos Silva</h5>
+                    <small>inessantossilva.substack.com</small>
+                    <p>Best reads and learnings on Web3 (particularly #DeSci) and health (digital health, women's health, and longevity). Based in Porto.</p>
                     # learning
                 </div>
                 
