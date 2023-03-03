@@ -487,7 +487,7 @@
 .friendItem {
   background-color: #d0c4f4;
   border-radius: 10px;
-  opacity: .8;
+  opacity: .75;
   padding: 12px;
   display: flex;
   flex-direction: column;
