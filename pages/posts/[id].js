@@ -169,7 +169,6 @@ export default function Post({ postData, allPostsData }) {
 						</div>
 					) }
 
-					{/* TODO */}
 					<div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
 					<section>
