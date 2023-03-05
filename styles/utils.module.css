@@ -322,7 +322,7 @@
   grid-template-columns: 260px 1fr;
   margin: 0;
   margin-right: 20px;
-  column-gap: 20px;
+  column-gap: 25px;
 }
 
 .adminNav {
@@ -341,7 +341,8 @@
 
 .adminNavItem {
   font-size: 18px;
-  padding: 8px;
+  min-height: 50px;
+  padding: 10px;
   margin: 8px;
   border-radius: 8px;
   display: flex;

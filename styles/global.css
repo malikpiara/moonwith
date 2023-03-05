@@ -58,11 +58,11 @@ tr {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #dcd1ef;
+  background-color: #e8ddfc;
 }
 
 .purple {
-  --body-bg: #f1ebfc;
+  --body-bg: #f3edff;
 }
 
 .green {
