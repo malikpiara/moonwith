@@ -107,7 +107,7 @@ a:hover {
 }
 
 section img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -171,5 +171,6 @@ footer {
   footer {
     position: relative;
     writing-mode: horizontal-tb;
+    margin: 0;
   }
 }
