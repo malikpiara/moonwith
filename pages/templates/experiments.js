@@ -32,7 +32,7 @@ export default function Experiments() {
                     <p><s>8€</s> Free</p>
                     <Button value="Duplicate Template" onClick={handleClick}/>
                     <p>I use this Notion template to map assumptions and turn product ideas into measurable experiments to make my teams move with confidence.</p>
-                    <p>It can be used alongside the Lean Canvas to test assumptions at a macro level or at a feature level.</p>
+                    <p>It can be used alongside the Lean Canvas to test assumptions at a macro level or for product discovery.</p>
                     <p>The mindset should be focused on reducing uncertainty and making the build-measure-learn feedback loop as short as possible.</p>
                     <p>How might we design an experiment to test our assumptions this week? How might do so in a way that takes less or no development time?</p>
                 </div>
