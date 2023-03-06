@@ -10,7 +10,7 @@
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.9.2",
     "@next/font": "^13.1.6",
-    "@supabase/supabase-js": "^2.8.0",
+    "@supabase/supabase-js": "^2.10.0",
     "@vercel/analytics": "^0.1.10",
     "date-fns": "^2.29.2",
     "eslint-config-next": "^13.1.6",
