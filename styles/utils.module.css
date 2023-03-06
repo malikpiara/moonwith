@@ -477,12 +477,37 @@
   gap: 1em;
 }
 
-.fullWidth:nth-child(1) {
+.fullWidthTemplates {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  column-gap: 2.2em;
+}
+
+.fullWidth:nth-child(1),
+.fullWidthTemplates:nth-child(1) {
   padding-top: 0;
 }
 
-.fullWidth > div {
+.fullWidth > div,
+.fullWidthTemplates div:nth-child(2) {
   flex: 1 1 400px;
+}
+
+.templateImage {
+  flex: 2 1 400px;
+}
+
+.templateImage img {
+  cursor: pointer;
+  opacity: .8;
+  transition: ease-in-out 0.3s;
+  border-radius: 3px;
+}
+
+.templateImage img:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
 .friendItem {
@@ -511,7 +536,8 @@
     font-size: 2rem;
   }
   .fullWidthGrid,
-  .fullWidth {
+  .fullWidth,
+  .fullWidthTemplates {
     overflow: hidden;
     padding: 1em;
   }
