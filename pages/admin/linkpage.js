@@ -18,9 +18,9 @@ import { supabase } from '../../lib/supabaseClient';
 }
   })
 
-export default function AdminDashboard(data) {
+export default function AdminDashboard({ linkPage }) {
 
-	const [bio, setBio] = useState(data.linkPage.bio)
+	const [bio, setBio] = useState(linkPage.bio)
 
 	function handleClick() {
 		window.open('https://github.com/malikpiara/moonwith/new/main/posts')
@@ -66,7 +66,7 @@ export default function AdminDashboard(data) {
 
 			<form onSubmit={handleSubmit}>
 				<label>Bio</label>
-				<input className={styles.input} type="text" placeholder={data.linkPage.bio} required value={bio} onChange={(e) => setBio(e.target.value)} />
+				<input className={styles.input} type="text" placeholder={linkPage.bio} required value={bio} onChange={(e) => setBio(e.target.value)} />
 				
 				<button type="submit" className={`${styles.button} ${styles.primary}`}>Change</button>
     		</form>
