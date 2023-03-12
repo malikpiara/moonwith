@@ -4,6 +4,7 @@ import admin from './admin.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Nav from '../../components/adminNav';
 import { supabase } from '../../lib/supabaseClient';
+import Date from '../../components/date';
 
   export const getServerSideProps = withPageAuthRequired( {
 	async getServerSideProps() {
@@ -84,7 +85,9 @@ export default function AdminDashboard({ subscribers }) {
         {subscribers.map((subscriber) => (
 			<tr key={subscriber.id}>
           <td className={admin.subscriber} key={subscriber.id}>{subscriber.email}</td>
-		  <td className={admin.subscriber} key={subscriber.id}>{subscriber.created_at}</td>
+		  <td className={admin.subscriber} key={subscriber.id}>
+		  	<Date dateString={subscriber.created_at} />
+		  </td>
 		  </tr>
         ))}
 		</tbody>

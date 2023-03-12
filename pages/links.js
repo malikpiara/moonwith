@@ -17,7 +17,7 @@ export async function getServerSideProps() {
 }
 
 
-export default function LinkPage(data) {
+export default function LinkPage({ linkPage }) {
     return (
         <>
         <div className={linkPageStyles.wrapper}>
@@ -31,7 +31,7 @@ export default function LinkPage(data) {
                                 alt='Malik'
                             />
             <h1 className={linkPageStyles.name}>Malik Piara</h1>
-            <p className={linkPageStyles.bio}>{data.linkPage.bio}</p>
+            <p className={linkPageStyles.bio}>{linkPage.bio}</p>
             <div className={linkPageStyles.iconContainer}>
                 <span>
                     <Link href="https://instagram.com/likpiara/" target="_blank">

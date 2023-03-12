@@ -4,7 +4,7 @@ import commentStyles from './comment.module.css';
 import utilStyles from '../styles/utils.module.css';
 import ProfilePreview from '../components/profile_preview';
 
-export default function Comment(props) {
+export default function Comment({ author, content }) {
 	const [showMore, setShowMore] = useState(false);
 
 	function handleHover() {
@@ -21,14 +21,14 @@ export default function Comment(props) {
 					onMouseLeave={handleHover}
 					className={commentStyles.avatar}
 				>
-					{props.author.toUpperCase().slice(0, 1)}
+					{author.toUpperCase().slice(0, 1)}
 				</div>
 				<div>
 					<div className={commentStyles.commentHead}>
-						<>{props.author}</>
+						<>{author}</>
 					</div>
 					<div className={commentStyles.commentBody}>
-						<p>{props.content}</p>
+						<p>{content}</p>
 					</div>
 					<div>
 						{showMore && <ProfilePreview />}

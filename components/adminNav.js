@@ -3,8 +3,6 @@ import SpeechBubble from './icons/speechIcon.js';
 import Heart from './icons/heartIcon.js';
 import PostsIcon from './icons/postsIcon.js';
 import Link from 'next/link';
-import Image from 'next/image';
-import miniLogo from '../public/favicon.png';
 import { useRouter } from 'next/router';
 import WorldIcon from './icons/worldIcon';
 

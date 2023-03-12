@@ -4,6 +4,7 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Link from 'next/link';
 import Nav from '../../components/adminNav';
 import { CommentPlaceholderAdmin } from '../../components/placeholderCommentAdmin';
+import Date from '../../components/date';
 
 export const getServerSideProps = withPageAuthRequired();
 
@@ -102,7 +103,7 @@ export default function AdminDashboard() {
 						<Link href={`posts/${comment.post_id}`}>{comment.post_id}</Link>
 					</div>
 					<div>By {comment.author}</div>
-					<div>{comment.createdAt}</div>
+					<div><Date dateString={comment.createdAt} /></div>
 					<div>
 						{comment.isDeleted ? (
 							<small>Deleted</small>

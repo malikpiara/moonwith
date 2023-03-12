@@ -3,9 +3,8 @@ import React from 'react';
 import SpeechBubble from './icons/speechIcon';
 
 export default function CommentButton({
-    likeCount = 0,
-    onClick,
-	hasLike
+    commentCount = 0,
+    onClick
  }) {
 	return (
 		<div
