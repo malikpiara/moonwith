@@ -1,4 +1,4 @@
-import styles from '../styles/utils.module.css';
+import styles from '../../styles/utils.module.css';
 import React from 'react';
 
 export default function Button({value, onClick}) {
