@@ -84,6 +84,7 @@ viewBox="0 0 24 24">
             <ul className={linkPageStyles.ul}>
                 <LinkItem url="/" label="My Personal Blog"/>
                 <LinkItem url="https://instagram.com/earnestcards/" label="Cards for Deeper Conversations"/>
+                <LinkItem url="/contact#coworking" label="In Berlin? Join my Coworking Fridays" />
                 <LinkItem url="https://piara.li/book/" label="Office Hours (CODE University)"/>
             </ul>
         </div>

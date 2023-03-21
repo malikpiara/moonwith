@@ -3,7 +3,7 @@ import Layout from '../../components/layout/Layout';
 import {
 	getAllPostIds,
 	getPostData,
-	getSortedPostsData,
+	getSortedPostsData, 
 } from '../../lib/posts';
 import Date from '../../components/common/FormattedDate';
 import Comment from '../../components/comment/Comment';
