@@ -433,6 +433,7 @@
   height: 350px;
   border-radius: 15px;
   color: #fff;
+  z-index: 99;
 }
 
 .magic p:first-of-type {

@@ -1,9 +1,8 @@
 import { useState,useEffect } from 'react';
 import styles from '../../styles/utils.module.css';
-import admin from './admin.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import Nav from '../../components/adminNav';
 import { supabase } from '../../lib/supabaseClient';
+import Layout from '../../components/layoutAdmin';
 
   export const getServerSideProps = withPageAuthRequired( {
 	async getServerSideProps() {
@@ -22,23 +21,6 @@ export default function AdminDashboard({ linkPage }) {
 
 	const [bio, setBio] = useState(linkPage.bio)
 
-	function handleClick() {
-		window.open('https://github.com/malikpiara/moonwith/new/main/posts')
-	}
-
-	function handleKeyPress(event) {
-		if (event.keyCode == 49) {
-			window.location.href = '/admin'
-		} else if (event.keyCode == 50) {
-			window.location.href = '/admin/subscribers'
-		} else if (event.keyCode == 51) {
-			window.location.href = '/'
-		} else if (event.keyCode == 52) {
-			if (!element) {setElement(true)}
-			else if (element) {setElement(false)}
-		}
-	}
-
 	const handleSubmit = async (event) => {
 		event.preventDefault()
 	
@@ -50,34 +32,18 @@ export default function AdminDashboard({ linkPage }) {
 	}
 
 	return (
-		<div className={styles.adminDashboardWrapper}>
-
-		{useEffect(() => {
-				document.addEventListener('keydown', handleKeyPress)
-				}
-		)}
-			
-		<Nav onClick={handleClick} />
-	  
-			<div>
+		<Layout>
 			<h3>LinkPage</h3>
 
 			<section className="subAdmin">
-
-			<form onSubmit={handleSubmit}>
-				<label>Bio</label>
-				<input className={styles.input} type="text" placeholder={linkPage.bio} required value={bio} onChange={(e) => setBio(e.target.value)} />
-				
-				<button type="submit" className={`${styles.button} ${styles.primary}`}>Change</button>
-    		</form>
+				<form onSubmit={handleSubmit}>
+					<label>Bio</label>
+					<input className={styles.input} type="text" placeholder={linkPage.bio} required value={bio} onChange={(e) => setBio(e.target.value)} />
+					
+					<button type="submit" className={`${styles.button} ${styles.primary}`}>Change</button>
+				</form>
 			</section>
-			<br/>
 
-			<div className={admin.container}>
-			
-	  </div>
-			</div>
-
-		</div>
+		</Layout>
 	);
 }
