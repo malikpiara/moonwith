@@ -3,7 +3,7 @@ import styles from '../../styles/utils.module.css';
 import admin from './admin.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { supabase } from '../../lib/supabaseClient';
-import Date from '../../components/common/Date';
+import Date from '../../components/common/FormattedDate';
 import Layout from '../../components/admin/LayoutAdmin';
 
   export const getServerSideProps = withPageAuthRequired( {

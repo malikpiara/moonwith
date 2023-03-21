@@ -5,20 +5,20 @@ import {
 	getPostData,
 	getSortedPostsData,
 } from '../../lib/posts';
-import Date from '../../components/common/Date';
+import Date from '../../components/common/FormattedDate';
 import Comment from '../../components/comment/Comment';
-import LikeButton from '../../components/common/Like';
-import PostRecommendation from '../../components/post/PostRecommendation';
+import LikeButton from '../../components/common/LikeButton';
+import PostRecommendation from '../../components/post/PostRecommendationCard';
 import LoadMore from '../../components/LoadMoreButton';
 import CommentInput from '../../components/comment/CommentInput';
-import Tag from '../../components/common/Tag';
+import Tag from '../../components/common/TagLabel';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 import { useState, useEffect } from 'react';
 import ListOfComments from '../../components/comment/ListOfComments';
 import { useUser } from '@auth0/nextjs-auth0';
 import CommentButton from '../../components/comment/CommentButton';
-import NewsletterForm from '../../components/NewsletterForm';
+import NewsletterForm from '../../components/NewsletterSignupForm';
 
 export async function getStaticProps({ params }) {
 	const postData = await getPostData(params.id);

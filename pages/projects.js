@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/layout/Layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
@@ -17,7 +17,7 @@ export async function getStaticProps() {
 }
 
 export default function Projects() {
-	const projects = [
+	const data = [
 		{
 			title: 'Earnest Cards',
 			tags: ['mobile app'],
@@ -214,7 +214,7 @@ export default function Projects() {
 		</>
 	}
 	]
-	const project = projects.map(item => (
+	const project = data.map(item => (
 		<>
 		<div className={utilStyles.projectWrapper}>
 			<h2 className={utilStyles.headingLg}>{item.title}</h2>

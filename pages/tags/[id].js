@@ -3,7 +3,7 @@ import Layout from '../../components/layout/Layout';
 import { getSortedPostsData, getAllTags } from '../../lib/posts';
 import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
-import Date from '../../components/common/Date';
+import Date from '../../components/common/FormattedDate';
 
 export async function getStaticProps({ params }) {
 	const allPostsData = await getSortedPostsData(params.id);
