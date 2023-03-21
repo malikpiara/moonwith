@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react';
 import styles from '../../styles/utils.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { supabase } from '../../lib/supabaseClient';
-import Layout from '../../components/layoutAdmin';
+import Layout from '../../components/admin/LayoutAdmin';
 
   export const getServerSideProps = withPageAuthRequired( {
 	async getServerSideProps() {

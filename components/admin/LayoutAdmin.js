@@ -1,6 +1,6 @@
-import Nav from './adminNav';
+import Nav from './AdminNav';
 import { useState, useEffect } from 'react';
-import styles from '../styles/utils.module.css';
+import styles from '../../styles/utils.module.css';
 
 export default function Layout({ children }) {
     const [element, setElement] = useState(false);

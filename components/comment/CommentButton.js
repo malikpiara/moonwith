@@ -1,6 +1,6 @@
-import styles from '../styles/utils.module.css';
+import styles from '../../styles/utils.module.css';
 import React from 'react';
-import SpeechBubble from './icons/speechIcon';
+import SpeechBubble from '../icons/speechIcon';
 
 export default function CommentButton({
     commentCount = 0,

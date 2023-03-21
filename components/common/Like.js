@@ -1,6 +1,6 @@
-import styles from '../styles/utils.module.css';
+import styles from '../../styles/utils.module.css';
 import React from 'react';
-import Heart from './icons/heartIcon';
+import Heart from '../icons/heartIcon';
 
 export default function LikeButton({
     likeCount = 0,

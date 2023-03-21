@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Header from '../components/header';
-import HeaderMobile from '../components/headerMobile';
-import Footer from '../components/footer';
+import Header from './Header';
+import HeaderMobile from './HeaderMobile';
+import Footer from './Footer';
 import styles from './layout.module.css';
 import React, { useEffect } from 'react';
 

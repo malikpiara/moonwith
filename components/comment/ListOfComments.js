@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import Comment from './comment';
-import CommentPlaceholder from './comments_placeholder';
+import Comment from './Comment';
+import CommentPlaceholder from './CommentsPlaceholder';
 import React from 'react';
 
 /* TO IMPROVE

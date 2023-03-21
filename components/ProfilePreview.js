@@ -1,4 +1,4 @@
-import commentStyles from './comment.module.css';
+import commentStyles from './comment/comment.module.css';
 import utilStyles from '../styles/utils.module.css';
 
 export default function ProfilePreview() {

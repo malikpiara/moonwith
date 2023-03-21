@@ -1,4 +1,4 @@
-import styles from '../styles/utils.module.css';
+import styles from '../../styles/utils.module.css';
 
 export function CommentPlaceholderAdmin() {
     return (

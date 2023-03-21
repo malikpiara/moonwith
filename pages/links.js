@@ -3,7 +3,7 @@ import Image from 'next/image';
 import utilStyles from '../styles/utils.module.css';
 import linkPageStyles from '../styles/linkPage.module.css';
 import Link from 'next/link';
-import LinkItem from '../components/linkItem';
+import LinkItem from '../components/LinkItem';
 import { supabase } from '../lib/supabaseClient';
 
 export async function getServerSideProps() {

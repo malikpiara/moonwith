@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import heroPic from '../public/images/malik.webp'
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/layout/Layout';
 import utilStyles from '../styles/utils.module.css';
 
 export async function getStaticProps() {

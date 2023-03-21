@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../../components/layout';
+import Layout, { siteTitle } from '../../components/layout/Layout';
 import image from '../../public/images/templates/experiments.png'
 import utilStyles from '../../styles/utils.module.css';
-import Button from '../../components/button';
+import Button from '../../components/common/Button';
 import Image from 'next/image';
 
 export default function Experiments() {

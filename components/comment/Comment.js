@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import commentStyles from './comment.module.css';
-import utilStyles from '../styles/utils.module.css';
-import ProfilePreview from '../components/profile_preview';
+import utilStyles from '../../styles/utils.module.css';
+import ProfilePreview from '../ProfilePreview';
 
 export default function Comment({ author, content }) {
 	const [showMore, setShowMore] = useState(false);

@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import styles from '../../styles/utils.module.css';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Link from 'next/link';
-import { CommentPlaceholderAdmin } from '../../components/placeholderCommentAdmin';
-import Date from '../../components/date';
-import Layout from '../../components/layoutAdmin';
+import { CommentPlaceholderAdmin } from '../../components/admin/PlaceholderCommentAdmin';
+import Date from '../../components/common/Date';
+import Layout from '../../components/admin/LayoutAdmin';
 
 export const getServerSideProps = withPageAuthRequired();
 

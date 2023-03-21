@@ -1,24 +1,24 @@
 import Head from 'next/head';
-import Layout from '../../components/layout';
+import Layout from '../../components/layout/Layout';
 import {
 	getAllPostIds,
 	getPostData,
 	getSortedPostsData,
 } from '../../lib/posts';
-import Date from '../../components/date';
-import Comment from '../../components/comment';
-import LikeButton from '../../components/like';
-import PostRecommendation from '../../components/post_recommendation';
-import LoadMore from '../../components/load-more';
-import CommentInput from '../../components/comment-input';
-import Tag from '../../components/tag';
+import Date from '../../components/common/Date';
+import Comment from '../../components/comment/Comment';
+import LikeButton from '../../components/common/Like';
+import PostRecommendation from '../../components/post/PostRecommendation';
+import LoadMore from '../../components/LoadMoreButton';
+import CommentInput from '../../components/comment/CommentInput';
+import Tag from '../../components/common/Tag';
 import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 import { useState, useEffect } from 'react';
-import ListOfComments from '../../components/list-of-comments';
+import ListOfComments from '../../components/comment/ListOfComments';
 import { useUser } from '@auth0/nextjs-auth0';
-import CommentButton from '../../components/commentButton';
-import NewsletterForm from '../../components/newsletterForm';
+import CommentButton from '../../components/comment/CommentButton';
+import NewsletterForm from '../../components/NewsletterForm';
 
 export async function getStaticProps({ params }) {
 	const postData = await getPostData(params.id);

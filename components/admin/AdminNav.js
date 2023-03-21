@@ -1,10 +1,10 @@
-import styles from '../styles/utils.module.css';
-import SpeechBubble from './icons/speechIcon.js';
-import Heart from './icons/heartIcon.js';
-import PostsIcon from './icons/postsIcon.js';
+import styles from '../../styles/utils.module.css';
+import SpeechBubble from '../icons/speechIcon.js';
+import Heart from '../icons/heartIcon.js';
+import PostsIcon from '../icons/postsIcon.js';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import WorldIcon from './icons/worldIcon';
+import WorldIcon from '../icons/worldIcon';
 
 export default function AdminNav({onClick}) {
     function getNavItemClassName(router, href) {

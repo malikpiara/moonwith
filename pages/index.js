@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/layout/Layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
-import LoadMore from '../components/load-more';
-import PostPreview from '../components/post_preview';
+import LoadMore from '../components/LoadMoreButton';
+import PostPreview from '../components/post/PostPreview';
 import { useState } from 'react';
 
 export async function getStaticProps() {
