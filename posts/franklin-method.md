@@ -6,9 +6,9 @@ tags: [principles]
 
 Although at times real, lasting transformation may seem like an impossible task, I'm reminded of the power of belief, discipline and persistence in building character and leadership while revisiting Benjamin Franklin who began working on a system for self-improvement when he was only 20 years-old.
 
-In his autobiography he outlines the program he designed to cultivate his personal virtues. To do so, he made a list of 13 values he found desirable and tracked his progress every day.
+In his autobiography he outlines the program he designed to cultivate his personal virtues. To do so, he made a list of 13 values he found desirable, added them to a table with a column for each day of the week and tracked his progress every day. If he didn't follow through, he would proceed to add a mark or a cross. The goal was to have an empty table without any marking.
 
-| Virtues |
+| Benjamin Franklin's 13 Virtues |
 | :- |
 | **1. Temperance:** Eat not to dullness; drink not to elevation. |
 | **2. Silence:** Speak not but what may benefit others or yourself; avoid trifling conversation. |
@@ -25,7 +25,7 @@ In his autobiography he outlines the program he designed to cultivate his person
 | **13. Humility:** Imitate Jesus and Socrates. |
 
 
-To reflect on his progress, he created a table with a column for each day of the week and a row for each virtue. He would then check the table by the end of the day and add a cross every time he failed to exercise the given virtue. Here's what my own version looks like:
+Here's what my own version looks like today:
 
 ![](https://user-images.githubusercontent.com/6923650/227373891-387684c0-413f-4d5b-b23f-3833577475dc.png)
 
