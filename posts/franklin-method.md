@@ -4,7 +4,7 @@ date: "2023-03-23"
 tags: [principles]
 ---
 
-In his autobiography, Benjamin Franklin outlines a self-improvement program he designed to cultivate his character and personal virtues.
+Although at times real, lasting transformation may seem like an impossible task, I'm reminded of the power of belief, discipline and persistence in building character and leadership while revisiting Benjamin Franklin who began working on a system for self-improvement when he was only 20 years-old. In his autobiography he outlines the program he designed to cultivate his character and personal virtues. To do so, he made a list of 13 values he found desirable and tracked his progress every day.
 
 | Virtues |
 | :- |
