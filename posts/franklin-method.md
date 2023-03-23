@@ -27,4 +27,4 @@ In his autobiography he outlines the program he designed to cultivate his person
 
 To reflect on his progress, he created a table with a column for each day of the week and a row for each virtue. He would then check the table by the end of the day and add a cross everytime he failed to exercise the given virtue.
 
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/6923650/227373891-387684c0-413f-4d5b-b23f-3833577475dc.png">
+![](https://user-images.githubusercontent.com/6923650/227373891-387684c0-413f-4d5b-b23f-3833577475dc.png)
