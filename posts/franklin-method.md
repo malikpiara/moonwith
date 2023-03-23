@@ -25,6 +25,8 @@ In his autobiography he outlines the program he designed to cultivate his person
 | **13. Humility:** Imitate Jesus and Socrates. |
 
 
-To reflect on his progress, he created a table with a column for each day of the week and a row for each virtue. He would then check the table by the end of the day and add a cross everytime he failed to exercise the given virtue.
+To reflect on his progress, he created a table with a column for each day of the week and a row for each virtue. He would then check the table by the end of the day and add a cross every time he failed to exercise the given virtue. Here's what my own version looks like:
 
 ![](https://user-images.githubusercontent.com/6923650/227373891-387684c0-413f-4d5b-b23f-3833577475dc.png)
+
+What are the values and traits you would like to cultivate? Do you have a system in place to help you improve? I'd love to hear from you.
