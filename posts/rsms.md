@@ -6,9 +6,9 @@ tags: [principles, people]
 
 [Rasmus Andersson](https://rsms.me/), known for designing the [Inter typeface](https://rsms.me/inter/), co-creating Spotify and GraphQL, and shaping Figma as lead designer, is one of my personal heroes. I look up to him for his proficiency in both design and computer science. Something I too aspire to achieve. Besides the work everyone knows about, he spends his time tinkering and creating [other projects](https://rsms.me/projects/). Among them multiple programming languages. 
 
-Mastering both design and software is no small feat. And since I'm graduating soon, I decided to reach out and ask for advice. He was kind enough to share his thoughts on [a tweetstorm](https://twitter.com/rsms/status/1645135344134942721) I'm sharing here in a compiled format:
+Mastering both design and software is no small feat. And since I'm graduating soon, I decided to reach out and ask for advice. He was kind enough to share his thoughts on [a tweetstorm](https://twitter.com/rsms/status/1645135344134942721) I'm sharing here in a compiled format.
 
-
+### Rasmus Andersson:
 Every person is different and we all have a unique perspective, so it's hard to give general advice, but anyhow:
 
 Do! Make! Do a lot of work, do A LOT of work. The saying that in order to be great at something, you have to do it 10 000 times is true (in most cases.) 
@@ -30,3 +30,9 @@ A furniture designer doing that would be pretty terrible at designing chairs;
 Very pretty! But they break if you put the chair on a carpet and apply lateral force, so we can't ship that.
 
 I think it’s REALLY hard to take this advice to heart in the insanely-fast paced software industry. The idea that you might have to work hard for 5-10 years to get to where you want to be might seem crazy when the software people build only lasts for a fraction of that time.
+
+***
+
+Rasmus's advice  echoes what other people I admire have told me in the past. Working hard and [showing up every day](https://moonwith.com/posts/train) probably matters more than any other thing. Sometimes it can be discouraging not see results right away but we have to have faith. Trust the process.
+
+And regarding bold goals and achieving mastery: Only we can know who we can be. — Never forget that.
