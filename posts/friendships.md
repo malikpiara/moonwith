@@ -1,5 +1,5 @@
 ---
-title: Letting friendships go
+title: Letting relationships go
 date: "2021-10-02"
 tags: [emotional intelligence, relationships]
 ---
