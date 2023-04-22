@@ -34,7 +34,7 @@ export default function LinkPage({ linkPage }) {
             <p className={linkPageStyles.bio}>{linkPage.bio}</p>
             <div className={linkPageStyles.iconContainer}>
                 <span>
-                    <Link href="https://instagram.com/likpiara/" target="_blank">
+                    <Link href="https://instagram.com/malikpiara/" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 width="25" height="25"
 viewBox="0 0 24 24">
@@ -86,6 +86,7 @@ viewBox="0 0 24 24">
                 <LinkItem url="https://instagram.com/earnestcards/" label="Cards for Deeper Conversations"/>
                 <LinkItem url="/contact#coworking" label="In Berlin? Join my Coworking Fridays" />
                 <LinkItem url="https://piara.li/book/" label="Office Hours (CODE University)"/>
+                <LinkItem url="https://t.me/+OGAZMUob59w1OTJk" label="Portugueses em Berlim"/>
             </ul>
         </div>
         </>
