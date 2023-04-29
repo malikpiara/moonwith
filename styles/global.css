@@ -4,10 +4,8 @@
   --bg-contrast-1: #80808021;
   --tag-bg-color: #ffffff;
   --skeleton-bg: #c7c4daba;
-  --font-family-body: system-ui, -apple-system, segoe ui, Roboto, Helvetica,
+  --font-family-body: inter, system-ui, -apple-system, segoe ui, Roboto, Helvetica,
     Arial, sans-serif, apple color emoji, segoe ui emoji;
-  /*   --font-family-heading: 'var(--sourceSerif4)', Georgia, var(--montserrat), sans-serif;
-  --font-family-nav: 'var(--montserrat)'; */
 }
 
 @keyframes fade {
@@ -28,7 +26,7 @@ h5 {
 }
 
 .sub {
-  background-color: #774c2814;
+  background-color: #BEB3FF;
   padding: 30px;
   margin-block: 20px;
   border-radius: 15px;
@@ -39,6 +37,15 @@ h5 {
   display: flex;
   gap: 10px;
   margin-block: 15px;
+}
+
+.sub form input {
+  border: solid #071C3A;
+  color: #071C3A;
+}
+
+.sub form input::placeholder {
+  color: inherit;
 }
 
 table {
@@ -62,7 +69,7 @@ tbody tr:nth-child(odd) {
 }
 
 .purple {
-  --body-bg: #f3edff;
+  --body-bg: #FBF9F1;
 }
 
 .green {
@@ -89,7 +96,7 @@ body {
 }
 
 textarea {
-  font-family: var(--font-family-body);
+  font-family: var(--inter);
 }
 
 ::selection {

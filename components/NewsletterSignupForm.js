@@ -19,7 +19,7 @@ export default function NewsletterForm() {
 	}
     return (
         <section className="sub">
-            <h5>🌳 Grow with me. Get my personal letters on emotional intelligence delivered to your inbox every week.</h5>
+            <h5>✨ Grow with me. Get my personal letters on emotional intelligence delivered to your inbox every week.</h5>
             <form onSubmit={handleSubmit}>
                 <input className={utilStyles.input} type="email" required placeholder="Type your email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <button className={`${utilStyles.button} ${utilStyles.wide} ${utilStyles.primary}`} type="submit">Sign me up</button>
