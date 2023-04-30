@@ -1,7 +1,7 @@
 ---
 title: The bar has been raised
 date: "2023-04-30"
-tags: [learning, work]
+tags: [learning, work, future]
 ---
 
 In everything we do, there is a threshold or shared understanding of "good enough". Okay. Sufficient. Average.
