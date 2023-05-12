@@ -1,5 +1,5 @@
 ---
-title: The minority rule (first draft)
+title: The minority rule
 date: "2023-05-12"
 tags: [product enablement]
 ---
