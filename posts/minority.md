@@ -1,5 +1,5 @@
 ---
-title: The minority rule
+title: The minority rule (first draft)
 date: "2023-05-12"
 tags: [product enablement]
 ---
@@ -9,6 +9,9 @@ Imagine a family of four where one person decides to adopt a vegan lifestyle. Wh
 Even though they are the minority, their needs make them less flexible. We can extrapolate this to extended family dinners. When instead of four people you have sixteen, the need of this person will still have a greater effect on the restaurant decision. Even though there is only one vegan person in the group.
 
 Visualising this hidden rule can help us understand the power of inflexible minorities in society. It can also be an insight we can use to make product decisions in a strategic way.
+
+![2023-05-12 13 26 59](https://github.com/malikpiara/moonwith/assets/6923650/2d11aa66-8620-42aa-8eef-588e3be09931)
+![2023-05-12 13 26 51](https://github.com/malikpiara/moonwith/assets/6923650/c653b577-396c-40d7-bbd3-baeab2c78d6d)
 
 When most people don't have a strong opinion or preference, appealing to the ones that do, may be a good tactic to increase user acquisition and consolidate a market.
 
