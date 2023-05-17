@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function Experiments() {
     function handleClick() {
-        window.location = `https://upframed.notion.site/5889286aeb324779bc36e904af77f469?v=5e0371ffa98140e98fc483e048244509`
+        window.location = `https://upframed.notion.site/upframed/5889286aeb324779bc36e904af77f469?v=ef791f3c2df04d98b4bf176bf5a5e0bb`
     }
     return (
         <Layout wide>
