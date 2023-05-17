@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../../components/layout/Layout';
-import image from '../../public/images/templates/Screenshot%202023-05-17%20at%2015.32.20.png'
+import image from '../../public/images/templates/Screenshot 2023-05-17 at 15.32.20.png'
 import utilStyles from '../../styles/utils.module.css';
 import Button from '../../components/common/Button';
 import Image from 'next/image';
