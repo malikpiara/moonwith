@@ -16,6 +16,6 @@ On weekends, there will be prompts too but it’s up to you to decide whether yo
 You can share your work on Instagram, Twitter and Dribbble with the hashtag **#30dayUI** so we can find your work and support it.
 
 ### Join our community on Telegram
-[piara.li/30dayui](piara.li/30dayui)
+[piara.li/30dayui](https://piara.li/30dayui)
 
-***This post will be updated in the coming hours. Please feel free to ask anything.***
+*This post will be updated in the coming hours. Please feel free to ask anything.*
