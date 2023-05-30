@@ -23,10 +23,14 @@ Follow this link to join our Telegram group: [piara.li/30dayui](https://piara.li
 
 ### Design Prompts
 
-| Days |
+|  |
 | :- |
 | **Day 1:** Design a Sign-up Page  |
 | **Day 2:** Design a 404 Error Page |
 | **Day 3:** Design an Audio Player Interface |
+| **Day 4:** Design a Landing Page for a product |
+| **Day 5:** Design a Profile page |
+| **Day 6:** Design a Contact Us page |
+| **Day 7:** Redesign your favorite website's homepage |
 
-*This post was updated on May 26th. Come back tomorrow for the next challenge.*
+*This post was updated on May 30th. Come back tomorrow for the next challenge.*
