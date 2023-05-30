@@ -179,5 +179,6 @@ footer {
     position: relative;
     writing-mode: horizontal-tb;
     margin: 0;
+    bottom: 0;
   }
 }
