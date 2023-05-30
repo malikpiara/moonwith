@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../../styles/utils.module.css';
-import profilePic from '../../public/images/profile.jpg'
+import profilePic from '../../public/images/profile.jpg';
+import logo from '../../public/logo.svg'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -26,8 +27,18 @@ export default function Header() {
     <header className={styles.header}>
 				<>
 					<Link href={'/'}>
-						<h1 className={'siteTitle'}>{siteTitle}</h1>
+					
+						<Image
+							priority
+							src={logo}
+							className={'siteTitle'}
+							height={60}
+							width={165}
+							alt={siteTitle}
+						/>
 					</Link>
+
+					
 
 					<ul className={utilStyles.list}>
                     {navItems.map((navItem) => (
