@@ -17,7 +17,7 @@ export default function NotFound() {
         <ul className={utilStyles.list}>
 					
 						<li className={utilStyles.recommendedEntry}>
-							<Link href={`/posts/30day-u`}>30 Days of UI</Link>
+							<Link href={`/posts/30day-ui`}>30 Days of UI</Link>
 
 							<br />
 							{/* <small className={utilStyles.lightText}>
