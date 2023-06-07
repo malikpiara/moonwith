@@ -1,5 +1,5 @@
 ---
-title: Quick thoughts on the Portuguese Startup Scene
+title: Thoughts on German-Portuguese Startup Scene Collaboration
 date: "2023-06-07"
 tags: []
 ---
@@ -7,7 +7,7 @@ tags: []
 Yesterday, I had the honour of participating in a [panel at Re:publica focused on how the Portuguese and German startup scenes can collaborate more closely](https://re-publica.com/de/session/lisbon-calling-web-summit-2023). Here's my quick thoughts on Portugal.
 
 If there's enough interest, I'll update this blog post with a list of relevant initiatives, incubators, accelerators and key activities that anyone thinking about collaborating or operating in Portugal should know about.
-### Quick thoughts on the Portuguese Ecosystem.
+### The Portuguese Ecosystem
 1. The Portuguese startups/scaleups with the highest valuation, according to [Dealroom](https://startupportugal.dealroom.co/companies.startups/f/data_type/anyof_Verified/founding_or_hq_locations/allof_Portugal?), are predominantely B2B. If you're planning on starting a company in Portugal, picking a B2B strategy and having a foot in another market is a good strategy.
 2. [Farfetch](https://www.crunchbase.com/organization/farfetch) and [Seedrs](https://www.crunchbase.com/organization/seedrs) are notable exceptions. But both founding stories imply working with other markets (UK) from an early stage. This can be a lesson for entrepreneurs aiming to operate in Portugal.
 3. I personally don't believe startups operating in a B2C market can take off successfuly in Portugal at an early-stage. Unless they have a powerful brand and backing or are bundled/integrated with another product consumers already trust. This strategy can work in Germany but the Portuguese market is too small. Having said that, [Barkyn](https://www.crunchbase.com/organization/barkyn) is proving me wrong.
@@ -17,6 +17,7 @@ If there's enough interest, I'll update this blog post with a list of relevant i
 7. Despite the emigration levels, my sense, from an intercultural point of view is that the Portuguese are loyal to the companies they work for and fond of staying in Portugal. There are highly qualified professionals, above the avarage in the rest of Europe who choose to stay, despite their struggles, until they feel like they don't have another choice. This can be an opportunity for German companies that would like to get established in Portugal. If you're able to provide competitive compensation, you'l have a chance at attracting and retaining amazing talent.
 8. Many Portuguese companies pick the US or the UK as their primary market. The German market is big. There is an opportunity for deeper collaboration and I believe a way to get there is by investing in deeper relationships and bilateral programmes.
 
+### Some of the Portuguese companies with highest valuation in June 2023
 | Company | Market | Relevant Location |
 | -------- | -------- | -------- |
 | Outsystems   | **B2B**, **Enterprise**   | 🇺🇸 Boston, Massachusetts (HQ)

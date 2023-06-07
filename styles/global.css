@@ -54,14 +54,25 @@ table {
 
 table {
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
+  display: table;
+    overflow: visible;
+    border-spacing: 0;
+    width: 100%;
+    table-layout: auto;
 }
 
 tr {
-  display: flex;
-  padding: 5px;
-  padding-left: 12px;
+    display: table;
+    overflow: visible;
+    border-spacing: 0;
+    width: 100%;
+    table-layout: auto;
+    border-spacing: 0;
+    margin-right: 200px;
+    text-align: left;
+    padding: 0 12px;
+    height: 44px;
+    display: table-row;
 }
 
 tbody tr:nth-child(odd) {
