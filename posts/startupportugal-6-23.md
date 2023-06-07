@@ -34,7 +34,7 @@ If there's enough interest, I'll update this blog post with a list of relevant i
 | Seedrs   | **B2B**, B2C, Fintech    | 🇬🇧 London, England (HQ)
 
 ## Resources
-1. [Launch in Lisbon](https://www.startuplisboa.com/launch-in-lisbon). Three days to learn everything you need to know about how to set up your life and business in Lisbon. By Startup Lisboa, the most well-known startup incubator in town.
+1. [Launch in Lisbon](https://www.startuplisboa.com/launch-in-lisbon). Three days to learn everything you need to know about how to set up your life and business in Lisbon. By Startup Lisboa, the most well-known startup incubator in town. 
 2. [Soft Landing](https://softlanding.works/). Your partner to land your business in Portugal. The provide services that go from visa support, company incorporation and assist with paperwork to market entry consulting.
 3. [Startup Portugal](https://startupportugal.com/resources/). Their mission is to develop activities of public interest for the promotion of entrepreneurship in Portugal. Their website has detailed ecosystem reports, information on funding and additional goverment initiatives to support entrepreneurs. You can book an online or offline meeting.
 4. [351. The Portuguese Startup Community](https://351.community/). The door to the local startup scene. By joining the Slack Community, you'll have direct access to founders, investors and major players of the Portuguese startup scene. 351 promotes monthly startup talks, co-founder matchmaking and the [Portugal Tech Week](https://portugaltechweek.com/).
