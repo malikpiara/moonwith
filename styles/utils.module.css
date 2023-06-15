@@ -1,3 +1,24 @@
+.imageBase {
+  position: relative;
+  width: 350px;
+  left: 250px;
+}
+
+.imageLeftShift {
+  position: relative;
+  bottom: 250px;
+  right: 0px;
+  width: 300px;
+}
+
+.heading4Xl {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
