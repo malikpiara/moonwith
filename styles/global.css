@@ -50,9 +50,6 @@ h5 {
 
 table {
   overflow-x: hidden;
-}
-
-table {
   border-radius: 10px;
   display: table;
     overflow: visible;

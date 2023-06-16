@@ -33,8 +33,13 @@ If there's enough interest, I'll update this blog post with a list of relevant i
 | Veniam   | **B2B**, **Enterprise**, Deep Tech    | 🇵🇹 Porto, Portugal (HQ)
 | Seedrs   | **B2B**, B2C, Fintech    | 🇬🇧 London, England (HQ)
 
-## Resources
-1. [Launch in Lisbon](https://www.startuplisboa.com/launch-in-lisbon). Three days to learn everything you need to know about how to set up your life and business in Lisbon. By Startup Lisboa, the most well-known startup incubator in town. 
+## Resources for entrepreneurs looking to enter in Portugal
+1. [Launch in Lisbon](https://www.startuplisboa.com/launch-in-lisbon). Three days to learn everything you need to know about how to set up your life and business in Lisbon. By Startup Lisboa. 
 2. [Soft Landing](https://softlanding.works/). Your partner to land your business in Portugal. The provide services that go from visa support, company incorporation and assist with paperwork to market entry consulting.
 3. [Startup Portugal](https://startupportugal.com/resources/). Their mission is to develop activities of public interest for the promotion of entrepreneurship in Portugal. Their website has detailed ecosystem reports, information on funding and additional goverment initiatives to support entrepreneurs. You can book an online or offline meeting.
 4. [351. The Portuguese Startup Community](https://351.community/). The door to the local startup scene. By joining the Slack Community, you'll have direct access to founders, investors and major players of the Portuguese startup scene. 351 promotes monthly startup talks, co-founder matchmaking and the [Portugal Tech Week](https://portugaltechweek.com/).
+
+### Notable Incubators and Accelerators
+1. [Startup Lisboa](https://www.startuplisboa.com/). The most well-known startup incubator in town. They provide office space in downtown, as well as access to a strong network of mentors and investors.
+2. [From Start to Table](https://www.fromstart-to-table.com/). 8-week program for early-stage startups operating in the food and beverages space. The main strengths are the local networking opportunities and a 10,000€ prize. [Why Not Soda](https://whynotsoda.com/en/about/) founded by 2 Germans living in Berlin passed through their programme.
+3. [Maze X](https://maze-impact.com/maze-x). Early-stage 3-month programme with investment for startups focused on social impact, sustainability, healthcare and future of learning and work. Among their portfolio you can find [Ivy Protocol](https://www.ivyprotocol.com/) with 2 Germans based in Berlin as part of the founding team.
