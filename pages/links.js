@@ -84,7 +84,7 @@ viewBox="0 0 24 24">
             <ul className={linkPageStyles.ul}>
                 <LinkItem url="/" label="My Personal Blog"/>
                 <LinkItem url="https://instagram.com/earnestcards/" label="Cards for Deeper Conversations"/>
-                <LinkItem url="https://piara.li/breakfast" label="Breakfasts for Good: Meet Likeminded People" />
+                <LinkItem url="https://piara.li/breakfast" label="Breakfasts for Good" />
                 <LinkItem url="https://piara.li/book/" label="Office Hours (CODE University)"/>
                 <LinkItem url="https://t.me/+OGAZMUob59w1OTJk" label="Portugueses em Berlim"/>
             </ul>
