@@ -93,20 +93,6 @@ export default function Post({ postData, allPostsData }) {
 	// if it is, update the state.
 	const [likeId, setLikeId] = useState(0)
 
-	/* useEffect(() => {
-		fetch(`https://cobra.moonwith.com/likes/${postData.id}`)
-			.then((res) => res.json())
-			.then((likeValue) => {
-				setLikeValue(likeValue.length);
-				likeValue.forEach(like => {
-					// If the userId fetched from Auth0 is equal to a userId
-					// in the list of likes, setHasUserLike to true.
-					user?.sub == like.userId ? (setHasUserLike(true)) : (setHasUserLike(false));
-					setLikeId(like.id)
-				});
-			});
-	}, [user?.sub]); */
-
 	return (
 		<Layout>
 			<Head>
@@ -119,54 +105,6 @@ export default function Post({ postData, allPostsData }) {
 					{/* <div className={utilStyles.lightText}>
 						<Date dateString={postData.date} />
 					</div> */}
-
-					{/* { hasUserLike ? 
-					(
-						<div className={utilStyles.postMeta}>
-						<LikeButton hasLike likeCount={likeValue} onClick={() => {
-	
-							fetch(`/api/likes/${likeId}`, {
-								method: 'DELETE',
-								body: JSON.stringify({
-									id: likeId
-								}),
-								headers: { 'Content-Type': 'application/json' },
-							}).then((response) => console.log(response.json()));
-
-							toggleLike()
-						}}
-						/>
-						<CommentButton onClick={handleCommentClick}/>
-						</div>
-					) : user ? (
-						<div className={utilStyles.postMeta}>
-						<LikeButton likeCount={likeValue} onClick={() => {
-	
-							fetch('/api/likes', {
-								method: 'POST',
-								body: JSON.stringify({
-									postId: postData.id,
-									userId: user.sub
-								}),
-								headers: { 'Content-Type': 'application/json' },
-							}).then((response) => console.log(response.json()));
-
-							toggleLike()
-						}}
-						/>
-						<CommentButton onClick={handleCommentClick}/>
-						</div>
-					) :
-					
-					(
-						<div className={utilStyles.postMeta}>
-						<LikeButton likeCount={likeValue} onClick={() => {
-							window.location = `/api/auth/login?returnTo=/posts/${postData.id}`
-						}}
-						/>
-						<CommentButton onClick={handleCommentClick}/>
-						</div>
-					) } */}
 
 					<div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 

@@ -1,4 +1,4 @@
-import styles from '../layout/layout.module.css';
+/* import styles from '../layout/layout.module.css';
 import utilStyles from '../../styles/utils.module.css';
 import commentStyles from './comment.module.css';
 import React from 'react';
@@ -40,3 +40,4 @@ export default function CommentInput({
 		</div>
 	);
 }
+ */
