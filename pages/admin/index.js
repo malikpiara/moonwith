@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 import styles from '../../styles/utils.module.css';
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Link from 'next/link';
 import { CommentPlaceholderAdmin } from '../../components/admin/AdminCommentPlaceholder';
 import Date from '../../components/common/FormattedDate';
 import Layout from '../../components/admin/LayoutAdmin';
 
-export const getServerSideProps = withPageAuthRequired();
 
 export default function AdminDashboard() {
 	const [comments, setComments] = useState([]);

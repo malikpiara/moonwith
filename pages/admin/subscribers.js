@@ -1,13 +1,11 @@
 import { useState,useEffect } from 'react';
 import styles from '../../styles/utils.module.css';
 import admin from './admin.module.css';
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import { supabase } from '../../lib/supabaseClient';
 import Date from '../../components/common/FormattedDate';
 import Layout from '../../components/admin/LayoutAdmin';
 
-  export const getServerSideProps = withPageAuthRequired( {
-	async getServerSideProps() {
+  export async function getServerSideProps() {
 		
     const { data } = await supabase.from('subscribers').select()
 
@@ -17,7 +15,6 @@ import Layout from '../../components/admin/LayoutAdmin';
       },
     }
 }
-  })
 
 export default function AdminDashboard({ subscribers }) {
 

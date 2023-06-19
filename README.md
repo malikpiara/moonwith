@@ -1,6 +1,6 @@
 # About The Project
 
-A Next.js blog with markdown files + a like and comment system enabled by [Cobra](https://github.com/malikpiara/cobra). Authentication is powered by Auth0 and Next.js API routes. Most pages are pre-rendered statically. I'm using client-side data fetching at the component level to retrieve comments.
+A Next.js blog with markdown files + a like and comment system enabled by [Cobra](https://github.com/malikpiara/cobra). Authentication is powered by Supabase and Next.js API routes. Most pages are pre-rendered statically. I'm using client-side data fetching at the component level to retrieve comments.
 
 At [moonwith.com/piarali](https://moonwith.com/piarali) you can access my URL shortner. Using Incremental Static Regeneration (ISR) to re-generate this page every time there is a new request.
 
@@ -14,7 +14,7 @@ At [moonwith.com/piarali](https://moonwith.com/piarali) you can access my URL sh
 
 Vercel is the fastest way to deploy a Next.js application. When deploying to Vercel, the platform automatically detects Next.js, runs `next build`, and optimizes the build output for you.
 
-At `.env.example` you can find the environmental variables that make authentication with [Auth0](https://auth0.com/docs/quickstart/webapp/nextjs/interactive) possible.
+At `.env.example` you can find the environmental variables.
 
 ## Current Status
 

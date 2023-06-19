@@ -45,7 +45,7 @@ export default function Projects() {
 			description:
 			<>
 			<p>Every aspect of this platform was crafted from scratch by me. From the design to the frontend to the API that powers the comment section.</p>
-			<p>A blog written in React (Next.js) enhanced by a Typescript API connected to a PostgreSQL database. Authentication is powered by Auth0.</p>
+			<p>A blog written in React (Next.js) enhanced by a Typescript API connected to a PostgreSQL database. Authentication is powered by Supabase.</p>
 			</>
 		},
 

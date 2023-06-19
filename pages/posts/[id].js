@@ -16,7 +16,6 @@ import Link from 'next/link';
 import utilStyles from '../../styles/utils.module.css';
 import { useState, useEffect } from 'react';
 import ListOfComments from '../../components/comment/ListOfComments';
-import { useUser } from '@auth0/nextjs-auth0';
 import CommentButton from '../../components/comment/CommentButton';
 import NewsletterForm from '../../components/NewsletterSignupForm';
 
@@ -49,7 +48,7 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData, allPostsData }) {
-	const { user, error, isLoading } = useUser();
+	//const { user, error, isLoading } = useUser();
 
 	/* if (isLoading) return <div>Loading...</div>;
 	if (error) return <div>{error.message}</div>; */
@@ -94,7 +93,7 @@ export default function Post({ postData, allPostsData }) {
 	// if it is, update the state.
 	const [likeId, setLikeId] = useState(0)
 
-	useEffect(() => {
+	/* useEffect(() => {
 		fetch(`https://cobra.moonwith.com/likes/${postData.id}`)
 			.then((res) => res.json())
 			.then((likeValue) => {
@@ -106,7 +105,7 @@ export default function Post({ postData, allPostsData }) {
 					setLikeId(like.id)
 				});
 			});
-	}, [user?.sub]);
+	}, [user?.sub]); */
 
 	return (
 		<Layout>
@@ -121,7 +120,7 @@ export default function Post({ postData, allPostsData }) {
 						<Date dateString={postData.date} />
 					</div> */}
 
-					{ hasUserLike ? 
+					{/* { hasUserLike ? 
 					(
 						<div className={utilStyles.postMeta}>
 						<LikeButton hasLike likeCount={likeValue} onClick={() => {
@@ -167,7 +166,7 @@ export default function Post({ postData, allPostsData }) {
 						/>
 						<CommentButton onClick={handleCommentClick}/>
 						</div>
-					) }
+					) } */}
 
 					<div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
@@ -189,7 +188,7 @@ export default function Post({ postData, allPostsData }) {
 							<>
 								<h3 className={utilStyles.headingMd}>Comments</h3>
 
-								{user ? (
+								{/* {user ? (
 									<CommentInput
 										commentContent={commentContent}
 										CommentOnChange={handleCommentChange}
@@ -228,7 +227,7 @@ export default function Post({ postData, allPostsData }) {
                     in order to leave a comment and see the hidden side of the
                     Moon.
 									</div>
-								)}
+								)} */}
 
 								<div>
 									{/* TODO: Fetch user details from Auth0 based on the user_id (sub). */}
