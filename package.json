@@ -8,7 +8,7 @@
   },
   "proxy": "http://localhost:3000",
   "dependencies": {
-    "@auth0/nextjs-auth0": "^1.9.2",
+    "@auth0/nextjs-auth0": "^3.1.0",
     "@next/font": "^13.4.5",
     "@supabase/supabase-js": "^2.25.0",
     "@vercel/analytics": "^1.0.1",
