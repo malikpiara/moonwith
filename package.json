@@ -23,7 +23,7 @@
     "remark-html": "^15.0.2"
   },
   "devDependencies": {
-    "eslint": "^8.35.0",
+    "eslint": "^8.49.0",
     "eslint-config-prettier": "^8.8.0"
   }
 }
